@@ -48,8 +48,8 @@
 								</div>
 								<div class="container">
 									<p>
-										I am a recent MA graduate in Applied Linguistics from the University of Saskatchewan. 
-										My main research interests are in natural language processing, computational social science, and language technology. 
+										I am a recent MA graduate in Applied Linguistics from the <a href="https://www.usask.ca" target="_blank">University of Saskatchewan</a>. 
+										My main research interests are in natural language processing, corpus linguistics, and computational social science. 
 										I employ both computational and linguistic approches to studying the properties of languages (i.e., English and Mandarin) 
 										and their linguistic and social meanings inferred from actual language use in large-scale linguistic corpora (already built or compiled through web scraping). 
 									</p>
@@ -57,8 +57,8 @@
 									<p>
 										Inspired by Andrew Ng, I believe in the prospect of <a href="https://www.youtube.com/watch?v=06-AZXmwHjo" target="_blank"> Data-centric AI (versus Model-centric AI)</a>. 
 										This is because with the maturing of deep learning frameworks and cloud computing, trying out different machine/deep learning models becomes generally much cheaper than 
-										having a well-designed dataset, and the qualifty of the dataset becomes a main reason that causes the performances of SOTA models plateau out. 
-										That implies, <b>domain knowledge (plus some data science knowledge) in data construction and annotation</b> will play an increasingly impotant role in
+										having a well-designed dataset, and the qualifty of the dataset becomes a main reason that causes the performances of SOTA models to plateau out, especially in non-canonical and understudied text and language domains. 
+										That implies, <b>domain knowledge (plus some data science knowledge) in data construction, annotation and augmentation</b> will play an increasingly impotant role in
 										real-world deep learning application. Natural language processing or computational linguistics is certainly not an exception.
 									</p>
 								</div>
@@ -69,24 +69,22 @@
 									<h3>Bio</h3>
 									<p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Fuqing" target="_blank">Fuqing</a>, a county-level city in Fujian province, the southeastern coast of China. 
 										From 2015 to 2019, I studied at <a href="https://en.wikipedia.org/wiki/Hunan_University" target="_blank">Hunan University</a> for my Bachelor's degree. Majoring in Chinese 
-										Language and Literature, I found my passion for linguistics in the second semester of my first year in college and managed to undertake a two-year project on  
-										the construction of Chinese grammar, funded by the national Student Innovation Program. I was also fortunate to be selected for a summer internship at the 
+										Language and Literature, I found my passion for linguistics in the first year of university and managed to undertake a two-year project on  
+										the construction of Chinese grammar, funded by the national Student Innovation Training Program. I was also fortunate to be selected for a summer internship at the 
 										University of Alberta for an experimental psycholinguistic research project.
 									</p>
 									<p>
-										Besides literature- and linguistics- related essays/papers, I spent considerable time writing essays in philosophy, history, and law during my bachelor's years. 
-										Prior to coming to Hunan University, I devoted most weekends of my last year in high school working on a 40-page long essay addressing Chinese notions of sex over time.
+										Besides literature- and linguistics- related essays/papers, I spent considerable time doing research in law, history, social science, and a bit of philosophy during my bachelor's years. 
+										Prior to coming to Hunan University, I devoted most weekends of my last year in high school working on a 40-page long essay addressing diachronic notions of sex of Chinese, which I see as 
+										the very beginning of my academic career. Some of my writings are shared on <a href="#Resources">Resources</a>.
 										 
 									</p>
 									<p>
 										From 2019 to 2021, I studied at the <a href="https://en.wikipedia.org/wiki/University_of_Saskatchewan" target="_blank">University of Saskatchewan</a> majoring in Applied Linguistics. 
-										I taught myself programming and started building computational tools, relying on linguistic knowledge (rule-based) and statistical learning algorithms, to carry out 
-										my research, which was about analysis of language use based in large-scale English corpora. 
-									</p>
-									<p>
-										With more experiences in programming and mathematics, the recent months have seen me learning and participating in extensive machine/deep learning 
-										courses/training. I have shared many of my learning experiences as well as tools I built on my <a href="https://github.com/jaaack-wang?tab=repositories" target="_blank">GitHub</a>.
-										 You can also check out the <a href="#Research">Research</a> and <a href="#Resources">Resources</a> sections to find out more.
+										I taught myself programming and computational linguistics from scratch during this period of time when I focused on quantitative and data-driven analysis of language use in transcribed linguistic corpora. 
+										I have become an active user of GitHub since last year and so far I have open-sourced several web-scraping and text-annotating tools, a variety of linguistic datasets I compiled, as well as 
+										extensive notes and tutorials on deep learning in connection with a variety of NLP tasks. You are more than welcome to visit my <a href="https://github.com/jaaack-wang?tab=repositories" target="_blank">GitHub</a> 
+										to find out more.
 									</p>
 								</div>
 							</section>
@@ -106,6 +104,23 @@
 								<h3>Research</h3>
 
 								<ul>
+									<li>
+										<p>
+											<b>
+												<a href="https://arxiv.org/abs/2111.14709" target="_blank">
+													Linguistic Knowledge in Data Augmentation for Natural Language Processing: An Example on Chinese Question Matching
+												</a> <br>
+											</b>
+											<i>Zhengxiang Wang, ArXiv:2111.14709v1 [cs.CL], 2021</i> <br>
+
+											<b>About</b>: As an effort to Data-centric NLP, I explored the role of linguistic knowledge in data augmentation for NLP and proposed a possible paradigm shift for text augmentation. 
+											You can check out the source code, data, and experimental results on this 
+											<a href="https://github.com/jaaack-wang/linguistic-knowledge-in-DA-for-NLP" target="_blank">
+												GitHub repository
+											</a>.
+										</p>
+									</li>
+
 									<li>
 										<p>
 											<b>
@@ -206,9 +221,15 @@
 									</ul>
 
 									<h4>
-										Corpus-linguistic
+										Text Processing
 									</h4>
 									<ul>
+										<li>
+											<a href="https://github.com/jaaack-wang/linguistic-knowledge-in-DA-for-NLP/tree/main/scripts" target="_blank">
+												Two adapted data augmentation programs that augment texts by five simple text editing operations with or without a n-gram language model.
+											</a>
+										</li>
+
 										<li>
 											<a href="https://github.com/jaaack-wang/HELPtk" target="_blank">
 												Historical English Language Processing Toolkit: An efficient toolkit and a general framework for early modern & modern English Language Processing (multi-label annotation) in XML.
@@ -258,7 +279,17 @@
 										</li>
 										<li>
 											<a href="https://github.com/jaaack-wang/ChineseNgrams" target="_blank">
-												Chinese Mandarin Ngrams Counts (from a corpus of 716,796,576 characters)											
+												Chinese Mandarin Ngrams Counts (character-based and word-based)											
+											</a>
+										</li>
+										<li>
+											<a href="https://github.com/jaaack-wang/Chinese-Synonyms" target="_blank">
+												A large high-quality corpus of Chinese synonyms.											
+											</a>
+										</li>
+										<li>
+											<a href="https://github.com/jaaack-wang/Chinese-fixed-phrases-idioms" target="_blank">
+												A large corpus of Chinese fixed phrases and idioms.											
 											</a>
 										</li>
 									</ul>
