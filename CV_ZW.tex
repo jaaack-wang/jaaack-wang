@@ -1,122 +1,283 @@
-\documentclass[a4paper, 11pt]{article}  % there seems to be nuances between [] (attributes?) and {} (func names?)
+%-------------------------
+% Resume in Latex
+% Author : Zhengxiang Wang
+% License : MIT
+%------------------------
 
-\usepackage{hyperref} % for \url{_true_link_} and \href{_true_link_}{_display_name_}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{geometry} % set margins of the document
- \geometry{
- a4paper,
- total={170mm, 257mm}, % left-right, top-down
- left=20mm,
- top=20mm,
- }
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\input{glyphtounicode}
 
-% ======================= Body Part Begins =======================
 
-\begin{document} % whenever there is a begin, there is an end
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
 
 \begin{center}
-
-	\huge \textbf{Zhengxiang Wang} \vspace{11pt} \\  % \Huge is even huger than \huge; \\: breaks a new line
-	\small \url{http://jaaack-wang.eu.org/} 
-
+    \textbf{\Huge \scshape Zhengxiang Wang} \\ \vspace{3pt}
+    \small
+    \faEnvelope \hspace{.5pt} \href{mailto:jackwang196531@gmail.com}{jackwang196531@gmail.com}
+    $|$
+    \faHome \hspace{.5pt} \href{https://jaaack-wang.eu.org}{https://jaaack-wang.eu.org}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/jaaack-wang}{GitHub}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/zhengxiang-wang-560735191/}{LinkedIn}
+    
 \end{center}
 
-% ------------------------------------- Eduction -------------------------------------
-\section*{EDUCATION} % * is for suppressing the indexed numbers for each section
-\hrule % a horizontal line; default looks good
-\vspace{11pt} % add an11 pt vertical space
 
-\textbf{University of Saskatchewan}, Canada \hfill Sep 2019 – May 2021 % \hfill get texts in two ends of a line
+%----------- EDUCATION -----------
 
-\begin{itemize}
-	\itemsep0em % this is to reduce the (vertical) spaces between listed items
-	
-	\item{Master of Arts in Applied Linguistics}
-	\item{Thesis: A macroscopic re-examination of language and gender: A corpus-based case study in university instructor discourses [\href{https://harvest.usask.ca/bitstream/handle/10388/13387/WANG-THESIS-2021.pdf?sequence=1\&isAllowed=y}{PDF}]}
-	
-\end{itemize}
+\section{Education}
+  \resumeSubHeadingListStart
+    
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Ph.D. in Linguistics \textnormal{(with a focus on Computational Linguistics)}}{Aug 2022 \textbf{--} Present}
 
-\vspace{11pt}
-
-\noindent
-\textbf{Hunan University}, China \hfill Sep 2015 – June 2019
-
-\begin{itemize}
-	\itemsep0em 
-	
-	\item{Bachelor of Arts in Chinese Language and Literature}
-	
-\end{itemize}
+    \vspace{3pt}
+    \resumeSubheading
+      {University of Saskatchewan}{Saskatoon, Canada}
+      {M.A. in Applied Linguistics \textnormal{(Graduate Thesis Award)}}{Sep 2019 \textbf{--} May 2021}
+      
+    \vspace{3pt}
+    \resumeSubheading
+      {Hunan University}{Changsha, China}
+      {B.A. in Chinese Language and Literature \textnormal{(summa cum laude)}}{Sep 2015 \textbf{--} Jun 2019}
+    
+  \resumeSubHeadingListEnd
 
 
-% ------------------------------------- Research -------------------------------------
-\section*{RESEARCH EXPERIENCES}
-\hrule 
-\vspace{11pt}
+% ----------- CERTIFICATES -----------
 
-\textbf{Graduate Research Assistant}, University of Saskatchewan \hfill May 2020 – Jun 2021 \vspace{3pt} \\ 
-\emph{Supervised by Prof. Veronika Makarova, Prof. Zhi Li}
-
-\begin{itemize}
-	\itemsep0em 
-	
-	\item{Research topics: disfluency and unfilled pauses; academic English writing by L2 learners}
-	\item{Roles: provided technical (e.g., programming, website development), recruitment, and project management supports; bibliographic research and manuscript writing; conference presentation}
-	
-\end{itemize}
-
-\vspace{11pt}
-
-\noindent
-\textbf{Student Principal Investigator}, Hunan University \hfill Apr 2017 – May 2019 \vspace{3pt} \\ 
-\emph{Supervised by Prof. Lanyu Peng}
-\begin{itemize}
-	\itemsep0em 
-	
-	\item{Project: Grammar as science: Rethinking the construction of Modern Chinese Grammar [\href{https://drive.google.com/file/d/1h_u2THzdFSRTRMPgM2UDXj7O_dGkJAN3/view}{PDF}] (in Chinese, 99 pages), funded by the National Student Innovation Training Program}
-	
-\end{itemize}
-
-\vspace{11pt}
-
-\noindent
-\textbf{Research Intern}, University of Alberta \hfill Jun 2018 – Sep 2018 \vspace{3pt} \\ 
-\emph{Supervised by Prof. Benjamin V. Tucker}
-\begin{itemize}
-	\itemsep0em 
-	
-	\item{Research topic: effects of English phonetic reduction on Chinese L2 learners [\href{https://drive.google.com/file/d/1Pq59XVx5zYgCazE93btu9G8RI6Mk_tVC/view}{Poster}]}
-	
-\end{itemize}
-
-% ------------------------------------- PUBLICATIONS & MANUSCRIPTS -------------------------------------
-\section*{PUBLICATION \& MANUSCRIPT} % & is a special token, use "\" to make it a normal one 
-\hrule 
-\vspace{11pt}
-
-\begin{itemize}
-	\itemsep0em 
-	
-	\item{\textbf{Wang, Z}. (2021). Linguistic Knowledge in Data Augmentation for Natural Language Processing: An Example on Chinese Question Matching. \emph{ArXiv}:2111.14709v2 [cs.CL]. [\href{https://arxiv.org/pdf/2111.14709.pdf}{PDF}]}
-	\item{Peng, L, \& \textbf{Wang, Z}. (2017). The contemporary reflection on the Sentence-Based theory postulated by New Grammar of Modern Chinese. Journal of Hengyang Normal University, 38(5), 95-101. [\href{https://www.researchgate.net/publication/340730935_The_contemporary_reflection_on_the_Sentence-Based_theory_postulated_by_New_Grammar_of_Modern_Chinese}{PDF}]}
-	
-\end{itemize}
+\section{Certificates}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Machine Learning Specialization}, Deeplearning.AI \hfill 2022 \\ \vspace{1pt}
+        \textbf{Practical Data Science on the AWS Cloud}, Deeplearning.AI \hfill 2022 \\ \vspace{1pt}
+        \textbf{Deep Learning Specialization}, Deeplearning.AI \hfill 2021 \\ \vspace{1pt}
+        \textbf{Machine Learning}, Stanford Online \hfill 2021 \\ \vspace{1pt}
+        \textbf{Deep Learning Based Natural Language Processing}, Baidu PaddlePaddle \hfill 2021
+    }} \\ \vspace{-5pt}
+  \resumeSubHeadingListEnd
 
 
-% ------------------------------------- SKILLS -------------------------------------
-\section*{SKILLS}
-\hrule 
-\vspace{11pt}
+%----------- SKILLS -----------
 
-\begin{tabular}{@{} l l } % {tabular} creates tabular; "@{}" ensures no indentation for the first column; "l l": two columns, left-aligned
+\section{Skills}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Programming:}{ Python, Java, R, Octave, HTML, \LaTeX, C/C++, Unix scripting} \\ \vspace{2pt}
+        
+        \textbf{Frameworks:}{ TensorFlow, Keras, PyTorch, PaddlePaddle, NumPy, Jax, scikit-learn} \\ \vspace{2pt}
+        
+        \textbf{Cloud Computing:}{ AWS, Baidu AI Studio, Google Colab}
+    }} \\ \vspace{-5pt}
+  \resumeSubHeadingListEnd
+ 
 
- 	\textbf{Programming}  & Python (Advanced), R (Fluent), Java (Fluent), MATLAB/Octave (Fluent), \\
-	 	& JavaScript (Elementary), C (Elementary) \vspace{11pt} \\ 
+%----------- EMPLOYMENT -----------
 
- 	\textbf{Markup Languages} & HTML, Markdown, XML, \LaTeX \vspace{11pt}  \\  
+\section{Employment}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Graduate Teaching Assistant}, Stony Brook University \hfill Aug 2022 \textbf{--} Present \\ \vspace{1pt}
+        \textbf{Research Mentor}, Mitacs \hfill Apr 2021 – Sep 2021 \\ \vspace{1pt}
+        \textbf{Graduate Research Assistant}, University of Saskatchewan \hfill May 2020 – Jun 2021 \\ \vspace{1pt}
+        \textbf{Research Intern}, University of Alberta \hfill Jun 2018 – Sep 2018}} \\ \vspace{-5pt}
+  \resumeSubHeadingListEnd
 
-\end{tabular}
 
-% ======================= Body Part Ends =======================
+%----------- PUBLICATIONS & MANUSCRIPTS -----------
 
+\section{Publications \& Manuscripts}
+
+% \begin{itemize}
+% \itemsep-0.25em
+%     \item Li, Z., Makarova, V. \& \textbf{Wang, Z.} (2022). Developing literature review writing skills through an online writing tutorial series: Corpus-based evidence. \emph{Frontiers}. Under review. 
+%     \item \textbf{Wang, Z.} (2022). \href{https://arxiv.org/abs/2209.00797}{Random Text Perturbations Work, but not Always.} ArXiv:2209.00797 [cs.CL].
+%     \item Hao, H., Cui, Y., \textbf{Wang, Z.} \& Kim, Y. (2022). \href{https://arxiv.org/abs/2208.03772}{Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations.} IEEE VIS 2022. 
+%     \item \textbf{Wang, Z.} (2021). \href{https://arxiv.org/abs/2111.14709}{Linguistic Knowledge in Data Augmentation for Natural Language Processing: An Example on Chinese Question Matching.} ArXiv:2111.14709 [cs.CL]. 
+%     \item \textbf{Wang, Z.} (2021). \href{https://harvest.usask.ca/handle/10388/13387}{A Macroscopic Re-examination of Language and Gender: A Corpus-Based Case Study in University Instructor Discourses.} University of Saskatchewan. 
+%     \item Peng, L., \& \textbf{Wang, Z.} (2017). \href{https://www.researchgate.net/publication/340730935_The_contemporary_reflection_on_the_Sentence-Based_theory_postulated_by_New_Grammar_of_Modern_Chinese}{The contemporary reflection on the Sentence-Based theory postulated by New Grammar of Modern Chinese.} \emph{Journal of Hengyang Normal University}. 38(5), 95-101.
+% \end{itemize} \vspace{-15pt}
+
+  \resumeSubHeadingListStart
+    \small{\item{
+    \textcolor{gray}{(* denotes equal contributions)} \\ \vspace{2pt}
+        $\cdot$ Li, Z*., Makarova, V*. \& \textbf{Wang, Z*.} (2022). Developing literature review writing skills through an online writing tutorial series: Corpus-based evidence. \emph{Frontiers}. Under review. \\ \vspace{2pt}
+        
+        $\cdot$ \textbf{Wang, Z.} (2022). \href{https://arxiv.org/abs/2209.00797}{Random Text Perturbations Work, but not Always.} ArXiv:2209.00797 [cs.CL]. \\ \vspace{2pt}
+        
+        $\cdot$ Hao, H., Cui, Y., \textbf{Wang, Z.} \& Kim, Y. (2022). \href{https://arxiv.org/abs/2208.03772}{Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations.} IEEE VIS 2022. \\ \vspace{2pt}
+        
+        $\cdot$ \textbf{Wang, Z.} (2021). \href{https://arxiv.org/abs/2111.14709}{Linguistic Knowledge in Data Augmentation for Natural Language Processing: An Example on Chinese Question Matching.} ArXiv:2111.14709 [cs.CL]. \\ \vspace{2pt}
+        
+        $\cdot$ \textbf{Wang, Z.} (2021). \href{https://harvest.usask.ca/handle/10388/13387}{A Macroscopic Re-examination of Language and Gender: A Corpus-Based Case Study in University Instructor Discourses.} University of Saskatchewan. \\ \vspace{2pt}
+        
+        $\cdot$ Peng, L*., \& \textbf{Wang, Z*.} (2017). \href{https://www.researchgate.net/publication/340730935_The_contemporary_reflection_on_the_Sentence-Based_theory_postulated_by_New_Grammar_of_Modern_Chinese}{The contemporary reflection on the Sentence-Based theory postulated by New Grammar of Modern Chinese.} \emph{Journal of Hengyang Normal University}. 38(5), 95-101.
+    }} \\ \vspace{-5pt}
+  \resumeSubHeadingListEnd
+
+%----------- PRESENTATION -----------
+
+\section{Presentations}
+
+% \begin{itemize}
+% \itemsep-0.25em
+%     \item \textbf{Wang, Z.}, Li, Z., \& Makarova, V. (2022) Don’ts of English Grammar in International Graduate Students’ ESL Academic Writing. Prairie Workshop on Languages and Linguistics VI, University of Saskatchewan, 2022.
+%     \item Makarova, V., Li, Z. \& \textbf{Wang, Z.} (2022) What international graduate students seek and find in an online Academic English Writing tutorial course. ACLA/CAAL, 2022.
+%     \item \textbf{Wang, Z.}, Li, Z., \& Makarova, V. (2021) Developing an online academic writing tutorial for non-native English speaking international graduate students in diverse programs of studies. International Teaching Online Symposium, University of Windsor.
+%     \item \textbf{Wang, Z.}, Tucker, B. V. \& Mukai, Y. (2018). How does Chinese learner of English perceive and comprehend phonetic reduction? Summer Poster Symposium at University of Alberta.
+% \end{itemize} \vspace{-15pt}
+
+  \resumeSubHeadingListStart
+    \small{\item{
+        $\cdot$ \textbf{Wang, Z.}, Li, Z., \& Makarova, V. (2022) Don’ts of English Grammar in International Graduate Students’ ESL Academic Writing. Prairie Workshop on Languages and Linguistics VI, University of Saskatchewan. \\ \vspace{2pt}
+        
+        $\cdot$ Makarova, V., Li, Z. \& \textbf{Wang, Z.} (2022) What international graduate students seek and find in an online Academic English Writing tutorial course. ACLA/CAAL 2022. \\ \vspace{2pt}
+        
+        $\cdot$ \textbf{Wang, Z.}, Li, Z., \& Makarova, V. (2021) Developing an online academic writing tutorial for non-native English speaking international graduate students in diverse programs of studies. International Teaching Online Symposium, University of Windsor. \\ \vspace{2pt}
+        
+        $\cdot$ \textbf{Wang, Z.}, Tucker, B. V. \& Mukai, Y. (2018). How does Chinese learner of English perceive and comprehend phonetic reduction? Summer Poster Symposium at University of Alberta.
+    }} \\ \vspace{-5pt}
+  \resumeSubHeadingListEnd
+  
+
+%----------- AWARDS & HONORS -----------
+
+% \section{Awards \& Honors}
+%   \resumeSubHeadingListStart
+%     \small{\item{
+%         \textbf{Graduate Thesis Award}{, University of Saskatchewan, 2021} \\ \vspace{3pt}
+        
+%         \textbf{Mitacs Globalink Graduate Fellowship}{, Mitacs, 2019} \\ \vspace{3pt}
+        
+%         \textbf{Excellent Graduate of the year}{, Hunan University, 2019} \\ \vspace{3pt}
+        
+%         \textbf{Chinese Government Scholarship}{, China Scholarship Council, 2018} \\ \vspace{3pt}
+        
+%         \textbf{The First-Class Scholarship}{, Hunan University, 2017, 2018} \\ \vspace{3pt}
+        
+%         \textbf{National Student Innovation Training Program Grant}{, Ministry of Education of China, 2017} \\ \vspace{3pt}
+        
+%         \textbf{Triple-A student}{, Hunan University, 2016} \\ \vspace{3pt}
+        
+%         \textbf{National Scholarship}{, Ministry of Education of China, 2016}
+%     }}
+%   \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
 \end{document}
