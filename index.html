@@ -50,14 +50,23 @@
 								<div class="container">
 									<p>
 										I am a first-year PhD student in Linguistics at <a href="https://en.wikipedia.org/wiki/Stony_Brook_University" target="_blank">Stony Brook University</a>. 
-										My research interests are in Natural Language Processing, Computational Linguistics, Machine Learning, and Computational Social Sciences. 
+										My research interests are in Natural Language Processing, Computational Linguistics, Formal Language Theory, Machine Learning, and Computational Social Sciences. 
+									</p>
+
+									<p> I work with linguistic corpora, both real and synthetic. My current research focus is on understanding how and how well neural networks learn and generalize in light of formal language
+										theory and computational learning theory. I appreciate the insights from the traditional symbolic learning literature and believe that there is a tremendous benefit of utilizing these 
+										insights to examine and explain the capabilities of neural networks, particularly the prevailing large language models (or foundation models). 
+										   
+										<!-- I employ both computational and linguistic approaches to (A) understanding a better and more efficient way of building robust NLP models with small data, 
+										an effort toward what Andrew Ng termed as <a href="https://www.youtube.com/watch?v=06-AZXmwHjo" target="_blank">data-centric AI</a>; (B) studying the properties of languages 
+										and their linguistic and social meanings inferred from actual language use in large-scale linguistic corpora. I am intrigued by computational learning theory 
+										and have a great intellectual interest in the efficiency, sparcity, and explainability of large pretrained language models (i.e., foundation models).  -->
 									</p>
 
 									<p>
-										I employ both computational and linguistic approaches to (A) understanding a better and more efficient way of building robust NLP models with small data, 
-										an effort toward what Andrew Ng termed as <a href="https://www.youtube.com/watch?v=06-AZXmwHjo" target="_blank">data-centric AI</a>; (B) studying the properties of languages 
-										and their linguistic and social meanings inferred from actual language use in large-scale linguistic corpora. I am intrigued by computational learning theory 
-										and have a great intellectual interest in the efficiency, sparcity, and explainability of large pretrained language models (i.e., foundation models). 
+										Inspired by <a href="https://datacentricai.org" target="_blank">data-centric AI</a> proposed by Andrew Ng, 
+										I am also interested in finding a better and more efficient way of building robust NLP models with small data. My past research is highly applied, with an aim to understand the 
+										social meanings of actual language use in both spoken and written linguistic data. 
 									</p>
 
 									<p>
@@ -70,19 +79,16 @@
 							<section id="Bio">
 								<div class="container">
 									<h3>Bio</h3>
-									<p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Fuqing" target="_blank">Fuqing</a>, a small southeastern city of China. Prior to coming to Stony Brook,
+									<p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Fuqing" target="_blank">Fuqing</a>, a small southeastern town of China. Prior to coming to Stony Brook,
 										I completed a bachelor's degree in Chinese Language and Literature from <a href="https://en.wikipedia.org/wiki/Hunan_University" target="_blank">Hunan University</a>, 
 										and a master's degree in Applied linguistics from <a href="https://en.wikipedia.org/wiki/University_of_Saskatchewan" target="_blank">University of Saskatchewan</a>. 
 									</p>
 
 									<p>
 										I am a proud self-taught and self-motivated programmer. I started learning programming since 2020, and have managed to make programming relevant to and then part of my daily life. 
-										Looking back, I am glad to find my experiences with NLP align well with the three major phases of the field featured as: rule-based methods, statistical machine learning, and deep learning. 
-									</p>
-
-									<p>
-										I am a highly curious person. When I "was young", I traveled a lot. Now I more enjoy experiencing life at a place for a while, instead of rushing for pictures. I also like reading and writing. Here is a 
-										<a href="https://www.zhihu.com/people/wang-zheng-xiang-77/posts" target="_blank">collection of my essays in Chinese</a> on law, history, sociology, literature etc. 
+										Looking back, I am glad to find my experiences with NLP align well with the three major phases of the field featured as: rule-based (symbolic) methods, statistical machine learning, 
+										and deep learning.
+							
 									</p>
 
 									<p>Feel free to reach out, if you are interested in talking with me!
@@ -117,8 +123,10 @@
 											<i>Ongoing project, Zhengxiang Wang</i> <br>
 
 											<b>About</b>: I designed and conducted comprehensive experiments examining the capabilities of RNN seq2seq models in 
-											learning non-regular language transduction tasks for unseen in-distribution and out-distribution test data, given limited training data.
-											It is shown that RNN seq2seq models with attention are strong in-distribution learners with certain out-of-distribution generalization abilities.
+											learning a hierarchy of reduplicative functions for unseen in-distribution and out-of-distribution test data.
+											It is shown that these tasks are discriminative of the generative capacity of RNNs, RNN seq2seq models, and RNN seq2seq models 
+											with attention and the architectural biases that come with them. It is also found that RNN seq2seq models with attention are 
+											strong in-distribution learners with certain out-of-distribution generalization abilities.
 										</p>
 									</li>
 
@@ -152,7 +160,7 @@
 									<li>
 										<p>
 											<b>
-												<a href="https://arxiv.org/abs/2208.03772" target="_blank">
+												<a href="https://ieeexplore.ieee.org/abstract/document/9903512" target="_blank">
 													Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations
 												</a> <br>
 											</b>
@@ -160,7 +168,7 @@
 											   <a href="https://yumian-cui.github.io/" target="_blank">Yumian Cui</a>, 
 											   Zhengxiang Wang, 
 											   <a href="https://pages.cs.wisc.edu/~yeaseulkim/" target="_blank">Yea-Seul Kim</a>, 
-											   <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945" target="_blank">Transactions on Visualization and Computer Graphics</a>, 2022</i> <br>
+											   <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945" target="_blank">IEEE Transactions on Visualization and Computer Graphics</a>, 2022</i> <br>
 
 											<b>About</b>: IEEE VIS is the top-tier conference in the field of Visualization. The study marks the first effort to comprehensively examine and visualize 
 											the authors and fields of study of 3,240 VIS publications in the past 32 years. Temporal trends are also extensively investigated.
@@ -211,6 +219,12 @@
 										Deep Learning
 									</h4>
 									<ul>
+										<li>
+											<a href="https://github.com/jaaack-wang/rnn-transduction" target="_blank">
+												RNN transduction
+											</a>: customized pipeplines to model language transduction tasks using RNNs
+										</li>
+
 										<li>
 											<a href="https://github.com/jaaack-wang/rnn-seq2seq-learning" target="_blank">
 												RNN seq2seq models
@@ -303,7 +317,7 @@
 										<li>
 											<a href="https://github.com/jaaack-wang/gender-predicator" target="_blank">
 												Gender predictor
-											</a>: Predicting gender of given Chinese names with over 93% (up to 99%) test set accuracy using Naive Bayes, multi-class Logistic Regression, nerual networks models.
+											</a>: Predicting gender of given Chinese names with over 93% (up to 99%) test set accuracy using Naive Bayes, multi-class Logistic Regression, neural networks models.
 										</li>
 										<li>
 											<a href="https://github.com/jaaack-wang/ccnc" target="_blank">
