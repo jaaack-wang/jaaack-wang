@@ -8,4 +8,4 @@ As someone who majored in Chinese Language and Literature and geninuely like wri
 
 Thanks GPT-5!
 
-![](/assets/images/posts/smile.png)
+![](/assets/images/posts/2025/smile.png)
