@@ -64,9 +64,11 @@ layout: null
         <h2>Zhengxiang Wang's Blogs</h2>
 
         <p>
-            <a href="/blogs/archive.html" style="color:#41b883">Browse by year →</a> ·
-            <a href="/blogs/tags.html" style="color:#41b883">Browse by tag →</a>
+          <a href="{{ "/blogs/archive/" | relative_url }}" style="color:#41b883">Browse by year →</a>
+          &nbsp;·&nbsp;
+          <a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
         </p>
+
 
         {% if site.posts and site.posts != empty %}
           {% for post in site.posts %}

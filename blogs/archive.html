@@ -1,6 +1,7 @@
 ---
 layout: null
 title: "Archive"
+permalink: /blogs/archive/
 ---
 <!doctype html>
 <html lang="en">
@@ -10,7 +11,7 @@ title: "Archive"
   <title>Archive — {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <style>
-    :root { --accent:#41b883; }
+    :root { --accent:#41b883 }
     .container{max-width:900px;margin:5rem auto 4rem;padding:0 1rem}
     h2{color:var(--accent);border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:.25rem}
     .year{margin:2rem 0}
@@ -41,7 +42,7 @@ title: "Archive"
           </div>
         {% endfor %}
 
-        <p style="margin-top:2rem"><a href="/blogs/" style="color:#41b883">← Back to Blogs</a></p>
+        <p style="margin-top:2rem"><a href="{{ "/blogs/" | relative_url }}" style="color:#41b883">← Back to Blogs</a></p>
       </div>
     </section>
   </div>
