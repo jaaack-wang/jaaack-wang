@@ -10,6 +10,8 @@ markdown: kramdown
 # Pretty blog URLs like /blog/2025/08/15/my-post/
 permalink: /blog/:year/:month/:day/:slug/
 
+social_image: /assets/images/site/og-default.jpg
+
 # GitHub Pages allows this plugin; it auto-generates /feed.xml (RSS)
 plugins:
   - jekyll-feed
