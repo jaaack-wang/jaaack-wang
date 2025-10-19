@@ -1,0 +1,15 @@
+title: "Zhengxiang Wang"
+description: "Personal site and blog"
+url: "https://www.zhengxiang-wang.me"   # you already have a CNAME
+baseurl: ""                              # leave empty for apex domain
+
+# Keep your custom template; we’re not using a Jekyll theme
+theme: null
+markdown: kramdown
+
+# Pretty blog URLs like /blog/2025/08/15/my-post/
+permalink: /blog/:year/:month/:day/:slug/
+
+# GitHub Pages allows this plugin; it auto-generates /feed.xml (RSS)
+plugins:
+  - jekyll-feed

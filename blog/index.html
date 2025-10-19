@@ -1,0 +1,42 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <section class="wrapper style1 fade-up">
+      <div class="inner">
+        <h2>Blog</h2>
+
+        {% if site.posts and site.posts != empty %}
+          {% for post in site.posts %}
+            <article class="box" style="margin-bottom:1.25rem">
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
+              {% if post.excerpt %}
+                <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        {% else %}
+          <p>No posts yet.</p>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
