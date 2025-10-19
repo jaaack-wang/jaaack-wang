@@ -9,12 +9,59 @@ layout: null
   <title>Blog — {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+  <style>
+  /* Accent color from your sidebar */
+  :root {
+    --accent-color: #41b883;
+  }
+
+  h2 {
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.25rem;
+    display: inline-block;
+  }
+
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .button, .box a.button {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .button:hover {
+    background-color: #369d6b;
+  }
+</style>
+
+
 </head>
 <body class="is-preload">
+
+  <section style="background-color:#41b883; color:white; padding:3rem 0; text-align:center;">
+  <div class="inner">
+    <h1 style="margin-bottom:0.5rem;">Zhengxiang Wang’s Blogs</h1>
+    <!-- <p style="opacity:0.85;">Thoughts, research notes, and stories in progress.</p> -->
+  </div>
+</section>
+
+
   <div id="wrapper">
     <section class="wrapper style1 fade-up">
       <div class="inner">
-        <h2>Blog</h2>
+        <h2>Zhengxiang Wang's Blogs</h2>
 
         {% if site.posts and site.posts != empty %}
           {% for post in site.posts %}

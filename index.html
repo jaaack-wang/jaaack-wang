@@ -34,7 +34,7 @@ layout: null
 						<li><a href="#Bio">Bio</a></li>
 						<li><a href="#News">News</a></li>
 						<li><a href="#Research">Research</a></li>
-						<li><a href="/blog/">Blogs</a></li>
+						<li><a href="#latest-blogs">Blogs</a></li>
 						<!-- <li><a href="#Resources">Resources</a></li> -->
 					</ul>
 				</nav>
@@ -372,11 +372,11 @@ layout: null
 							 </section>
 
 
-							 <section class="wrapper style1 fade-up" id="latest-posts">
+							 <section class="wrapper style1 fade-up" id="latest-blogs">
 								<div class="inner">
-									<h2>Latest Posts</h2>
+									<h3>Latest Blogs</h3>
 									<div>
-									{% for post in site.posts limit:3 %}
+									{% for post in site.posts limit:5 %}
 										<article class="box" style="margin-bottom:1rem">
 										<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 										<p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
