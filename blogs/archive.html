@@ -1,0 +1,50 @@
+---
+layout: null
+title: "Archive"
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive — {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    :root { --accent:#41b883; }
+    .container{max-width:900px;margin:5rem auto 4rem;padding:0 1rem}
+    h2{color:var(--accent);border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:.25rem}
+    .year{margin:2rem 0}
+    .year h3{margin-bottom:.75rem;color:#444}
+    .post-row{margin:.5rem 0}
+    .post-row a{color:var(--accent);text-decoration:none}
+    .post-row a:hover{text-decoration:underline}
+    .muted{color:#888}
+  </style>
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <section class="wrapper style1 fade-up">
+      <div class="inner container">
+        <h2>Archive</h2>
+
+        {% assign grouped = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+        {% for yr in grouped %}
+          <div class="year" id="{{ yr.name }}">
+            <h3>{{ yr.name }}</h3>
+            {% for post in yr.items %}
+              <div class="post-row">
+                <span class="muted">{{ post.date | date: "%b %-d" }}</span>
+                &nbsp;—&nbsp;
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+
+        <p style="margin-top:2rem"><a href="/blog/" style="color:#41b883">← Back to Blogs</a></p>
+      </div>
+    </section>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

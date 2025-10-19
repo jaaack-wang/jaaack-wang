@@ -63,6 +63,11 @@ layout: null
       <div class="container" style="margin-left:3rem; margin-top:2.5rem;">
         <h2>Zhengxiang Wang's Blogs</h2>
 
+        <p>
+            <a href="/blogs/archive.html" style="color:#41b883">Browse by year →</a> ·
+            <a href="/blogs/tags.html" style="color:#41b883">Browse by tag →</a>
+        </p>
+
         {% if site.posts and site.posts != empty %}
           {% for post in site.posts %}
             <article class="box" style="margin-bottom:1.25rem">
@@ -71,11 +76,21 @@ layout: null
               {% if post.excerpt %}
                 <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
               {% endif %}
+
+              {% if post.tags %}
+                <p>
+                  {% for t in post.tags %}
+                    <a href="/blogs/tags.html#{{ t | slugify }}" style="margin-right:.35rem; text-decoration:none; color:#41b883">#{{ t }}</a>
+                  {% endfor %}
+                </p>
+              {% endif %}
+
             </article>
           {% endfor %}
         {% else %}
           <p>No posts yet.</p>
         {% endif %}
+
       </div>
     </section>
 
