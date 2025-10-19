@@ -372,22 +372,38 @@ layout: null
 							 </section>
 
 
-							 <section class="wrapper style1 fade-up" id="latest-blogs">
-								<div class="inner">
-									<h3>Latest Blogs</h3>
-									<div>
-									{% for post in site.posts limit:5 %}
-										<article class="box" style="margin-bottom:1rem">
-										<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-										<p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
-										{% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 180 }}</p>{% endif %}
-										</article>
-									{% endfor %}
-									<p><a class="button" href="/blog/">All posts →</a></p>
-									</div>
-								</div>
-							</section>
+							 <section id="latest-blogs" class="wrapper style1 fade-up">
+								<div class="container">
+									<!-- Section Heading -->
+									<h2>Blogs</h2>
 
+							<!-- Blog List -->
+							<div style="max-width:800px; margin-left:2rem;">
+							{% for post in site.posts limit:5 %}
+								<article class="box" style="margin:1.5rem 0;">
+								<h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
+								<p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
+								{% if post.excerpt %}
+									<p>{{ post.excerpt | strip_html | truncate:180 }}</p>
+								{% endif %}
+								</article>
+							{% endfor %}
+
+							<p style="margin-top:2rem;">
+								<a class="button" href="/blog/" style="
+								background-color:#41b883;
+								color:white;
+								border:none;
+								padding:0.6em 1.2em;
+								border-radius:4px;
+								text-decoration:none;
+								">
+								All posts →
+								</a>
+								</p>
+								</div>
+							</div>
+							</section>
 
 							<div class="image main" data-position="center">
 								<img src="images/banner2.JPG" alt="" />
