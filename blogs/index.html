@@ -52,7 +52,7 @@ layout: null
 
   <section style="background-color:#41b883; color:white; padding:3rem 0; text-align:center;">
   <div class="inner">
-    <h1 style="margin-bottom:0.5rem;">Zhengxiang Wang’s Blogs</h1>
+    <!-- <h1 style="margin-bottom:0.5rem;">Zhengxiang Wang’s Blogs</h1> -->
     <!-- <p style="opacity:0.85;">Thoughts, research notes, and stories in progress.</p> -->
   </div>
 </section>
@@ -61,7 +61,7 @@ layout: null
   <div id="wrapper">
     <section class="wrapper style1 fade-up">
       <div class="inner">
-        <!-- <h2>Zhengxiang Wang's Blogs</h2> -->
+        <h2>Zhengxiang Wang's Blogs</h2>
 
         {% if site.posts and site.posts != empty %}
           {% for post in site.posts %}
@@ -78,6 +78,10 @@ layout: null
         {% endif %}
       </div>
     </section>
+
+     <p class="blog-footer">
+          <a href="/">Home</a>
+        </p>
   </div>
 
   <script src="/assets/js/jquery.min.js"></script>

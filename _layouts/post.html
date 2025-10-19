@@ -7,55 +7,91 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
-  <!-- Accent styles to match sidebar -->
   <style>
-    :root { --accent: #41b883; }
-    /* Container */
-    .post-container { max-width: 900px; margin: 0 auto; }
-    /* Title & meta */
-    .post-title {
+    :root {
+      --accent: #41b883;
+      --text: #333;
+      --light-gray: #888;
+    }
+
+    body {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    /* Top spacing */
+    .post-wrapper {
+      max-width: 850px;
+      margin: 6rem auto 4rem; /* Adds space at top */
+      padding: 0 1rem;
+    }
+
+    /* Title */
+    .post-wrapper h1 {
       color: var(--accent);
+      font-size: 2.2rem;
       font-weight: 800;
-      margin: 0 0 0.5rem 0;
+      margin-bottom: 0.75rem;
       border-bottom: 3px solid var(--accent);
       display: inline-block;
-      padding-bottom: .25rem;
+      padding-bottom: 0.3rem;
     }
-    .post-meta { color: #888; margin: 0 0 1.5rem 0; }
+
+    /* Meta line */
+    .post-meta {
+      color: var(--light-gray);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Paragraphs */
+    .post-wrapper p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
     /* Links */
-    .post a { color: var(--accent); text-decoration: none; }
-    .post a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
     /* Images */
-    .post img {
+    .post-wrapper img {
+      display: block;
+      margin: 2rem auto;
+      border-radius: 6px;
       max-width: 100%;
       height: auto;
-      display: block;
-      margin: 1.25rem auto;
-      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
-    /* Quotes / code (nice defaults) */
-    .post blockquote {
-      border-left: 4px solid var(--accent);
-      padding: .5rem 1rem;
-      background: rgba(65,184,131,.06);
+
+    /* Footer nav */
+    .post-footer {
+      margin-top: 3rem;
+      font-size: 1rem;
     }
-    .post pre, .post code {
-      background: #f7f7f7;
-      border-radius: 6px;
+    .post-footer a {
+      color: var(--accent);
+      font-weight: 500;
     }
-    .post pre { padding: .75rem 1rem; overflow-x: auto; }
-    /* Footer links */
-    .post-footer { margin-top: 2rem; }
   </style>
 </head>
+
 <body class="is-preload">
   <div id="wrapper">
     <section class="wrapper style1 fade-up">
-      <div class="inner post post-container">
-        <h1 class="post-title">{{ page.title }}</h1>
+      <div class="inner post-wrapper">
+        <h1>{{ page.title }}</h1>
         <p class="post-meta">
           {{ page.date | date: "%b %-d, %Y" }}
-          {% if page.tags and page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}
+          {% if page.tags and page.tags.size > 0 %}
+            · {{ page.tags | join: ", " }}
+          {% endif %}
         </p>
 
         {{ content }}
