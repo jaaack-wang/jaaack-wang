@@ -6,7 +6,7 @@ layout: null
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog — {{ site.title }}</title>
+  <title>Blogs — {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
@@ -79,13 +79,13 @@ layout: null
                 <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
               {% endif %}
 
-              {% if post.tags %}
+              <!-- {% if post.tags %}
                 <p>
                   {% for t in post.tags %}
                     <a href="/blogs/tags.html#{{ t | slugify }}" style="margin-right:.35rem; text-decoration:none; color:#41b883">#{{ t }}</a>
                   {% endfor %}
                 </p>
-              {% endif %}
+              {% endif %} -->
 
             </article>
           {% endfor %}
