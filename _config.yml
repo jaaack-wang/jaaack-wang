@@ -8,7 +8,7 @@ theme: null
 markdown: kramdown
 
 # Pretty blog URLs like /blog/2025/08/15/my-post/
-permalink: /blogs/:year/:month/:day/:slug/
+permalink: /blogs/:year/:month/:slug/
 
 social_image: /assets/images/site/og-default.jpg
 
