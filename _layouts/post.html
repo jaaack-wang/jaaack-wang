@@ -162,8 +162,38 @@
     <section class="wrapper style1 fade-up">
       <div class="inner post-wrapper">
         <h1>{{ page.title }}</h1>
+
+        {%- comment -%}
+          Flexible date display:
+          - If page.display_date is set, show it.
+          - Else if page.approx_date: "YYYY-MM" → "Month YYYY".
+          - Else if year/month fields provided (and no day), show "Month YYYY".
+          - Else fall back to full page.date.
+        {%- endcomment -%}
+        {%- assign __human_date = nil -%}
+        {%- if page.display_date -%}
+          {%- assign __human_date = page.display_date -%}
+        {%- elsif page.approx_date -%}
+          {%- assign parts = page.approx_date | split: "-" -%}
+          {%- assign y = parts[0] -%}
+          {%- assign m_raw = parts[1] -%}
+          {%- assign m = m_raw | plus: 0 -%}
+          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign m_index = m | minus: 1 -%}
+          {%- assign __human_date = months[m_index] | append: " " | append: y -%}
+        {%- elsif page.year and page.month and page.day == nil -%}
+          {%- assign m = page.month | plus: 0 -%}
+          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign m_index = m | minus: 1 -%}
+          {%- assign __human_date = months[m_index] | append: " " | append: page.year -%}
+        {%- endif -%}
+
         <p class="post-meta">
-          {{ page.date | date: "%b %-d, %Y" }}
+          {%- if __human_date -%}
+            {{ __human_date }}
+          {%- else -%}
+            {{ page.date | date: "%b %-d, %Y" }}
+          {%- endif -%}
           {% if page.tags and page.tags.size > 0 %}
             · {{ page.tags | join: ", " }}
           {% endif %}
