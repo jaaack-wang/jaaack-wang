@@ -50,6 +50,8 @@ layout: null
 </head>
 <body class="is-preload">
 
+  <span id="logo" style="display:none;">Zhengxiang Wang</span>
+
   <section style="background-color:#41b883; color:white; padding:3rem 0; text-align:center;">
   <div class="inner">
     <!-- <h1 style="margin-bottom:0.5rem;">Zhengxiang Wang’s Blogs</h1> -->
@@ -74,7 +76,41 @@ layout: null
           {% for post in site.posts %}
             <article class="box" style="margin-bottom:1.25rem">
               <h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
-              <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
+              
+              {%- comment -%}
+          Flexible date display:
+          - If page.display_date is set, show it.
+          - Else if page.approx_date: "YYYY-MM" → "Month YYYY".
+          - Else if year/month fields provided (and no day), show "Month YYYY".
+          - Else fall back to full page.date.
+        {%- endcomment -%}
+        {%- assign __human_date = nil -%}
+        {%- if page.display_date -%}
+          {%- assign __human_date = page.display_date -%}
+        {%- elsif page.approx_date -%}
+          {%- assign parts = page.approx_date | split: "-" -%}
+          {%- assign y = parts[0] -%}
+          {%- assign m_raw = parts[1] -%}
+          {%- assign m = m_raw | plus: 0 -%}
+          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign m_index = m | minus: 1 -%}
+          {%- assign __human_date = months[m_index] | append: " " | append: y -%}
+        {%- elsif page.year and page.month and page.day == nil -%}
+          {%- assign m = page.month | plus: 0 -%}
+          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign m_index = m | minus: 1 -%}
+          {%- assign __human_date = months[m_index] | append: " " | append: page.year -%}
+        {%- endif -%}
+
+              <p class="post-meta">
+  {% if __human_date %}
+    {{ __human_date }}
+  {% else %}
+    {{ post.date | date: "%b %-d, %Y" }}
+  {% endif %}
+</p>
+
+
               {% if post.excerpt %}
                 <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
               {% endif %}
