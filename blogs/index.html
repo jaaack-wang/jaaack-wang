@@ -92,12 +92,12 @@ layout: null
           {%- assign y = parts[0] -%}
           {%- assign m_raw = parts[1] -%}
           {%- assign m = m_raw | plus: 0 -%}
-          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
           {%- assign m_index = m | minus: 1 -%}
           {%- assign __human_date = months[m_index] | append: " " | append: y -%}
         {%- elsif page.year and page.month and page.day == nil -%}
           {%- assign m = page.month | plus: 0 -%}
-          {%- assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+          {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
           {%- assign m_index = m | minus: 1 -%}
           {%- assign __human_date = months[m_index] | append: " " | append: page.year -%}
         {%- endif -%}
