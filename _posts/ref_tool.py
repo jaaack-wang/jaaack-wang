@@ -106,7 +106,7 @@ def transform_text(text: str) -> Tuple[str, Dict[str, str]]:
     for ix, (li, detail) in eligible.items():
         lines[li] = REF_LINE.format(ix=ix, detail=detail)
 
-    return "\n".join(lines), report
+    return "\n\n".join(lines), report
 
 
 def main() -> None:
