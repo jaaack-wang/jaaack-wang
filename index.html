@@ -13,7 +13,22 @@ layout: null
     		#News ul.news li {margin-bottom: 0.4em;}
 
 		    #News ul.news p {margin: 0;}
-  </style>
+
+			/* --- MapMyVisitors: keep inside main column and make smaller --- */
+			.mmv-wrap{
+				max-width: 100%;
+				width: 900px;         /* adjust: 700 / 800 / 900 */
+				margin: 1.5rem auto;  /* center it */
+				overflow: hidden;
+			}
+
+			/* If their embed uses iframe/canvas/div, force it to fit wrapper */
+			.mmv-wrap iframe,
+			.mmv-wrap canvas,
+			.mmv-wrap > div{
+				max-width: 100% !important;
+			}
+		</style>
 
 	</head>
 	<body class="is-preload">
@@ -458,6 +473,14 @@ layout: null
 								<li>Design: <a href="https://html5up.net/read-only" target="_blank"> Read Only</a> by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li> 
 								<li><a href="https://github.com/jaaack-wang/jaaack-wang" target="_blank">Source Code</a></li>
 							</ul>
+
+							<!-- MapMyVisitors (inside main column, not overlapping sidebar) -->
+							<div class="mmv-wrap">
+							<script type="text/javascript" id="mapmyvisitors"
+								src="https://mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a">
+							</script>
+							</div>
+
 						</div>
 					</section>
 
@@ -471,7 +494,7 @@ layout: null
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a"></script>
+			<!-- <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a"></script> -->
 
 	</body>
 </html>
