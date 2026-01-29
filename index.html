@@ -28,6 +28,28 @@ layout: null
 			.mmv-wrap > div{
 				max-width: 100% !important;
 			}
+
+			/* --- Archive styles (scoped to #latest-blogs) --- */
+			:root { --accent:#41b883; }
+
+			#latest-blogs .container { max-width: 900px; margin: 5rem auto 4rem; padding: 0 1rem; }
+
+			#latest-blogs h2{
+				color: var(--accent);
+				border-bottom: 3px solid var(--accent);
+				display: inline-block;
+				padding-bottom: .25rem;
+			}
+
+			#latest-blogs .year{ margin: 2rem 0; }
+			#latest-blogs .year h3{ margin-bottom: .75rem; color:#444; }
+
+			#latest-blogs .post-row{ margin:.5rem 0; }
+			#latest-blogs .post-row a{ color: var(--accent); text-decoration:none; }
+			#latest-blogs .post-row a:hover{ text-decoration:underline; }
+
+			#latest-blogs .muted{ color:#888; }
+			#latest-blogs .archive-tags-link a{ color: var(--accent); }
 		</style>
 
 	</head>
@@ -423,16 +445,41 @@ layout: null
 								</div>
 							 </section>
 
-
 							 <section id="latest-blogs" class="wrapper style1 fade-up">
+								<div class="inner container archive-page">
+									<h2>Blogs</h2>
+
+									<p class="archive-tags-link">
+									<a href="{{ '/blogs/tags/' | relative_url }}">Browse by tag →</a>
+									</p>
+
+									{% assign grouped = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+									{% for yr in grouped %}
+									<div class="year" id="{{ yr.name }}">
+										<h3>{{ yr.name }}</h3>
+
+										{% for post in yr.items %}
+										<div class="post-row">
+											<span class="muted">{{ post.date | date: "%b %-d" }}</span>
+											&nbsp;—&nbsp;
+											<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+										</div>
+										{% endfor %}
+									</div>
+									{% endfor %}
+								</div>
+							</section>
+
+
+							 <!-- <section id="latest-blogs" class="wrapper style1 fade-up">
 								<div class="container">
 									<h2>Blogs</h2>
 
 									<p>
-          <a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
-        </p>
+									<a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
+									</p>
 
-							<!-- <div style="max-width:800px; margin-left:2rem;">
+							<div style="max-width:800px; margin-left:2rem;">
 							{% for post in site.posts limit:5 %}
 								<article class="box" style="margin:1.5rem 0;">
 								<h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
@@ -441,23 +488,10 @@ layout: null
 									<p>{{ post.excerpt | strip_html | truncate:180 }}</p>
 								{% endif %}
 								</article>
-							{% endfor %} -->
-
-							 {% assign grouped = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-								{% for yr in grouped %}
-								<div class="year" id="{{ yr.name }}">
-									<h3>{{ yr.name }}</h3>
-									{% for post in yr.items %}
-									<div class="post-row">
-										<span class="muted">{{ post.date | date: "%b %-d" }}</span>
-										&nbsp;—&nbsp;
-										<a href="{{ post.url }}">{{ post.title }}</a>
-									</div>
-									{% endfor %}
-								</div>
 							{% endfor %}
 
-							<!-- <p style="margin-top:2rem;">
+
+							<p style="margin-top:2rem;">
 								<a class="button" href="/blogs/" style="
 								background-color:#41b883;
 								color:white;
@@ -468,10 +502,10 @@ layout: null
 								">
 								All posts →
 								</a>
-								</p> -->
+								</p>
 								</div>
 							</div>
-							</section>
+							</section> -->
 
 							<div class="image main" data-position="center">
 								<img src="images/banner2.JPG" alt="" />
