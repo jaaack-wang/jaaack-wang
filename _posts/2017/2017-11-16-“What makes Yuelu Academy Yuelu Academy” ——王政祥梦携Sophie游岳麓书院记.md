@@ -2,7 +2,7 @@
 layout: post
 title: "“What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记"
 approx_date: "2017-11"
-tags: [Philosophy,创意写作]
+tags: [创意写作]
 ---
 
 

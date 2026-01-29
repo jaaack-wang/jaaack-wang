@@ -428,7 +428,11 @@ layout: null
 								<div class="container">
 									<h2>Blogs</h2>
 
-							<div style="max-width:800px; margin-left:2rem;">
+									<p>
+          <a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
+        </p>
+
+							<!-- <div style="max-width:800px; margin-left:2rem;">
 							{% for post in site.posts limit:5 %}
 								<article class="box" style="margin:1.5rem 0;">
 								<h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
@@ -437,9 +441,23 @@ layout: null
 									<p>{{ post.excerpt | strip_html | truncate:180 }}</p>
 								{% endif %}
 								</article>
+							{% endfor %} -->
+
+							 {% assign grouped = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+								{% for yr in grouped %}
+								<div class="year" id="{{ yr.name }}">
+									<h3>{{ yr.name }}</h3>
+									{% for post in yr.items %}
+									<div class="post-row">
+										<span class="muted">{{ post.date | date: "%b %-d" }}</span>
+										&nbsp;—&nbsp;
+										<a href="{{ post.url }}">{{ post.title }}</a>
+									</div>
+									{% endfor %}
+								</div>
 							{% endfor %}
 
-							<p style="margin-top:2rem;">
+							<!-- <p style="margin-top:2rem;">
 								<a class="button" href="/blogs/" style="
 								background-color:#41b883;
 								color:white;
@@ -450,7 +468,7 @@ layout: null
 								">
 								All posts →
 								</a>
-								</p>
+								</p> -->
 								</div>
 							</div>
 							</section>
