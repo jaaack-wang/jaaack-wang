@@ -2,7 +2,7 @@
 layout: post
 title: "On Virtue and Knowledge of Socrates"
 approx_date: "2016-03"
-tags: [Philosophy]
+tags: [哲学]
 ---
 
 It's well known that Socrates views virtue as a matter of knowledge, which can be paraphrased into an assertion like: He who knows what is good will do good. Or, like: No one really knowingly does wrong. However, this standpoint Socrates holds dear is seemingly so opinionated that it has provoked a great deal of controversy, despite the definition of knowledge on his stance excessively restricted. 
