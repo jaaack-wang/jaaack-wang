@@ -40,15 +40,12 @@
       color: var(--text);
     }
 
-    /* Top spacing */
     .post-wrapper {
       max-width: 850px;
       margin: 6rem auto 4rem;
-      /* Adds space at top */
       padding: 0 1rem;
     }
 
-    /* Title */
     .post-wrapper h1 {
       color: var(--accent);
       font-size: 2.2rem;
@@ -59,14 +56,12 @@
       padding-bottom: 0.3rem;
     }
 
-    /* Meta line */
     .post-meta {
       color: var(--light-gray);
       font-size: 1rem;
       margin-bottom: 1.25rem;
     }
 
-    /* Disclaimer */
     .post-disclaimer {
       margin: 0 0 1.5rem;
       padding: .65rem .85rem;
@@ -76,13 +71,11 @@
       font-size: .98rem;
     }
 
-    /* Paragraphs */
     .post-wrapper p {
       margin-bottom: 1.5rem;
       font-size: 1.1rem;
     }
 
-    /* Links */
     a {
       color: var(--accent);
       text-decoration: none;
@@ -92,7 +85,6 @@
       text-decoration: underline;
     }
 
-    /* Images */
     .post-wrapper img {
       display: block;
       margin: 2rem auto;
@@ -102,7 +94,6 @@
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Footer nav */
     .post-footer {
       margin-top: 3rem;
       font-size: 1rem;
@@ -135,7 +126,6 @@
       text-decoration: underline;
     }
 
-    /* Stack nicely on small screens */
     @media (max-width: 640px) {
       .post-nav {
         flex-direction: column;
@@ -224,19 +214,27 @@
         <h1>{{ page.title }}</h1>
 
         {%- comment -%}
-        Normalize translation flag robustly across:
-        translated: true / "true"
-        is_translation: true / "true"
+        GitHub Pages-safe translation detection:
+        - Supports translated: true / "true"
+        - Supports is_translation: true / "true"
+        Avoid calling downcase on booleans.
         {%- endcomment -%}
         {%- assign __translated_raw = page.translated | default: page.is_translation | default: false -%}
-        {%- assign __translated_str = __translated_raw | append: "" | downcase -%}
-        {%- assign __is_translated = __translated_str == "true" -%}
+        {%- assign __translated_json = __translated_raw | jsonify -%}
+        {%- assign __is_translated = false -%}
+        {%- if __translated_raw == true or __translated_json == '"true"' or __translated_json == 'true' -%}
+        {%- assign __is_translated = true -%}
+        {%- endif -%}
 
         {%- comment -%}
-        Optional: normalize language for zh vs zh-CN etc.
+        Language helper (treat zh-CN / zh etc as Chinese)
         {%- endcomment -%}
         {%- assign __lang = page.lang | default: "en" -%}
-        {%- assign __is_zh = __lang contains "zh" -%}
+        {%- assign __lang_s = __lang | append: "" -%}
+        {%- assign __is_zh = false -%}
+        {%- if __lang_s contains "zh" -%}
+        {%- assign __is_zh = true -%}
+        {%- endif -%}
 
         {% assign sib = site.posts | where: "pair_id", page.pair_id | where_exp: "p", "p.lang != page.lang" | first %}
 
@@ -250,13 +248,6 @@
         </p>
         {% endif %}
 
-        {%- comment -%}
-        Flexible date display:
-        - If page.display_date is set, show it.
-        - Else if page.approx_date: "YYYY-MM" → "Month YYYY".
-        - Else if year/month fields provided (and no day), show "Month YYYY".
-        - Else fall back to full page.date.
-        {%- endcomment -%}
         {%- assign __human_date = nil -%}
         {%- if page.display_date -%}
         {%- assign __human_date = page.display_date -%}
@@ -287,8 +278,7 @@
         </p>
 
         {%- comment -%}
-        Disclaimer only on translated posts:
-        Supports translated: true and is_translation: true (and string forms).
+        Disclaimer only on translated posts.
         {%- endcomment -%}
         {% if __is_translated %}
         {% if __is_zh %}
@@ -305,27 +295,31 @@
         {{ content }}
 
         {%- comment -%}
-        Scoped navigation:
-        - If translated: navigate only among translated posts of same lang
-        - Else: navigate only among original posts (not translated) of same lang
-        Robustly detects translated flag as above.
+        Navigation:
+        Use simple, GitHub Pages-safe pools.
+        - If translated: pool = posts where translated/is_translation is true
+        - Else: pool = posts where both flags are not true
         {%- endcomment -%}
 
-        {%- if __is_translated -%}
-        {%- assign __pool = site.posts
-        | where: "lang", page.lang
-        | where_exp: "p", "((p.translated | default: p.is_translation | default: false) == true) or ((p.translated |
-        default: p.is_translation | default: '' | append: '' | downcase) == 'true')"
-        -%}
-        {%- else -%}
-        {%- assign __pool = site.posts
-        | where: "lang", page.lang
-        | where_exp: "p", "not (((p.translated | default: p.is_translation | default: false) == true) or ((p.translated
-        | default: p.is_translation | default: '' | append: '' | downcase) == 'true'))"
-        -%}
+        {%- assign __pool = site.posts | where: "lang", page.lang -%}
+        {%- assign __pool_filtered = "" | split: "" -%}
+
+        {%- for p in __pool -%}
+        {%- assign _raw = p.translated | default: p.is_translation | default: false -%}
+        {%- assign _json = _raw | jsonify -%}
+        {%- assign _is_t = false -%}
+        {%- if _raw == true or _json == '"true"' or _json == 'true' -%}
+        {%- assign _is_t = true -%}
         {%- endif -%}
 
-        {%- assign __pool_sorted = __pool | sort: "date" | reverse -%}
+        {%- if __is_translated and _is_t -%}
+        {%- assign __pool_filtered = __pool_filtered | push: p -%}
+        {%- elsif __is_translated == false and _is_t == false -%}
+        {%- assign __pool_filtered = __pool_filtered | push: p -%}
+        {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign __pool_sorted = __pool_filtered | sort: "date" | reverse -%}
 
         {%- assign __prev = nil -%}
         {%- assign __next = nil -%}
