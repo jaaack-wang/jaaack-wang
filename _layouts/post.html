@@ -35,7 +35,6 @@
   </p>
 {% endif %} -->
 
-
   <style>
     :root {
       --accent: #41b883;
@@ -72,7 +71,17 @@
     .post-meta {
       color: var(--light-gray);
       font-size: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Disclaimer */
+    .post-disclaimer {
+      margin: 0 0 1.5rem;
+      padding: .65rem .85rem;
+      border-left: 4px solid #e6e6e6;
+      background: #fafafa;
+      color: #666;
+      font-size: .98rem;
     }
 
     /* Paragraphs */
@@ -237,7 +246,6 @@
         </p>
         {% endif %}
 
-
         {%- comment -%}
         Flexible date display:
         - If page.display_date is set, show it.
@@ -274,9 +282,25 @@
           {% endif %}
         </p>
 
+        {%- comment -%}
+        Disclaimer only on translated posts:
+        Set `translated: true` in the translated post's front matter.
+        {%- endcomment -%}
+        {% if page.translated %}
+        {% if page.lang == "zh" %}
+        <p class="post-disclaimer">
+          免责声明：本文译文由 GPT-5.2 翻译生成，原文为英文。
+        </p>
+        {% else %}
+        <p class="post-disclaimer">
+          Disclaimer: This post was originally written in Chinese and translated into English by GPT-5.2.
+        </p>
+        {% endif %}
+        {% endif %}
+
         {{ content }}
 
-        <nav class="post-nav" aria-label="Post">
+        <!-- <nav class="post-nav" aria-label="Post">
           {% if page.previous %}
           <a class="post-nav-link prev" href="{{ page.previous.url }}" rel="prev">
             ← Previous: {{ page.previous.title }}
@@ -288,44 +312,87 @@
             Next: {{ page.next.title }} →
           </a>
           {% endif %}
-        </nav>
+        </nav> -->
 
-        <div class="share-bar">
-          <span>Share:</span>
-          <a class="share x"
-            href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | uri_escape }}&text={{ page.title | uri_escape }}"
-            target="_blank" rel="noopener">X</a>
-          <a class="share li"
-            href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}"
-            target="_blank" rel="noopener">LinkedIn</a>
-          <a class="share fb"
-            href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
-            target="_blank" rel="noopener">Facebook</a>
-          <a class="share rd"
-            href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}"
-            target="_blank" rel="noopener">Reddit</a>
-          <a class="share em"
-            href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}">Email</a>
-        </div>
+        {%- comment -%}
+        Scoped navigation:
+        - If page.translated == true: navigate only among translated posts of the same lang
+        - Else: navigate only among original posts (translated != true) of the same lang
+        Requires: translated posts have `translated: true` in front matter.
+        {%- endcomment -%}
 
-        <div id="comments" class="post-comments">
-          <h3 style="margin-top:2rem">Comments</h3>
+        {%- assign __is_translated = page.translated | default: false -%}
 
-          <script src="https://giscus.app/client.js" data-repo="jaaack-wang/jaaack-wang" data-repo-id="R_kgDOGO-aLw"
-            data-category="Announcements" data-category-id="DIC_kwDOGO-aL84Cw1ix" data-mapping="url" data-strict="0"
-            data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light"
-            data-lang="en" crossorigin="anonymous" async>
-            </script>
+        {%- if __is_translated -%}
+        {%- assign __pool = site.posts | where: "translated", true | where: "lang", page.lang -%}
+        {%- else -%}
+        {%- assign __pool = site.posts | where_exp: "p", "p.translated != true" | where: "lang", page.lang -%}
+        {%- endif -%}
 
-          <noscript>Please enable JavaScript to view the comments.</noscript>
-        </div>
+        {%- assign __pool_sorted = __pool | sort: "date" | reverse -%}
 
-        <!-- <p class="post-footer">
+        {%- assign __prev = nil -%}
+        {%- assign __next = nil -%}
+        {%- for p in __pool_sorted -%}
+        {%- if p.url == page.url -%}
+        {%- assign __idx = forloop.index0 -%}
+        {%- if __idx > 0 -%}
+        {%- assign __prev_i = __idx | minus: 1 -%}
+        {%- assign __prev = __pool_sorted[__prev_i] -%}
+        {%- endif -%}
+        {%- assign __next_i = __idx | plus: 1 -%}
+        {%- if __next_i < __pool_sorted.size -%} {%- assign __next=__pool_sorted[__next_i] -%} {%- endif -%} {%- break
+          -%} {%- endif -%} {%- endfor -%} <nav class="post-nav" aria-label="Post">
+          {% if __prev %}
+          <a class="post-nav-link prev" href="{{ __prev.url | relative_url }}" rel="prev">
+            ← Previous: {{ __prev.title }}
+          </a>
+          {% endif %}
+
+          {% if __next %}
+          <a class="post-nav-link next" href="{{ __next.url | relative_url }}" rel="next">
+            Next: {{ __next.title }} →
+          </a>
+          {% endif %}
+          </nav>
+
+
+          <div class="share-bar">
+            <span>Share:</span>
+            <a class="share x"
+              href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | uri_escape }}&text={{ page.title | uri_escape }}"
+              target="_blank" rel="noopener">X</a>
+            <a class="share li"
+              href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}"
+              target="_blank" rel="noopener">LinkedIn</a>
+            <a class="share fb"
+              href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
+              target="_blank" rel="noopener">Facebook</a>
+            <a class="share rd"
+              href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}"
+              target="_blank" rel="noopener">Reddit</a>
+            <a class="share em"
+              href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}">Email</a>
+          </div>
+
+          <div id="comments" class="post-comments">
+            <h3 style="margin-top:2rem">Comments</h3>
+
+            <script src="https://giscus.app/client.js" data-repo="jaaack-wang/jaaack-wang" data-repo-id="R_kgDOGO-aLw"
+              data-category="Announcements" data-category-id="DIC_kwDOGO-aL84Cw1ix" data-mapping="url" data-strict="0"
+              data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light"
+              data-lang="en" crossorigin="anonymous" async>
+              </script>
+
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+          </div>
+
+          <!-- <p class="post-footer">
           <a href="/blogs/">← Back to Blogs</a> · <a href="/">Home</a>
         </p> -->
-        <p class="post-footer">
-          <a href="/">← Back to Home</a>
-        </p>
+          <p class="post-footer">
+            <a href="/">← Back to Home</a>
+          </p>
       </div>
     </section>
   </div>
