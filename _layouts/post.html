@@ -27,14 +27,6 @@
   <meta name="twitter:image" content="{{ image }}">
   <link rel="canonical" href="{{ url }}">
 
-  <!-- {% if page.tags %}
-  <p class="post-tags">
-    {% for t in page.tags %}
-      <a href="/blogs/tags.html#{{ t | slugify }}">#{{ t }}</a>
-    {% endfor %}
-  </p>
-{% endif %} -->
-
   <style>
     :root {
       --accent: #41b883;
@@ -135,7 +127,6 @@
       display: inline-block;
       text-decoration: none;
       color: #41b883;
-      /* your accent */
       font-weight: 600;
       line-height: 1.4;
     }
@@ -204,8 +195,6 @@
       color: #41b883;
     }
 
-    /* your accent for email */
-
     .post-comments {
       margin-top: 2rem;
     }
@@ -234,11 +223,26 @@
       <div class="inner post-wrapper">
         <h1>{{ page.title }}</h1>
 
+        {%- comment -%}
+        Normalize translation flag robustly across:
+        translated: true / "true"
+        is_translation: true / "true"
+        {%- endcomment -%}
+        {%- assign __translated_raw = page.translated | default: page.is_translation | default: false -%}
+        {%- assign __translated_str = __translated_raw | append: "" | downcase -%}
+        {%- assign __is_translated = __translated_str == "true" -%}
+
+        {%- comment -%}
+        Optional: normalize language for zh vs zh-CN etc.
+        {%- endcomment -%}
+        {%- assign __lang = page.lang | default: "en" -%}
+        {%- assign __is_zh = __lang contains "zh" -%}
+
         {% assign sib = site.posts | where: "pair_id", page.pair_id | where_exp: "p", "p.lang != page.lang" | first %}
 
         {% if sib %}
         <p class="archive-tags-link">
-          {% if page.lang == "zh" %}
+          {% if __is_zh %}
           <a href="{{ sib.url | relative_url }}">English →</a>
           {% else %}
           <a href="{{ sib.url | relative_url }}">中文 →</a>
@@ -284,12 +288,10 @@
 
         {%- comment -%}
         Disclaimer only on translated posts:
-        Set `translated: true` in the translated post's front matter.
+        Supports translated: true and is_translation: true (and string forms).
         {%- endcomment -%}
-
-        <!-- DEBUG translated={{ page.translated }} is_translation={{ page.is_translation }} lang={{ page.lang }} layout={{ page.layout }} -->
-        {% if page.translated %}
-        {% if page.lang == "zh" %}
+        {% if __is_translated %}
+        {% if __is_zh %}
         <p class="post-disclaimer">
           免责声明：本文译文由 GPT-5.2 翻译生成，原文为英文。
         </p>
@@ -304,17 +306,23 @@
 
         {%- comment -%}
         Scoped navigation:
-        - If page.translated == true: navigate only among translated posts of the same lang
-        - Else: navigate only among original posts (translated != true) of the same lang
-        Requires: translated posts have `translated: true` in front matter.
+        - If translated: navigate only among translated posts of same lang
+        - Else: navigate only among original posts (not translated) of same lang
+        Robustly detects translated flag as above.
         {%- endcomment -%}
 
-        {%- assign __is_translated = page.translated | default: false -%}
-
         {%- if __is_translated -%}
-        {%- assign __pool = site.posts | where: "translated", true | where: "lang", page.lang -%}
+        {%- assign __pool = site.posts
+        | where: "lang", page.lang
+        | where_exp: "p", "((p.translated | default: p.is_translation | default: false) == true) or ((p.translated |
+        default: p.is_translation | default: '' | append: '' | downcase) == 'true')"
+        -%}
         {%- else -%}
-        {%- assign __pool = site.posts | where_exp: "p", "p.translated != true" | where: "lang", page.lang -%}
+        {%- assign __pool = site.posts
+        | where: "lang", page.lang
+        | where_exp: "p", "not (((p.translated | default: p.is_translation | default: false) == true) or ((p.translated
+        | default: p.is_translation | default: '' | append: '' | downcase) == 'true'))"
+        -%}
         {%- endif -%}
 
         {%- assign __pool_sorted = __pool | sort: "date" | reverse -%}
@@ -343,7 +351,6 @@
           </a>
           {% endif %}
           </nav>
-
 
           <div class="share-bar">
             <span>Share:</span>
@@ -375,9 +382,6 @@
             <noscript>Please enable JavaScript to view the comments.</noscript>
           </div>
 
-          <!-- <p class="post-footer">
-          <a href="/blogs/">← Back to Blogs</a> · <a href="/">Home</a>
-        </p> -->
           <p class="post-footer">
             <a href="/">← Back to Home</a>
           </p>
