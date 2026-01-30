@@ -3,8 +3,10 @@ layout: post
 title: "On Virtue and Knowledge of Socrates"
 approx_date: "2016-03"
 tags: [哲学]
+lang: en
+is_translation: false
+pair_id: On Virtue and Knowledge of Socrates
 ---
-
 It's well known that Socrates views virtue as a matter of knowledge, which can be paraphrased into an assertion like: He who knows what is good will do good. Or, like: No one really knowingly does wrong. However, this standpoint Socrates holds dear is seemingly so opinionated that it has provoked a great deal of controversy, despite the definition of knowledge on his stance excessively restricted. 
 
 Socrates, the reputed wiser, ever put, "one thing only I know, and that is that I know nothing ". It's what, he believes, makes him alone the wisest at his era. But the problem is, if he does get no knowledge else, then how come he could differentiate what is virtue or not? That's impossible, not in a million years! Hence he obviously knows at least a few things himself, which provides him with the ability to judge, subjectively or objectively. It follows, it's these few things that make Socrates come to his famous but kind of exaggerated conclusion. 

@@ -3,10 +3,10 @@ layout: post
 title: "“What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记"
 approx_date: "2017-11"
 tags: [创意写作]
+lang: zh
+is_translation: false
+pair_id: “What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记
 ---
-
-
-
 读完Jostein Gaarder最著名的小说，《苏菲的世界》（Sophie's World），王政祥意犹未尽，趁着灵感来袭，打算用英文赶忙写下一篇续补的小说，叫做‘A missing episode of Sophie's World——Human Nature’（《苏菲的世界》拾遗——人性篇）。小说开头拟接着《苏菲的世界》的结尾部分，——Sophie在Alberto的引导下认识到自己和他不过是Hilde的爸爸为女儿讲解哲学历史时所编造出来的虚构人物，随着小说的行将结束，她和Alberto就不再有机会逃出小说世界，于是他们趁着Hilde的爸爸，或者主宰（the major），不注意时跑到了他家附近。——写到Sophie见到主宰和女儿温情款款在家用餐，思念起还可怜地滞留在小说世界里的家人，于是决定回去（return），重新开始、改写一切（restart and rewrite everything）。Alberto拗不过Sophie，应允了。王政祥写下“They disappeared in the shadows……”，算是交代了这篇拾遗篇什的起因。接着，他又写下标题，
 
 Return: Sophie's World Of Her Own

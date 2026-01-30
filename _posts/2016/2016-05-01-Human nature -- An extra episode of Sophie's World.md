@@ -3,10 +3,10 @@ layout: post
 title: "Human nature -- An extra episode of Sophie's World"
 approx_date: "2016-05"
 tags: [哲学,创意写作]
+lang: en
+is_translation: false
+pair_id: Human nature -- An extra episode of Sophie's World
 ---
-
-
-
 With Alberto's secret plan carried out and working smoothly, Alberto and Sophie made it to survive the major's final blow. Sneaking out of the book major had been working on, they turned out to be invisible people living immortally in an external world. Sophie was really exalted about the brand new chapter of her life, especially at the thought of the 100-percent exemption from major's arbitrary and tyrannical manipulation. All of sudden, she transferred herself from a poor puppet to a totally free man, a truly master of her own. She will be controlled by no one. How amazing life is! Thought Sophie. 
 
 But not before long, something changed. It was when Sophie and Alberto managed to find major and his daughter Hilde, who were then talking at the table over dinner, that Sophie unexpectedly cried. Alberto gave her a stroke and asked,"Why are you crying? What is it?"
