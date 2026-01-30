@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "关于“的”的几点思考"
 approx_date: "2018-01"
-tags: [语言学]
 lang: en
 is_translation: true
 pair_id: 关于“的”的几点思考
+title: Some Thoughts on "De
+tags:
+  - Linguistics
 ---
 1. **A New Discussion of the Tense Particle “de”**
 

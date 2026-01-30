@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "De“的、地、得”字短语刍议"
 approx_date: "2018-05"
-tags: [语言学]
 lang: en
 is_translation: true
 pair_id: De“的、地、得”字短语刍议
+title: "A Brief Discussion on Phrases with “的”, “地”, and “得”"
+tags:
+  - Linguistics
 ---
 1. **The High Frequency of De “的, 地, 得” Usage**
 

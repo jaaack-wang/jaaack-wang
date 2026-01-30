@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "试论贝卡利亚的死刑思想"
 approx_date: "2017-06"
-tags: [书评,法学]
 lang: en
 is_translation: true
 pair_id: 试论贝卡利亚的死刑思想
+title: "On Beccaria’s Views on the Death Penalty"
+tags: ["Book Review"]
 ---
 **Abstract**: Beccaria’s thinking on the death penalty is of great significance, far-reaching in influence, and has made an indelible contribution to advancing today’s global process of abolishing the death penalty. In general, Beccaria’s death-penalty thought takes as its main content a clear and systematic exposition of abolitionism, and it embodies the internal characteristic of combining social contract theory and utilitarianism. From the perspective of social contract theory, as the theoretical foundation of his penal law system, Beccaria was deeply influenced by Rousseau’s theory: both emphasized that the prerequisite for the emergence of the social contract is human natural rights (such as the right to life) and humankind’s self-interested nature. His innovative significance lies in that, on the basis that humankind cedes only part of its freedom rather than all of it, he denied the power of the state and the law to put citizens to death. Beccaria’s utilitarian thought takes humanitarianism as the highest pursuit and crime prevention as the specific goal, which makes his penal law theory rich in modesty and deterrence rather than a simple lex talionis retributive punishment. In addition, Beccaria’s abolitionist thought on the death penalty is not thorough. This article mainly takes three aspects—social contract theory, utilitarianism, and incompleteness in his death-penalty thought—as entry points, and offers commentary on each in turn, analyzes relevant controversies, and provides corresponding supplements, fully affirming, in standpoint, the progressiveness and prudence of his death-penalty thought.
 

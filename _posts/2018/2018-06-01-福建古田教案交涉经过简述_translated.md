@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "福建古田教案交涉经过简述"
 approx_date: "2018-06"
-tags: [历史]
 lang: en
 is_translation: true
 pair_id: 福建古田教案交涉经过简述
+title: A Brief Account of the Negotiations over the Gutian Incident in Fujian
+tags:
+  - history
 ---
 ## I. The Occurrence of the Incident
 

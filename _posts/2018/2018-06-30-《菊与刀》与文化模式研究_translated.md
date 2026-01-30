@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "《菊与刀》与文化模式研究"
 approx_date: "2018-06"
-tags: [历史]
 lang: en
 is_translation: true
 pair_id: 《菊与刀》与文化模式研究
+title: The Chrysanthemum and the Sword and the Study of Cultural Patterns
+tags:
+  - history
 ---
 Ruth Benedict’s *The Chrysanthemum and the Sword* is a remarkable book in the history of anthropological research. The author was an American scholar who neither knew Japanese nor had ever been to the Japanese mainland, yet this work—studying the basic patterns of Japanese culture, or Japanese national character—became a guide for U.S. occupation policy toward Japan after World War II. The postwar plans for Japan proposed in the book were later almost all realized and proved effective—an astonishing fact indeed. Wikipedia holds that the book not only shaped Americans’ basic understanding of Japan, but also influenced Japanese people’s self-understanding; although it faced considerable criticism after publication, that has not hindered its continuing influence. Some scholars even believe that, to some extent, later related studies are merely footnotes to this book<a id="cite1" href="#ref1">[1]</a>. Even C. Douglas Lummis, a critic of the book, has to admit that *The Chrysanthemum and the Sword* is a founding work of postwar Japanology, and that it essentially laid the research framework for the entire field of Nihonjinron<a id="cite2" href="#ref2">[2]</a>. You Guolong believes that, in terms of research significance, this book: (1) announced that anthropology had moved from the study of primitive societies into the study of large-scale civilized societies; (2) demonstrated how one can understand the developmental trends of larger socio-cultures by studying human psychology<a id="cite3" href="#ref3">[3]</a>. Like the author, I neither know Japanese nor have ever been to Japan, and the general reader’s understanding of Japan is also quite limited. The basic facts above about *The Chrysanthemum and the Sword* are of some help for us to grasp the overall value and significance of this book.
 

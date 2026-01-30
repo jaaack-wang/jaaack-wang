@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "《理想国》第三卷简括"
 approx_date: "2017-09"
-tags: [哲学,理想国]
 lang: en
 is_translation: true
 pair_id: 《理想国》第三卷简括
+title: Summary of Book III of The Republic
+tags: [Philosophy]
 ---
 Book III of *The Republic* is Socrates’ preliminary construction of his ideal city-state, and therefore it embodies a very strong prescriptiveness—this is from the perspective of reality. From the ideal perspective, Socrates perhaps thinks that he is merely honestly describing the basic form that an ideal city-state ought to have. In any case, these two are, in the end, still the same thing’s different projections on different levels, and the source of the projection is precisely the text of Book III.
 

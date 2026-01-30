@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "《理想国》第七卷简括"
 approx_date: "2017-12"
-tags: [哲学,理想国]
 lang: en
 is_translation: true
 pair_id: 《理想国》第七卷简括
+title: A Summary of Book VII of The Republic
+tags: [Philosophy]
 ---
 Book VII of *The Republic* first offers a famous analogy aimed at the distinction between the visible world and the intelligible world proposed at the end of Book VI—namely what later generations call the Myth of the Cave. This cave myth holds an important place in the history of Western philosophy and has become a technical term; one can find it on Wikipedia. Of course, when people discuss this allegory, they often attribute it to Plato’s thought rather than Socrates’s, as can be seen from the fact that the Myth of the Cave is also called Plato’s Cave. Exactly how much of what Socrates says in *The Republic* is Socrates’s own thought and how much is Plato’s own thought is difficult to describe accurately. But according to Yale University’s Bryan Magee’s *The Story of Philosophy*, the academic community generally believes that Plato’s early dialogues more or less contain accurate descriptions of Socrates’s doctrines, descriptions that Plato heard firsthand from Socrates. But later on, although Socrates remained the protagonist in the dialogues, he had already become a mouthpiece for Plato to express his own views and doctrines. In short, Plato’s early and later writings clearly represent two different philosophical tendencies. This is an interesting phenomenon worth noting, but as far as *The Republic* is concerned, the Socrates figure within the system of this book is consistent from beginning to end. This reflects the logical consistency of *The Republic*.
 

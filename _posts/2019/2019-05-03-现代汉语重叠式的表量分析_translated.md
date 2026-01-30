@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "现代汉语重叠式的表量分析"
 approx_date: "2019-05"
-tags: [语言学]
 lang: en
 is_translation: true
 pair_id: 现代汉语重叠式的表量分析
+title: A Quantitative Analysis of Reduplication in Modern Chinese
+tags:
+  - Linguistics
 ---
 ## I. Introduction
 

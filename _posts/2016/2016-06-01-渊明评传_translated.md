@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "渊明评传"
 approx_date: "2016-06"
-tags: [人评,文言文]
 lang: en
 is_translation: true
 pair_id: 渊明评传
+title: A Critical Biography of Yuanming
+tags: ["Human Review"]
 ---
 ![img](https://picx.zhimg.com/80/141b66273dcc8edac595c59fb3bef26b_1440w.webp?source=d16d100b)
 

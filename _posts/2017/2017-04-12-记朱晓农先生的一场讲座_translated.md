@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "记朱晓农先生的一场讲座"
 approx_date: "2017-15"
-tags: [记事]
 lang: en
 is_translation: true
 pair_id: 记朱晓农先生的一场讲座
+title: A Lecture by Mr. Zhu Xiaonong
+tags:
+  - Journal
 ---
 The first time I developed a genuine interest in linguistics and later decided to take linguistics as my main focus was after attending a lecture by Mr. Zhu Xiaonong from the Hong Kong University of Science and Technology, when I was only a freshman.
 

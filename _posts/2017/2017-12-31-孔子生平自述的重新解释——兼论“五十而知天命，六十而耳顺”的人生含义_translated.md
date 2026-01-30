@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "孔子生平自述的重新解释——兼论“五十而知天命，六十而耳顺”的人生含义"
 approx_date: "2017-12"
-tags: [人评]
 lang: en
 is_translation: true
 pair_id: 孔子生平自述的重新解释——兼论“五十而知天命，六十而耳顺”的人生含义
+title: "A Reinterpretation of Confucius’s Autobiographical Reflections—with Additional Discussion on the Meaning of “At Fifty, I Knew the Mandate of Heaven; at Sixty, My Ear Was Obedient”"
+tags:
+  - Human review
 ---
 **Abstract**: Confucius’s famous autobiographical account of his life (“At fifteen I set my heart on learning...”) succinctly and from a commanding height summarizes the characteristics of the stages of his personal development, providing a highly significant reference for understanding Confucius’s character and teachings. Specifically, the stages of Confucius’s life development exhibit the following features: setting one’s will on learning at fifteen is the initial stage of Confucius’s life development, and all subsequent stages spring from it; Confucius’s life development embodies a progressive, step-by-step advancement, manifested in the continual enrichment of life experience and the increasingly clear articulation of his aspirations. After fifty, Confucius recognized his desire and positioning for serving in office and engaging in politics for the remainder of his life, and through the formulation “knowing Heaven’s mandate” realized a process of “knowing oneself”; “at sixty the ear is obedient” is progress on this basis, marking the completion of Confucius’s process of “knowing others.” Able both to “know himself” and to “know others,” by seventy Confucius had reached the highest spiritual realm of his life development. The stages of Confucius’s life development reveal his great personality as a traditional Confucian historical spiritual symbol.
 

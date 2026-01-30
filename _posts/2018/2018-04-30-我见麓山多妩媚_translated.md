@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "我见麓山多妩媚"
 approx_date: "2018-04"
-tags: [随笔]
 lang: en
 is_translation: true
 pair_id: 我见麓山多妩媚
+title: The Many Charms I See in Mount Lu
+tags:
+  - Essay
 ---
 If you asked me to use one word—just one word—to describe how Yuelu Mountain makes me feel, I think I would, without the slightest hesitation, choose “charming.” Li Bai has the line, “We never tire of looking at each other—only Jingting Mountain,” and Xin Qiji has the line, “I find green mountains so charming; I expect the green mountains find me the same,” which I love most. Of course, Yuelu Mountain’s “charm” also refers to its graceful beauty and varied allure, but for me, it points more to a tacit understanding that dawns upon the heart, a lingering tenderness that makes one loath to part. I think Yuelu Mountain understands human feelings—especially mine.
 

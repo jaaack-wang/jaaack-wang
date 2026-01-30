@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "《中国歌谣集成•福建卷•福州市分卷》札记"
 approx_date: "2017-12"
-tags: [书评]
 lang: en
 is_translation: true
 pair_id: 《中国歌谣集成•福建卷•福州市分卷》札记
+title: "Notes on \"Collection of Chinese Folk Songs: Fujian Volume, Fuzhou Subvolume"
+tags:
+  - Book Review
 ---
 “Poetry is where the will goes: in the heart it is will; when expressed in words it is poetry. Emotion is stirred within and takes form in words; when words are not enough, therefore one sighs; when sighing is not enough, therefore one sings; when singing is not enough, without knowing it the hands dance and the feet tread.” This passage from the “Preface” to “Guanju” in *The Book of Songs · Zhou Nan · Guanju · Preface* excellently reveals the essence of art as a means of emotional catharsis (catharsis). The so-called “expressing one’s will,” “sighing,” “singing and chanting,” “hands dancing and feet treading,” and so on, all refer to the essential function of art: the release of emotion. We often say that art reflects reality, yet art can often be independent of, or rise above, reality. In fact, as to “reflecting reality,” we might as well understand it as a kind of emotional need for people to express their own understanding of reality. As a kind of spiritual creation and spiritual entertainment in the daily leisure of ordinary people, folk ballads have the characteristics of being close to life, catchy and smooth, and easy to sing, pass on, and memorize—very much in line with our understanding of the cathartic essence of art. These characteristics promote the dissemination and popularity of folk ballads, enabling them to gain a broad audience, and widely reflecting all aspects of the everyday life of ordinary people, expressing their genuine joys, anger, sorrows, and delights—this ultimately forms a virtuous cycle. Folk ballads are undoubtedly one of the most important components of folk literature.
 

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "《论犯罪与刑罚》是怎么写的"
 approx_date: "2017-05"
-tags: [书评,法学]
 lang: en
 is_translation: true
 pair_id: 《论犯罪与刑罚》是怎么写的
+title: How "On Crimes and Punishments" Was Written
+tags: ["Book Review"]
 ---
 ## **I. Beccaria and *On Crimes and Punishments***
 

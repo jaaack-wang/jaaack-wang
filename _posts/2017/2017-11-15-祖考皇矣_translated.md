@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "祖考皇矣"
 approx_date: "2017-11"
-tags: [文言文,中文诗]
 lang: en
 is_translation: true
 pair_id: 祖考皇矣
+title: The Ancestors Are Truly Regal
+tags: ["Classical Chinese"]
 ---
 **Origin of the writing:**
 

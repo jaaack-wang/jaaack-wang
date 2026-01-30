@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "乌云的银边"
 approx_date: "2016-10"
-tags: [随笔,文评]
 lang: en
 is_translation: true
 pair_id: 乌云的银边
+title: The Silver Lining of the Clouds
+tags: [Essay]
 ---
 Note: It was an assigned-topic essay, but I’ve already forgotten what the prompt was back then.
 

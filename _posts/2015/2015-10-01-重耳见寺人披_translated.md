@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "重耳见寺人披"
 approx_date: "2015-10"
-tags: [文言文,创意写作]
 lang: en
 is_translation: true
 pair_id: 重耳见寺人披
+title: "Chong’er Sees Siren Pi"
+tags: ["Classical Chinese", "Creative Writing"]
 ---
 # Chong’er Meets the Eunuch Pi①
 

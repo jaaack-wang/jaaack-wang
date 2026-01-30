@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "《理想国》第六卷简括"
 approx_date: "2017-11"
-tags: [哲学,理想国]
 lang: en
 is_translation: true
 pair_id: 《理想国》第六卷简括
+title: Summary of Book VI of "The Republic
+tags: [Philosophy]
 ---
 Book VI of *The Republic* first explores the question of the philosopher.
 

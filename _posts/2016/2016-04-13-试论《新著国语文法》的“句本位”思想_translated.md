@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "试论《新著国语文法》的“句本位”思想"
 approx_date: "2016-04"
-tags: [语言学]
 lang: en
 is_translation: true
 pair_id: 试论《新著国语文法》的“句本位”思想
+title: On the "Sentence-Centered" Concept in The New Chinese Grammar
+tags:
+  - Linguistics
 ---
 ​      
 

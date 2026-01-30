@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "岳麓书院祭孔大典祭文"
 approx_date: "2017-15"
-tags: [文言文]
 lang: en
 is_translation: true
 pair_id: 岳麓书院祭孔大典祭文
+title: Sacrificial Oration for the Confucius Commemoration Ceremony at Yuelu Academy
+tags:
+  - Classical Chinese
 ---
 In this mid-autumn of the Bingshen year, it so happens to be the 2,567th anniversary of the birth of our Former Teacher Confucius; thus is this piece respectfully offered in praise:
 

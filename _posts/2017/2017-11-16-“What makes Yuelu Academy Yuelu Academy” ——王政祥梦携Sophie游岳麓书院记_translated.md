@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "“What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记"
 approx_date: "2017-11"
-tags: [创意写作]
 lang: en
 is_translation: true
 pair_id: “What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记
+title: "“What Makes Yuelu Academy Yuelu Academy” — Wang Zhengxiang’s Dream Visit to Yuelu Academy with Sophie"
+tags:
+  - Creative Writing
 ---
 After finishing Jostein Gaarder’s most famous novel, *Sophie's World*, Wang Zhengxiang still felt unsatisfied. Seizing a sudden burst of inspiration, he planned to hurriedly write a supplementary novel in English, called “A missing episode of Sophie's World——Human Nature” (*A Missing Episode of Sophie's World—Human Nature*). The beginning of the novel was intended to follow the ending of *Sophie's World*—Sophie, under Alberto’s guidance, realizes that she and he are merely fictional characters fabricated by Hilde’s father while explaining the history of philosophy to his daughter. As the novel is about to end, she and Alberto no longer have a chance to escape from the world of the novel, so they run to near his home while Hilde’s father, or the major (the major), is not paying attention. —He writes to the point where Sophie sees the major and his daughter sharing a tender family meal at home, and she misses her family who are still pitifully stranded in the world of the novel, so she decides to go back (return), to start over and rewrite everything (restart and rewrite everything). Alberto can’t resist Sophie and agrees. Wang Zhengxiang writes “They disappeared in the shadows……”, as a way of accounting for the cause of this missing-episode piece. Then he writes the title,
 

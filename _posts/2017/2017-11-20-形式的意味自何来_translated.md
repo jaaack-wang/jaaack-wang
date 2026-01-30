@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "形式的意味自何来"
 approx_date: "2017-11"
-tags: [书评,随笔]
 lang: en
 is_translation: true
 pair_id: 形式的意味自何来
+title: Where Does the Meaning of Form Come From?
+tags: ["Book Review"]
 ---
 “Significant form” is a concept proposed by the British formalist aesthetician Clive Bell in the first chapter, “The Aesthetic Hypothesis,” of his famous book *Art*. This concept originally referred specifically to visual art, or was generalized from visual art, as Clive Bell put it: “I call these combinations and relations of lines and colours, and these aesthetically moving forms, ‘significant form’; it is that common quality possessed by all works of visual art.” The aesthetically moving process of “significant form” is the process of arousing people’s “aesthetic emotion,” and in Clive Bell’s view, this is precisely the process of truly experiencing “beauty.” In other words, the process of experiencing “beauty” can be summarized as: “perception of ‘significant form’” — “arousal of ‘aesthetic emotion’” — “experience of ‘beauty’.”
 

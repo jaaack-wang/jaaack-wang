@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "论屈原人格--从屈原的优越感与自卑感说起"
 approx_date: "2015-12"
-tags: [人评]
 lang: en
 is_translation: true
 pair_id: 论屈原人格--从屈原的优越感与自卑感说起
+title: "On Qu Yuan’s Character: Beginning with His Sense of Superiority and Inferiority"
+tags:
+  - Human Evaluation
 ---
 [Abstract] Qu Yuan is one of China’s most influential cultural celebrities. For more than 2,000 years, studies of Qu Yuan have been numerous, but research on his personality, for various reasons, has not been sufficiently satisfactory. This paper will take Qu Yuan’s intense sense of superiority and enormous sense of inferiority as an entry point, place Qu Yuan in the position of an individual person, put forward a brand-new view of Qu Yuan’s personality, and strive to make this view well-grounded and able to stand up to testing.
 

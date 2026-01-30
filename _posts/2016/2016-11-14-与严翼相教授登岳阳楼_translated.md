@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "与严翼相教授登岳阳楼"
 approx_date: "2016-11"
-tags: [文言文,中文诗]
 lang: en
 is_translation: true
 pair_id: 与严翼相教授登岳阳楼
+title: Climbing Yueyang Tower with Professor Yan Yixiang
+tags: ["Classical Chinese"]
 ---
 On November 14, 2016, I toured Yueyang Junshan and Yueyang Tower together with Professor Yan Ik Sang of Hanyang University in Seoul, Korea (Seoul). At the time heavy fog arose, shaking the city yet not dispersing; as far as the eye could see, there was only thick mist. Near noon rain began, further helping to fill the vast void; the sun was low and dim, lingering without clearing. Professor Yan arrived happily; upon seeing it he could neither laugh nor cry. Having no alternative, he sighed in disappointment; we agreed to lean on the railing, facing Dongting Lake and holding our feelings for five minutes. Later he asked for a piece of writing, saying you could write a “New Record of Yueyang Tower” or “A New Record of Yueyang Tower”; a regulated verse of seven characters or an ancient fu would do. To please you, it would also be possible to complete it as prose, and so on. Now the vernacular poem has been completed, yet Professor Yan has already flown back to his country; though I crane my neck and stand on tiptoe, I do not see him. I add this note as a remembrance.
 

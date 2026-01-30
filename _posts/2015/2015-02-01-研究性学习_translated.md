@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "研究性学习"
 approx_date: "2015-02"
-tags: [性研究,社会学]
 lang: en
 is_translation: true
 pair_id: 研究性学习
+title: A Study of Sexual Perceptions in China
+tags: ["sex research", "sociology"]
 ---
 {:toc}
 

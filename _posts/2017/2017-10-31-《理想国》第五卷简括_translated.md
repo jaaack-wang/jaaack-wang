@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "《理想国》第五卷简括"
 approx_date: "2017-10"
-tags: [哲学,理想国]
 lang: en
 is_translation: true
 pair_id: 《理想国》第五卷简括
+title: Summary of Book V of The Republic
+tags: [Philosophy]
 ---
 At the beginning of Book V of the *Republic*, what was originally to be discussed was the types of “bad constitutions,” because this was precisely the question left over from the end of the previous book. But this topic was interrupted by the appearance of Polemarchus. Polemarchus believes that all of Socrates’ earlier answers involved a tendency to evade what is weighty and attend to what is light, that he “means to dodge a whole large section of the debate that is by no means insignificant, trying to slip past without giving us an explanation.” In other words, Polemarchus is calling into question the theoretical presuppositions Socrates used in the earlier discussion—presuppositions that have not been proven and therefore cannot be satisfactory. Of course, if in discussing an issue people had to clarify all theoretical presuppositions, or if people’s discussion lacked any shared consensus as the major premise for discussing a specific issue, then any discussion would be endless. Polemarchus’ challenge here, of course, is not intentionally meant to make this discussion endless; rather, it is to enable it to be built upon a firmer theoretical consensus—that is, to make the theoretical presuppositions used in this discussion as impeccable as possible. This is also why the *Republic* goes back and forth repeatedly in its discussion of a specific issue; this back-and-forth is in fact the characteristic of Socrates’ method (Socrates’s Methods) that we pointed out in Book IV. From this we can see the role Polemarchus plays in the *Republic*: to urge Socrates continuously to test the theoretical presuppositions he employs, allowing the Socratic method to be brought to full expression. This is something we should pay attention to when reading the *Republic*.
 

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "寂寞和希望：铁屋中的呐喊"
 approx_date: "2018-12"
-tags: [人评]
 lang: en
 is_translation: true
 pair_id: 寂寞和希望：铁屋中的呐喊
+title: "Loneliness and Hope: Shouts in the Iron House"
+tags:
+  - Human Review
 ---
 ## **I**
 

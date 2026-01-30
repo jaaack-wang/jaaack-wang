@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "浅谈《沈从文的后半生》"
 approx_date: "2015-10"
-tags: [书评,人物]
 lang: en
 is_translation: true
 pair_id: 浅谈《沈从文的后半生》
+title: A Brief Discussion of "The Latter Half of Shen Congwen's Life
+tags: ["Book Review"]
 ---
 *The Latter Half of Shen Congwen’s Life* is a major work by Professor Zhang Xinying of Fudan University from last year. At the time, I saw this book on the bestseller list, but never had the chance to buy a copy and read it. At the end of September, I inadvertently learned of a library essay contest soliciting book reviews; among the two recommended titles, one was reader-recommended—and it was precisely *The Latter Half of Shen Congwen’s Life*. I therefore developed a strong interest in this book. I bought a copy during the National Day holiday and read it carefully, and found it to be a biography with solid writing and considerable feeling. I’ve never been particularly keen on Shen Congwen, and I have long been dissatisfied with his long-winded, complicated, muddled, and inarticulate choice of words and sentence-making. For example, when I first opened this book, on page six I saw a sentence Shen Congwen wrote to Zhang Zhaohuo: “When writing this letter, I wrote it completely as happily as a love letter, filled with affection and written in a fussy, piecemeal way!” What kind of sentence is that? At that time, the only thing I was interested in was exploring the psychological mechanism behind Shen Congwen’s “not writing” in the latter half of his life, and the meaning of this cultural phenomenon under a specific historical context. Unexpectedly, this happened to coincide with the spirit of the “Explanation” the author wrote at the beginning of the book. This kept me quite attentive throughout the entire reading process. In addition to reading this book, I also found *Shen Congwen: Chronological Biography*, *Research Materials on Shen Congwen*, and Zhang Xinying’s paper “From Abstract Lyricism to Delirious Ravings—Shen Congwen in the 1940s” to read alongside it. During that period, everywhere my eyes fell, it could truly be said, was “Shen Congwen,” “Shen Congwen.” Who would have thought that while I was updating my views on Shen Congwen, I also no longer dared to point fingers at him. Even so, I will briefly talk about two impressions this book gave me.
 

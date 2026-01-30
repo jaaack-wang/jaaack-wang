@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "从心所欲，不逾矩——情欲与伦理的和解式"
 approx_date: "2016-10"
-tags: [随笔,文评]
 lang: en
 is_translation: true
 pair_id: 从心所欲，不逾矩——情欲与伦理的和解式
+title: "Follow Your Heart Without Overstepping Boundaries: A Reconciliatory Approach to Desire and Ethics"
+tags: [Essay]
 ---
 Psychoanalysts believe that civilization and instinct are like the two poles of a magnet—forever mutually exclusive, forever in contention. To this end, they created a set of theoretical terms, such as ego, id, superego; the pleasure principle, the moral principle, the reality principle, and so on. A person’s whole life is then lived under the conflicts among so many “selves” and so many “principles,” surviving in repression, anxiety, and difficulty. Confucius did not dare to boast until he was seventy that he could “follow what his heart desired without overstepping the bounds,” let alone the likes of us. And the “finding comfort in one’s own comfort” that Zhuangzi spoke of—how easy is that to talk about?
 

@@ -7,11 +7,16 @@ permalink: /blogs/en/
   <div class="inner container archive-page">
     <h2>Blogs (English)</h2>
 
+    <p class="muted" style="margin-top: .25rem;">
+      Disclaimer: All posts that were originally written in Chinese were translated into English by GPT-5.2.
+    </p>
+
     <p class="archive-tags-link">
       <a href="{{ '/blogs/en/tags/' | relative_url }}">Browse by tag →</a>
       &nbsp;|&nbsp;
       <a href="{{ '/' | relative_url }}#latest-blogs">All (originals) →</a>
     </p>
+
 
     {% assign en_posts = site.posts | where: "lang", "en" %}
     {% assign grouped = en_posts | group_by_exp: "p", "p.date | date: '%Y'" %}
