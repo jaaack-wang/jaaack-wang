@@ -286,6 +286,8 @@
         Disclaimer only on translated posts:
         Set `translated: true` in the translated post's front matter.
         {%- endcomment -%}
+
+        <!-- DEBUG translated={{ page.translated }} is_translation={{ page.is_translation }} lang={{ page.lang }} layout={{ page.layout }} -->
         {% if page.translated %}
         {% if page.lang == "zh" %}
         <p class="post-disclaimer">
@@ -299,20 +301,6 @@
         {% endif %}
 
         {{ content }}
-
-        <!-- <nav class="post-nav" aria-label="Post">
-          {% if page.previous %}
-          <a class="post-nav-link prev" href="{{ page.previous.url }}" rel="prev">
-            ← Previous: {{ page.previous.title }}
-          </a>
-          {% endif %}
-
-          {% if page.next %}
-          <a class="post-nav-link next" href="{{ page.next.url }}" rel="next">
-            Next: {{ page.next.title }} →
-          </a>
-          {% endif %}
-        </nav> -->
 
         {%- comment -%}
         Scoped navigation:
