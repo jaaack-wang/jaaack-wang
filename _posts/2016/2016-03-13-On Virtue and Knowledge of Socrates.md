@@ -2,7 +2,7 @@
 layout: post
 title: "On Virtue and Knowledge of Socrates"
 approx_date: "2016-03"
-tags: [哲学]
+tags: [Philosophy]
 lang: en
 is_translation: false
 pair_id: On Virtue and Knowledge of Socrates

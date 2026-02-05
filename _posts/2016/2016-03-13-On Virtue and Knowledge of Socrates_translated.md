@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Virtue and Knowledge of Socrates"
+title: "论苏格拉底的美德与知识"
 approx_date: "2016-03"
 tags: [哲学]
 lang: zh

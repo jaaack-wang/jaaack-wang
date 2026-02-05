@@ -3209,7 +3209,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
-				padding: 2em 1.5em 0 1.5em;
+				padding: 2em 2rem 0 2rem;
 			}
 
 		/* Footer */
@@ -3263,6 +3263,12 @@ input, select, textarea {
 
 			body, input, select, textarea {
 				font-size: 12pt;
+			}
+
+		/* Main */
+
+			#main > section > .container {
+				padding: 2em 1.75rem 0 1.75rem;
 			}
 
 		/* List */

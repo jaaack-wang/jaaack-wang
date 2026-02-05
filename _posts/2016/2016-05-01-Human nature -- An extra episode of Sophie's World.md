@@ -2,7 +2,7 @@
 layout: post
 title: "Human nature -- An extra episode of Sophie's World"
 approx_date: "2016-05"
-tags: [哲学,创意写作]
+tags: [Philosophy, Creative Writing]
 lang: en
 is_translation: false
 pair_id: Human nature -- An extra episode of Sophie's World
