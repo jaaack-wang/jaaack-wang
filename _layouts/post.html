@@ -27,6 +27,182 @@
   <meta name="twitter:image" content="{{ image }}">
   <link rel="canonical" href="{{ url }}">
 
+  <style>
+    :root {
+      --accent: #41b883;
+      --text: #333;
+      --light-gray: #888;
+    }
+
+    body {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .post-wrapper {
+      max-width: 850px;
+      margin: 6rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .post-wrapper h1 {
+      color: var(--accent);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .post-meta {
+      color: var(--light-gray);
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-disclaimer {
+      margin: 0 0 1.5rem;
+      padding: .65rem .85rem;
+      border-left: 4px solid #e6e6e6;
+      background: #fafafa;
+      color: #666;
+      font-size: .98rem;
+    }
+
+    .post-wrapper p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .post-wrapper img {
+      display: block;
+      margin: 2rem auto;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+
+    .post-footer a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    .post-nav-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #41b883;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .post-nav-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .post-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .post-nav .next {
+        align-self: flex-end;
+      }
+    }
+
+    .share-bar {
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e6e6e6;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+    }
+
+    .share-bar span {
+      color: #666;
+      margin-right: .25rem;
+    }
+
+    .share-bar .share {
+      display: inline-block;
+      padding: .35rem .6rem;
+      border-radius: 5px;
+      background: #f4f4f4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .share-bar .share:hover {
+      text-decoration: underline;
+    }
+
+    .share-bar .x {
+      color: #111;
+    }
+
+    .share-bar .li {
+      color: #0a66c2;
+    }
+
+    .share-bar .fb {
+      color: #1877f2;
+    }
+
+    .share-bar .rd {
+      color: #ff4500;
+    }
+
+    .share-bar .em {
+      color: #41b883;
+    }
+
+    .post-comments {
+      margin-top: 2rem;
+    }
+
+    .post-comments h3 {
+      color: #41b883;
+      border-bottom: 2px solid #41b883;
+      display: inline-block;
+      padding-bottom: .25rem;
+    }
+
+    .post-tags a {
+      margin-right: .35rem;
+      text-decoration: none;
+      color: #41b883;
+      font-weight: 600
+    }
+  </style>
 </head>
 
 <body class="is-preload">
@@ -189,7 +365,7 @@
           </div>
 
           <div id="comments" class="post-comments">
-            <h3>Comments</h3>
+            <h3 style="margin-top:2rem">Comments</h3>
 
             <script src="https://giscus.app/client.js" data-repo="jaaack-wang/jaaack-wang" data-repo-id="R_kgDOGO-aLw"
               data-category="Announcements" data-category-id="DIC_kwDOGO-aL84Cw1ix" data-mapping="url" data-strict="0"
