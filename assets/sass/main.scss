@@ -47,6 +47,285 @@
 		vertical-align: baseline;
 	}
 
+/* Custom overrides */
+
+:root {
+	--accent: #4acaa8;
+	--accent-soft: rgba(74, 202, 168, 0.12);
+	--text: #2f2f2f;
+	--text-muted: #666;
+	--card-bg: #f7f9f8;
+}
+
+body {
+	color: var(--text);
+}
+
+strong, b {
+	color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--text);
+}
+
+a.icon,
+.icons a,
+.btn {
+	border-bottom: 0;
+}
+
+#header {
+	background: linear-gradient(165deg, #53d0ae 0%, #45c6a3 42%, #3aa68a 100%);
+}
+
+#header > nav ul li {
+	border-top: solid 2px rgba(255, 255, 255, 0.18);
+}
+
+#header > header .avatar img {
+	border-radius: 999px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+#main > section {
+	border-top: solid 4px #eef2f2;
+}
+
+.news {
+	margin-top: 1.5rem;
+	border-left: 2px solid #e3f3ed;
+	padding-left: 1.25rem;
+}
+
+.news li {
+	position: relative;
+	margin-bottom: 1.1rem;
+	padding-left: 0.5rem;
+}
+
+.news li:before {
+	content: "";
+	position: absolute;
+	left: -1.37rem;
+	top: 0.5rem;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 4px rgba(74, 202, 168, 0.18);
+}
+
+.news b {
+	color: var(--accent);
+}
+
+.news p {
+	margin: 0;
+}
+
+.mmv-wrap {
+	max-width: 100%;
+	width: 900px;
+	margin: 1.5rem auto;
+	overflow: hidden;
+}
+
+.mmv-wrap iframe,
+.mmv-wrap canvas,
+.mmv-wrap > div {
+	max-width: 100% !important;
+}
+
+#latest-blogs .archive-page {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+#latest-blogs .archive-tags-link a {
+	color: var(--accent);
+}
+
+.archive-tags-link a {
+	color: var(--accent);
+}
+
+#latest-blogs .year-title {
+	font-size: 1.25rem;
+	color: var(--text);
+	letter-spacing: 0.02em;
+	margin-top: 1.75rem;
+	margin-bottom: 0.75rem;
+}
+
+#latest-blogs .post-row {
+	margin: 0.6rem 0;
+}
+
+#latest-blogs .post-row a {
+	color: var(--accent);
+}
+
+#latest-blogs .muted {
+	color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+	#latest-blogs .archive-page {
+		padding: 0 1.25rem;
+	}
+}
+
+
+.post-wrapper {
+	max-width: 850px;
+	margin: 6rem auto 4rem;
+	padding: 0 1.25rem;
+}
+
+.post-wrapper h1 {
+	color: var(--accent);
+	font-size: 2.2rem;
+	font-weight: 800;
+	margin-bottom: 0.75rem;
+	border-bottom: 3px solid var(--accent);
+	display: inline-block;
+	padding-bottom: 0.3rem;
+}
+
+.post-meta {
+	color: var(--text-muted);
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+.post-disclaimer {
+	margin: 0 0 1.5rem;
+	padding: 0.65rem 0.85rem;
+	border-left: 4px solid #e6e6e6;
+	background: #fafafa;
+	color: #666;
+	font-size: 0.98rem;
+}
+
+.post-wrapper p {
+	margin-bottom: 1.5rem;
+	font-size: 1.1rem;
+}
+
+.post-wrapper img {
+	display: block;
+	margin: 2rem auto;
+	border-radius: 6px;
+	max-width: 100%;
+	height: auto;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 2.5rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid #e6e6e6;
+}
+
+.post-nav-link {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--accent);
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.post-nav-link:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+	.post-nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.post-nav .next {
+		align-self: flex-end;
+	}
+}
+
+.share-bar {
+	margin-top: 1.75rem;
+	padding-top: 1rem;
+	border-top: 1px solid #e6e6e6;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.share-bar span {
+	color: #666;
+	margin-right: 0.25rem;
+}
+
+.share-bar .share {
+	display: inline-block;
+	padding: 0.35rem 0.6rem;
+	border-radius: 5px;
+	background: #f4f4f4;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.share-bar .share:hover {
+	text-decoration: underline;
+}
+
+.share-bar .x {
+	color: #111;
+}
+
+.share-bar .li {
+	color: #0a66c2;
+}
+
+.share-bar .fb {
+	color: #1877f2;
+}
+
+.share-bar .rd {
+	color: #ff4500;
+}
+
+.share-bar .em {
+	color: var(--accent);
+}
+
+.post-comments {
+	margin-top: 2rem;
+}
+
+.post-comments h3 {
+	color: var(--accent);
+	border-bottom: 2px solid var(--accent);
+	display: inline-block;
+	padding-bottom: 0.25rem;
+	margin-top: 2rem;
+}
+
+.post-footer {
+	margin-top: 3rem;
+	font-size: 1rem;
+}
+
+.post-footer a {
+	color: var(--accent);
+	font-weight: 500;
+}
+
 	article, aside, details, figcaption, figure,
 	footer, header, hgroup, menu, nav, section {
 		display: block;

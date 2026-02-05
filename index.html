@@ -10,82 +10,6 @@ layout: null
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
-	<style>
-		#News ul.news li {
-			margin-bottom: 0.4em;
-		}
-
-		#News ul.news p {
-			margin: 0;
-		}
-
-		/* --- MapMyVisitors: keep inside main column and make smaller --- */
-		.mmv-wrap {
-			max-width: 100%;
-			width: 900px;
-			/* adjust: 700 / 800 / 900 */
-			margin: 1.5rem auto;
-			/* center it */
-			overflow: hidden;
-		}
-
-		/* If their embed uses iframe/canvas/div, force it to fit wrapper */
-		.mmv-wrap iframe,
-		.mmv-wrap canvas,
-		.mmv-wrap>div {
-			max-width: 100% !important;
-		}
-
-		/* --- Archive styles (scoped to #latest-blogs) --- */
-		:root {
-			--accent: #41b883;
-		}
-
-		/* Use the same feel as other sections: centered and padded */
-		#latest-blogs .archive-page {
-			max-width: 900px;
-			margin: 0 auto;
-			padding-left: 2rem;
-			padding-right: 2rem;
-		}
-
-		/* match other section titles (h3) */
-		#latest-blogs h3 {
-			margin-bottom: 1rem;
-			/* optional, matches spacing vibe */
-		}
-
-		/* keep your accent link styling */
-		#latest-blogs .post-row {
-			margin: .65rem 0;
-		}
-
-		#latest-blogs .post-row a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		#latest-blogs .post-row a:hover {
-			text-decoration: underline;
-		}
-
-		#latest-blogs .muted {
-			color: #888;
-		}
-
-		#latest-blogs .archive-tags-link a {
-			color: var(--accent);
-		}
-
-		/* optional: extra breathing room on very small screens */
-		@media (max-width: 480px) {
-			#latest-blogs .archive-page {
-				padding-left: 1.25rem;
-				padding-right: 1.25rem;
-			}
-		}
-	</style>
-
 </head>
 
 <body class="is-preload">
@@ -616,7 +540,7 @@ layout: null
 
 					{% for yr in grouped %}
 					<div class="year" id="{{ yr.name }}">
-						<h3>{{ yr.name }}</h3>
+						<h4 class="year-title">{{ yr.name }}</h4>
 
 						{% for post in yr.items %}
 						<div class="post-row">
@@ -636,13 +560,13 @@ layout: null
 									<h2>Blogs</h2>
 
 									<p>
-									<a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
+									<a href="{{ "/blogs/tags/" | relative_url }}" style="color:#4acaa8">Browse by tag →</a>
 									</p>
 
 							<div style="max-width:800px; margin-left:2rem;">
 							{% for post in site.posts limit:5 %}
 								<article class="box" style="margin:1.5rem 0;">
-								<h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
+								<h3><a href="{{ post.url }}" style="color:#4acaa8;">{{ post.title }}</a></h3>
 								<p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
 								{% if post.excerpt %}
 									<p>{{ post.excerpt | strip_html | truncate:180 }}</p>
@@ -653,7 +577,7 @@ layout: null
 
 							<p style="margin-top:2rem;">
 								<a class="button" href="/blogs/" style="
-								background-color:#41b883;
+								background-color:#4acaa8;
 								color:white;
 								border:none;
 								padding:0em 1.2em;
