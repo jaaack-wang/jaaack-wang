@@ -4,7 +4,7 @@ approx_date: "2017-10"
 lang: en
 is_translation: true
 pair_id: 何思何虑，勿助勿忘
-title: No Need to Overthink or Worry, Neither Help Nor Forget
+title: "Think Not, Worry Not: Neither Assist Nor Forget"
 tags: ["Book Review"]
 ---
 In this age and society beset by all kinds of uncertainties that trouble people’s hearts, *The Most Magical Philosophy of Mind of Wang Yangming* is undoubtedly a timely and fitting piece of “chicken soup for the soul.” Many people need to rely on it to soothe or numb the emotional crises brought on by interpersonal and social relations; this is understandable. Of course, in the same age and society, the sense of distrust derived from such emotional crises also leads many people not to buy into this at all. Modern society is pluralistic or fragmented, but people’s hearts are indeed restless, unstable, and in need of comfort—this is our most basic sense of reality. Now, “chicken soup for the soul” may not be a good term, but its existence is, of course, reasonable. Human beings are emotional animals that think with feelings; where there is external “stimulation,” there is bound to be an inner “reaction.” A set of “reaction rules” for dealing with reality produced by experience, once universalized and theorized, may be the generative mechanism behind various kinds of “chicken soup for the soul.” Put this way, so-called philosophy, religion, ideology, and so on, from God’s perspective, would also have to be said to belong to the “chicken soup for the soul” category. No wonder that when man begins to think, God laughs. For in the face of clumsy, shoddily made “chicken soup for the soul,” the humans who created God have to laugh as well.

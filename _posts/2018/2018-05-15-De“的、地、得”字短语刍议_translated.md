@@ -4,7 +4,7 @@ approx_date: "2018-05"
 lang: en
 is_translation: true
 pair_id: De“的、地、得”字短语刍议
-title: "A Brief Discussion on Phrases with “的”, “地”, and “得”"
+title: "A Brief Discussion of De-Phrases (的, 地, 得)"
 tags:
   - Linguistics
 ---

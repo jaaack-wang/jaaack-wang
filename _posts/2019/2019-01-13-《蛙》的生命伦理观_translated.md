@@ -4,7 +4,7 @@ approx_date: "2019-01"
 lang: en
 is_translation: true
 pair_id: 《蛙》的生命伦理观
-title: The Bioethical Perspective in "Frog
+title: "The Bioethical Perspective in Frog"
 tags:
   - Book Review
 ---

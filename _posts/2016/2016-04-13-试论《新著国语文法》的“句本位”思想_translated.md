@@ -4,7 +4,7 @@ approx_date: "2016-04"
 lang: en
 is_translation: true
 pair_id: 试论《新著国语文法》的“句本位”思想
-title: On the "Sentence-Centered" Concept in The New Chinese Grammar
+title: "A Tentative Discussion of the Sentence-Centered View in New Chinese Grammar"
 tags:
   - Linguistics
 ---

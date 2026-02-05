@@ -4,9 +4,9 @@ approx_date: "2018-12"
 lang: en
 is_translation: true
 pair_id: 寂寞和希望：铁屋中的呐喊
-title: "Loneliness and Hope: Shouts in the Iron House"
+title: "Loneliness and Hope: A Cry from the Iron House"
 tags:
-  - Human Review
+  - Character Analysis
 ---
 ## **I**
 

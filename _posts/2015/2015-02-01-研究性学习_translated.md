@@ -4,8 +4,8 @@ approx_date: "2015-02"
 lang: en
 is_translation: true
 pair_id: 研究性学习
-title: A Study of Sexual Perceptions in China
-tags: ["sex research", "sociology"]
+title: "Research-Based Learning: A Study of Sexuality"
+tags: ["Sex Research", "Sociology"]
 ---
 {:toc}
 

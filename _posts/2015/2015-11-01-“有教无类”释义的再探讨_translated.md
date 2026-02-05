@@ -4,7 +4,7 @@ approx_date: "2015-11"
 lang: en
 is_translation: true
 pair_id: “有教无类”释义的再探讨
-title: A Further Exploration of the Meaning of "Education for All, Without Discrimination
+title: 'A Reexamination of the Interpretation of "You Jiao Wu Lei"'
 tags: [Education]
 ---
 [Abstract] By revealing the differences in meaning between the two major categories of interpretations of “有教无类,” this paper raises doubts about the current mainstream interpretation. Under such doubt, the author mainly, through a detailed discussion of the non-mainstream interpretation, proposes the greater likelihood of the non-mainstream interpretation and the author’s re-examination from three aspects: the mainstream interpretation of “有教无类” in ancient annotated editions, its grammatical meaning in Old Chinese, and its relevance to Confucius’ thought.

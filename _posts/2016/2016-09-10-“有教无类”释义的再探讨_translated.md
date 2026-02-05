@@ -4,7 +4,7 @@ approx_date: "2016-11"
 lang: en
 is_translation: true
 pair_id: “有教无类”释义的再探讨
-title: A Further Exploration of the Interpretation of "Teaching Without Discrimination
+title: 'A Reexamination of the Interpretation of "You Jiao Wu Lei"'
 tags: [Education]
 ---
 **Abstract**: The current mainstream opinion holds that “You jiao wu lei” refers to the non-discriminatory nature of the objects of education, but the interpretations over the long millennium of antiquity, by contrast, placed emphasis on the non-discriminatory nature of educational outcomes and indicated the educational aim implied behind “You jiao wu lei.” The semantic-syntactic characteristics of “You jiao wu lei,” as well as the perfective usage in Old Chinese whereby the character “you” as a possessive verb marks the perfect aspect, both support the latter view. “You jiao wu lei” is the projection, at the level of education, of the Confucian idea of “stopping at the utmost good”; it is Confucius’ ideal of an ultimate educational aim, highly compatible with his entire system of thought, with far-reaching influence. Today’s ideal of quality-oriented education is in the same lineage.

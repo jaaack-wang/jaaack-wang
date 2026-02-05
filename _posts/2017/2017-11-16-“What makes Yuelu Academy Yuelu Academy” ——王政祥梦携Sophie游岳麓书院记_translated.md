@@ -4,7 +4,7 @@ approx_date: "2017-11"
 lang: en
 is_translation: true
 pair_id: “What makes Yuelu Academy Yuelu Academy” ——王政祥梦携Sophie游岳麓书院记
-title: "“What Makes Yuelu Academy Yuelu Academy” — Wang Zhengxiang’s Dream Visit to Yuelu Academy with Sophie"
+title: "What Makes Yuelu Academy Yuelu Academy: Wang Zhengxiang's Dream Journey to Yuelu Academy with Sophie"
 tags:
   - Creative Writing
 ---

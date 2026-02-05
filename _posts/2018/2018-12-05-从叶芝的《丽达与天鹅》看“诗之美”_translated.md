@@ -6,7 +6,7 @@ is_translation: true
 pair_id: 从叶芝的《丽达与天鹅》看“诗之美”
 title: "Exploring the Beauty of Poetry through Yeats’s “Leda and the Swan”"
 tags:
-  - Human Review
+  - Character Analysis
 ---
 “Leda and the Swan” is a classic poem by the great Irish poet W.B. Yeats. Taking Greek mythology as its source, the poem reinterprets the process in which Zeus, transformed into a swan, seduces and rapes the mortal girl Leda, and from this raises new philosophical reflections, attracting many interpretations by later generations.
 

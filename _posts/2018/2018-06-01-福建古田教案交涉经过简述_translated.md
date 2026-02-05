@@ -6,7 +6,7 @@ is_translation: true
 pair_id: 福建古田教案交涉经过简述
 title: A Brief Account of the Negotiations over the Gutian Incident in Fujian
 tags:
-  - history
+  - History
 ---
 ## I. The Occurrence of the Incident
 

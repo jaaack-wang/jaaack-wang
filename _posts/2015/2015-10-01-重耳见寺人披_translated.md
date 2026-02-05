@@ -4,7 +4,7 @@ approx_date: "2015-10"
 lang: en
 is_translation: true
 pair_id: 重耳见寺人披
-title: "Chong’er Sees Siren Pi"
+title: "Chong'er Meets the Eunuch Pi"
 tags: ["Classical Chinese", "Creative Writing"]
 ---
 # Chong’er Meets the Eunuch Pi①

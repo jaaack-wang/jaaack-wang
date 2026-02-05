@@ -4,7 +4,7 @@ approx_date: "2017-15"
 lang: en
 is_translation: true
 pair_id: 记朱晓农先生的一场讲座
-title: A Lecture by Mr. Zhu Xiaonong
+title: "Notes on a Lecture by Mr. Zhu Xiaonong"
 tags:
   - Journal
 ---

@@ -4,7 +4,7 @@ approx_date: "2017-12"
 lang: en
 is_translation: true
 pair_id: 《中国歌谣集成•福建卷•福州市分卷》札记
-title: "Notes on \"Collection of Chinese Folk Songs: Fujian Volume, Fuzhou Subvolume"
+title: "Notes on Collection of Chinese Folk Songs: Fujian Volume, Fuzhou Subvolume"
 tags:
   - Book Review
 ---

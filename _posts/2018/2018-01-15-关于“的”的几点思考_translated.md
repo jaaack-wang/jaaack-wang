@@ -4,7 +4,7 @@ approx_date: "2018-01"
 lang: en
 is_translation: true
 pair_id: 关于“的”的几点思考
-title: Some Thoughts on "De
+title: 'Some Thoughts on the Particle "De"'
 tags:
   - Linguistics
 ---

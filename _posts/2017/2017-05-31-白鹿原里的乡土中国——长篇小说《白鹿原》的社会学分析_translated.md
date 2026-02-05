@@ -4,9 +4,9 @@ approx_date: "2017-15"
 lang: en
 is_translation: true
 pair_id: 白鹿原里的乡土中国——长篇小说《白鹿原》的社会学分析
-title: "The Rural China in \"White Deer Plain\" — A Sociological Analysis of the Novel \"White Deer Plain"
+title: "Rural China in White Deer Plain: A Sociological Analysis of the Novel White Deer Plain"
 tags:
-  - sociology
+  - Sociology
   - Book Review
 ---
 Chen Zhongshi’s *White Deer Plain* always brings to mind Fei Xiaotong’s *From the Soil: The Foundations of Chinese Society*; both books are classic works in their respective fields. *White Deer Plain* is a long novel on the rural Guanzhong region, completed by the Shaanxi writer Chen Zhongshi in the 1980s and 1990s, nearly 500,000 words in length, expressing “the understanding and experience of a writer who is one of the people born and raised here”; *From the Soil: The Foundations of Chinese Society* is a theoretical treatise on rural society completed by the sociologist Fei Xiaotong in the late 1940s, only a little over 50,000 words, carrying a theorist’s reflection and summary at the level of shared characteristics of China’s grassroots traditional society. The story of *White Deer Plain* takes place over half a century from the late Qing and early Republic to the eve of the founding of the PRC, presenting the entire process by which a feudal patriarchal clan society bound by blood ties gradually disintegrates; the author’s purpose is: “to use my pen to draw the soul of this nation.” *From the Soil: The Foundations of Chinese Society* is the author’s second-phase “analysis of social structure” after doing a great deal of “field community research,” a generalization distilled from concrete phenomena about the universal nature of China’s traditional grassroots society.

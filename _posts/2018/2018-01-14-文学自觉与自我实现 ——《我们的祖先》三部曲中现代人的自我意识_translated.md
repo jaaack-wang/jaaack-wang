@@ -4,7 +4,7 @@ approx_date: "2018-01"
 lang: en
 is_translation: true
 pair_id: 文学自觉与自我实现 ——《我们的祖先》三部曲中现代人的自我意识
-title: "Literary Consciousness and Self-Realization: Modern Self-Awareness in the “Our Ancestors” Trilogy"
+title: "Literary Consciousness and Self-Realization: Modern Self-Consciousness in the Our Ancestors Trilogy"
 tags:
   - Book Review
 ---

@@ -6,7 +6,7 @@ is_translation: true
 pair_id: 莎菲女士是什么样的女人?
 title: What Kind of Woman Is Mrs. Sha Fei?
 tags:
-  - Human Review
+  - Character Analysis
 ---
 *Miss Sophie’s Diary* is Ding Ling’s work that brought her fame. This short story, once published, “was like dropping a bomb on this deathly silent literary world,” and “shocked a whole generation of the literary and art circles.” More than that, even up to the present, when I come across such a delicate yet bold stream-of-consciousness, diary-form novel, I still can’t help but feel pleasantly surprised, and a sudden interest in studying women arises. If human nature is truly like canine nature, then Sophie—this young woman whom people of her time regarded as a Modern Girl—still carries considerable significance today, at the very least representing the characteristics of women of a certain era, a certain class, or a certain physiological stage.
 

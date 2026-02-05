@@ -4,7 +4,7 @@ approx_date: "2017-10"
 lang: en
 is_translation: true
 pair_id: 《理想国》第四卷简括
-title: A Summary of Book IV of "The Republic
+title: "Summary of Book IV of The Republic"
 tags: [Philosophy]
 ---
 Book IV of *The Republic* explores quite a few important issues. Almost all of them are responses to the issues raised in the first three books, and they amount to a kind of deepening.

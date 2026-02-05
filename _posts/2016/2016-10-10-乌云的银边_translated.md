@@ -4,7 +4,7 @@ approx_date: "2016-10"
 lang: en
 is_translation: true
 pair_id: 乌云的银边
-title: The Silver Lining of the Clouds
+title: "The Silver Lining of Dark Clouds"
 tags: [Essay]
 ---
 Note: It was an assigned-topic essay, but I’ve already forgotten what the prompt was back then.
