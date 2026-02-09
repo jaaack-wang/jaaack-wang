@@ -9,6 +9,7 @@ layout: null
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
 
 	<style>
 		#News ul.news li {
@@ -84,6 +85,28 @@ layout: null
 				padding-right: 1.25rem;
 			}
 		}
+
+		/* Match Academicons links in header footer to existing icon sizing/style */
+		#header>footer .icons li a.ai {
+			border-bottom: none;
+			text-decoration: none;
+			font-size: 1.25em;
+			line-height: 1;
+		}
+
+		#header>footer .icons li a.x-link {
+			border-bottom: none;
+			text-decoration: none;
+			line-height: 1;
+		}
+
+		#header>footer .icons li a.x-link svg {
+			display: inline-block;
+			width: 1.25em;
+			height: 1.25em;
+			fill: currentColor;
+			vertical-align: middle;
+		}
 	</style>
 
 </head>
@@ -121,10 +144,13 @@ layout: null
 						class="icon solid fa-graduation-cap" target="_blank"><span class="label">Google
 							Scholar</span></a></li>
 				<li><a href="https://www.semanticscholar.org/author/Zhengxiang-Wang/50219235"
-						class="ai ai-semantic-scholar icons fa-2x" target="_blank"><span class="label">Semantic
-							Scholar</span></a></li>
-				<li><a href="https://x.com/ZhengXian9_Wang" class="fa-brands fa-x-twitter" target="_blank"><span
-							class="label">X</span></a></li>
+						class="ai ai-semantic-scholar" target="_blank" aria-label="Semantic Scholar"></a></li>
+				<li><a href="https://x.com/ZhengXian9_Wang" class="x-link" target="_blank" aria-label="X">
+						<svg viewBox="0 0 512 512" role="img" aria-hidden="true" focusable="false">
+							<path
+								d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L273.1 180.3 389.2 48zM364.4 421.8h39.1L151.1 88.3H109.2z" />
+						</svg>
+					</a></li>
 			</ul>
 		</footer>
 	</section>
