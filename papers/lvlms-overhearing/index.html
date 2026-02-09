@@ -82,14 +82,6 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="/papers/lvlms-overhearing/" class="work-item">
-          <div class="work-info">
-            <h5>LVLMs are Bad at Overhearing Human Referential Communication</h5>
-            <p>Evaluation of LVLM limitations in overhearing settings.</p>
-            <span class="work-venue">EMNLP 2025 Main</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
         <a href="/papers/implicit-writing-styles/" class="work-item">
           <div class="work-info">
             <h5>Catch Me If You Can? Not Yet</h5>
@@ -157,14 +149,17 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                During spontaneous conversations, speakers collaborate on novel referring expressions,
-                which they can then re-use in subsequent conversations. Understanding such referring
-                expressions is an important ability for an embodied agent, requiring integrated language,
-                vision, and conversational reasoning. We evaluate seven state-of-the-art LVLMs as
-                overhearers on a corpus of spontaneous human conversations in a collaborative object-matching
-                task. We find that the task remains challenging for current LVLMs and that models fail to
-                show consistent improvement as they overhear more repeated rounds from the same discourse
-                participants.
+                During conversation, speakers collaborate on spontaneous referring expressions, which they
+                can then re-use in subsequent conversation with the same partner. Understanding such referring
+                expressions is an important ability for an embodied agent so that it can carry out tasks in
+                the real world. This requires integrating and understanding language, vision, and conversational
+                interaction. We study the capabilities of seven state-of-the-art Large Vision Language Models
+                (LVLMs) as overhearers to a corpus of spontaneous conversations between pairs of human discourse
+                participants engaged in a collaborative object-matching task. We find that such a task remains
+                challenging for current LVLMs, which fail to show a consistent performance improvement as they
+                overhear more conversations from the same discourse participants repeating the same task for
+                multiple rounds. We release our corpus and code for reproducibility and to facilitate future
+                research.
               </p>
             </div>
           </div>
@@ -178,8 +173,12 @@
           <h2 class="title is-3 has-text-centered">Main Results</h2>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
-              <img src="../../images/research/lvlm_overhearing.png" alt="LVLM overhearing results" loading="lazy">
-              <h2 class="subtitle has-text-centered">Performance remains limited and does not consistently improve across repeated overheard rounds.</h2>
+              <img src="static/images/main_results.png" alt="Average accuracy of LVLMs in the overhearer task over rounds." loading="lazy">
+              <h2 class="subtitle has-text-centered">Average accuracy of various LVLMs in the overhearer task over rounds. Shaded areas and error bars denote 95% confidence intervals.</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/R1_30_runs_accu_boxplot.png" alt="Round 1 accuracy boxplots for two best-performing LVLMs across human pairs." loading="lazy">
+              <h2 class="subtitle has-text-centered">Round 1 accuracy boxplots of two best-performing LVLMs across 10 human pairs. Each boxplot summarizes 30 runs with different object orderings.</h2>
             </div>
           </div>
         </div>
@@ -193,10 +192,17 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                Current LVLMs still struggle to robustly ground overheard human referential communication,
-                even in repeated interaction settings where conversational context accumulates. The findings
-                point to a persistent gap in multimodal conversational grounding and motivate stronger methods
-                for integrating discourse history, visual context, and reference tracking.
+                Our findings demonstrate that modern LVLMs still struggle to resolve referring expressions to
+                real-world objects produced during spontaneous conversation, a task that humans excel at when
+                they can ground meanings together. Overhearers, whether human or LVLM, perform more poorly in
+                a matching task than human addressees, even when they are present to every word of a conversation.
+                LVLMs in the overhearer role, even state-of-the-art models, fail to exploit the dynamic nature
+                of conversation and do not improve over repeated referring, unlike human overhearers. These
+                limitations constrain the practical utility of LVLMs as embodied agents, while also highlighting
+                clear directions for future improvement. Given that our primary goal is to benchmark current LVLM
+                capabilities in this novel overhearing setting, providing mechanistic insights or finding pathways
+                to solutions is beyond the scope of our paper and left to future studies. We release our corpus
+                for reproducibility and to support continued research in this area.
               </p>
             </div>
           </div>

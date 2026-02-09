@@ -90,14 +90,6 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="/papers/implicit-writing-styles/" class="work-item">
-          <div class="work-info">
-            <h5>Catch Me If You Can? Not Yet</h5>
-            <p>LLMs still struggle to imitate implicit writing styles of everyday authors.</p>
-            <span class="work-venue">EMNLP 2025 Findings</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
       </div>
     </div>
   </div>
@@ -157,14 +149,21 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                As large language models become increasingly integrated into personal writing tools, a central
-                question is whether they can faithfully imitate an individual's writing style from only a few
-                examples. We present a comprehensive evaluation of state-of-the-art LLMs on implicit personal
-                style imitation via in-context learning. We use an ensemble of complementary metrics including
-                authorship attribution, authorship verification, style matching, and AI detection, with over
-                40,000 generations per model across news, email, forums, and blogs from more than 400 real-world
-                authors. Results show that while models can approximate style in structured formats, they still
-                struggle with nuanced and informal personal writing styles.
+                As large language models (LLMs) become increasingly integrated into personal writing tools, a
+                critical question arises: can LLMs faithfully imitate an individual's writing style from just a
+                few examples? Personal style is often subtle and implicit, making it difficult to specify through
+                prompts yet essential for user-aligned generation. This work presents a comprehensive evaluation
+                of state-of-the-art LLMs' ability to mimic personal writing styles via in-context learning from a
+                small number of user-authored samples. We introduce an ensemble of complementary metrics including
+                authorship attribution, authorship verification, style matching, and AI detection to robustly assess
+                style imitation. Our evaluation spans over 40,000 generations per model across domains such as news,
+                email, forums, and blogs, covering writing samples from more than 400 real-world authors. Results
+                show that while LLMs can approximate user styles in structured formats like news and email, they
+                struggle with nuanced, informal writing in blogs and forums. Further analysis on prompting strategies
+                such as number of demonstrations reveals key limitations in effective personalization. Our findings
+                highlight a fundamental gap in personalized LLM adaptation and the need for improved techniques to
+                support implicit, style-consistent generation. To aid future research and reproducibility, we
+                open-source our data and code.
               </p>
             </div>
           </div>
@@ -178,8 +177,24 @@
           <h2 class="title is-3 has-text-centered">Main Results</h2>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
-              <img src="../../images/research/personalized_writing_2025.png" alt="Implicit writing style imitation results" loading="lazy">
-              <h2 class="subtitle has-text-centered">LLMs perform better on structured genres and remain weak on nuanced informal writing styles.</h2>
+              <img src="static/images/AA_plot.png" alt="Per-author authorship attribution accuracy distributions under few-shot and zero-shot settings." loading="lazy">
+              <h2 class="subtitle has-text-centered">Distribution of per-author AA accuracy averaged across all LLMs. Few-shot prompting achieves higher per-author accuracy than zero-shot.</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/style_ccat50.png" alt="Mahalanobis style distance distribution for CCAT50 dataset." loading="lazy">
+              <h2 class="subtitle has-text-centered">CCAT50: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/style_enron.png" alt="Mahalanobis style distance distribution for Enron dataset." loading="lazy">
+              <h2 class="subtitle has-text-centered">Enron: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/style_reddit.png" alt="Mahalanobis style distance distribution for Reddit dataset." loading="lazy">
+              <h2 class="subtitle has-text-centered">Reddit: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/style_blog.png" alt="Mahalanobis style distance distribution for Blog dataset." loading="lazy">
+              <h2 class="subtitle has-text-centered">Blog: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
             </div>
           </div>
         </div>
@@ -193,10 +208,18 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                Current LLMs do not yet provide reliable personalization for implicit user writing style,
-                especially in informal and nuanced domains. The results reveal a fundamental gap between
-                surface-level stylistic matching and faithful style-consistent generation, indicating the
-                need for stronger adaptation methods for robust, user-aligned writing assistance.
+                This paper presents a comprehensive evaluation of state-of-the-art LLMs on their ability to mimic
+                the implicit writing styles of everyday users through few-shot in-context learning. By combining
+                authorship attribution, verification, stylometric modeling, and AI generation detection across
+                four diverse datasets, we provide strong empirical evidence that despite improvements from
+                exemplar-based prompting, current LLMs still struggle to reproduce nuanced personal styles,
+                especially in informal and stylistically diverse domains. Our analysis further shows that prompt
+                design choices, such as length alignment and content similarity, moderately affect stylistic
+                fidelity but do not close the personalization gap. These findings highlight fundamental limitations
+                in the stylistic adaptability of LLMs and suggest that achieving truly personalized generation
+                remains an open challenge. Future work should explore richer personalization signals and hybrid
+                prompting and/or finetuning strategies to better capture the subtleties of individual writing
+                styles in real-world settings.
               </p>
             </div>
           </div>

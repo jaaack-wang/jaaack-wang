@@ -70,14 +70,6 @@
         </button>
       </div>
       <div class="works-list">
-        <a href="/papers/time-puzzles/" class="work-item">
-          <div class="work-info">
-            <h5>Measuring Iterative Temporal Reasoning with Time Puzzles</h5>
-            <p>Constraint-based date inference benchmark for iterative temporal reasoning.</p>
-            <span class="work-venue">Preprint 2026</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
         <a href="/papers/lvlms-overhearing/" class="work-item">
           <div class="work-info">
             <h5>LVLMs are Bad at Overhearing Human Referential Communication</h5>
@@ -171,10 +163,29 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3 has-text-centered">Main Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              The paper shows that Time Puzzles remains difficult for current tool-less LLMs despite low-cost,
+              easy-to-verify construction: GPT-5 reaches 49.3% exact match and all other evaluated models stay
+              below 31%. Figure 1 visualizes exact-match trends across solution counts and shows that web search
+              consistently improves performance, but does not close the gap between implicit constraints and their
+              explicit-date counterparts, with gains shrinking as the number of valid solutions increases.
+            </p>
+            <p>
+              Figure 2 reports the Code Interpreter analysis on single-solution puzzles. The paper finds that
+              enabling Code Interpreter degrades GPT-5 on implicit constraints (with and without web search),
+              while GPT-4.1 benefits from it, especially with web search; performance on explicit constraints is
+              mostly stable, and output-token reductions are more consistent for GPT-5.
+            </p>
+          </div>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
-              <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles benchmark overview" loading="lazy">
-              <h2 class="subtitle has-text-centered">Benchmark setup and puzzle design overview.</h2>
+              <img src="static/images/em_across_solution_counts.png" alt="Average exact match accuracy across solution counts with and without web search." loading="lazy">
+              <h2 class="subtitle has-text-centered">Average exact match accuracy across solution counts, with and without web search (solution counts 1, 3, 5 for web-search conditions).</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/code_interpreter_conditions_comparison.png" alt="Exact-match accuracy and output token comparisons under web search and code interpreter settings." loading="lazy">
+              <h2 class="subtitle has-text-centered">Exact-match accuracy and output tokens for GPT-5 and GPT-4.1 under different conditions (+Web, +CI) on single-solution puzzles.</h2>
             </div>
           </div>
         </div>
