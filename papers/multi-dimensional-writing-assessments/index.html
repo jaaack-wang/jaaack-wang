@@ -172,16 +172,25 @@
             <div class="item">
               <div class="content has-text-justified">
                 <p>
-                  The main experiments show that LLMs can assign sensible scores that are often within one point of
-                  human scores on the 10-point scale (best human-LLM AAR1 ranges from 0.59 to 0.88). The paper also
-                  finds that interaction mode matters for comment quality: asking criteria independently (IM3) leads
-                  to more elaborate, specific, and potentially more helpful comments. In addition, both human- and
-                  LLM-generated assessments exhibit the expected negative score-comment correlation, supporting the
-                  internal consistency of LLM assessments.
+                  Overall score-agreement heatmaps show a clear pattern: humans agree more with humans, and LLMs
+                  agree more with LLMs. Still, the paper reports that LLMs can score approximately like humans, with
+                  strong human-LLM adjacent agreement on several settings (best AAR1 between 0.59 and 0.88).
                 </p>
               </div>
-              <img src="/images/research/wang_writing_assess_2025.png" alt="Main findings for multi-dimensional analytic writing assessment with LLMs." loading="lazy">
-              <h2 class="subtitle has-text-centered">LLMs produce generally reliable rubric-based assessments, with stronger comment quality under IM3 prompting.</h2>
+              <img src="static/images/acl_overall_agreement_heatmap.png" alt="Overall QWK and AAR1 agreement heatmaps among human and LLM assessors." loading="lazy">
+              <h2 class="subtitle has-text-centered">Overall QWK and AAR1 agreement among human and LLM assessors.</h2>
+            </div>
+            <div class="item">
+              <div class="content has-text-justified">
+                <p>
+                  At criterion level, agreement varies: LLM scores align better with humans on some criteria (for
+                  example material selection, citation/integration, grammar, and academic vocabulary) and worse on
+                  others such as connector use. The paper also finds interaction mode effects on comment quality,
+                  where IM3 tends to produce more specific and potentially more helpful comments.
+                </p>
+              </div>
+              <img src="static/images/acl_criterion_aar1_heatmap.png" alt="Criterion-level AAR1 agreement heatmap between human average and each assessor." loading="lazy">
+              <h2 class="subtitle has-text-centered">Criterion-level AAR1 between human-average scores and each assessor.</h2>
             </div>
           </div>
         </div>
