@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Measuring Iterative Temporal Reasoning with Time Puzzles</title>
+  <meta name="description" content="Project page for Measuring Iterative Temporal Reasoning with Time Puzzles." />
+  <style>
+    :root {
+      --bg: #f8f8f4;
+      --panel: #ffffff;
+      --text: #1f2328;
+      --muted: #55606e;
+      --accent: #0b5fff;
+      --border: #d9dde3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      background: linear-gradient(160deg, #f4f2ea 0%, var(--bg) 55%, #eef5ff 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 25px rgba(20, 35, 60, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .venue {
+      margin-top: 4px;
+      color: var(--muted);
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    section {
+      margin-top: 22px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: 0 8px 18px rgba(20, 35, 60, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .fig-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+
+    figure {
+      margin: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    pre {
+      margin: 0;
+      padding: 14px;
+      overflow-x: auto;
+      background: #f4f8ff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    .copy-row {
+      margin-top: 10px;
+    }
+
+    .copy-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .footnote {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    @media (min-width: 850px) {
+      .fig-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Measuring Iterative Temporal Reasoning with Time Puzzles</h1>
+      <p class="authors"><strong>Zhengxiang Wang</strong>, Zeyu Dong</p>
+      <p class="venue">Preprint (2026)</p>
+      <div class="actions">
+        <a class="btn primary" href="https://arxiv.org/abs/2601.07148" target="_blank" rel="noopener">Paper</a>
+        <a class="btn" href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank" rel="noopener">Code</a>
+        <a class="btn" href="#bibtex">BibTeX</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Abstract</h2>
+      <p>
+        Time Puzzles is a benchmark for measuring iterative temporal reasoning in language models.
+        The benchmark builds controlled puzzle tasks that require step-by-step updates over time,
+        so models must maintain and revise temporal states rather than rely on one-shot pattern
+        matching. Results show that even strong recent models have clear gaps on these iterative
+        settings, highlighting temporal consistency as an open challenge.
+      </p>
+    </section>
+
+    <section>
+      <h2>Main Results</h2>
+      <div class="fig-grid">
+        <figure>
+          <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles overview illustration." />
+          <figcaption>Benchmark overview and task construction.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../images/research/acl2026_accuracy_efficiency_entrainment.png" alt="Main quantitative results for Time Puzzles." />
+          <figcaption>Representative results showing performance gaps in iterative temporal reasoning.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        The paper introduces Time Puzzles as a targeted testbed for iterative temporal reasoning
+        and shows that current models still struggle when temporal updates must be chained over
+        multiple steps. The results suggest that improving temporal state tracking and iterative
+        reasoning should be a core direction for future model and evaluation design.
+      </p>
+    </section>
+
+    <section id="bibtex">
+      <h2>BibTeX</h2>
+      <pre id="bibtex-text">@article{wang2026timepuzzles,
+  title   = {Measuring Iterative Temporal Reasoning with Time Puzzles},
+  author  = {Wang, Zhengxiang and Dong, Zeyu},
+  journal = {arXiv preprint arXiv:2601.07148},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2601.07148}
+}</pre>
+      <div class="copy-row">
+        <button class="copy-btn" id="copy-bibtex" type="button">Copy BibTeX</button>
+      </div>
+      <p class="footnote">This project page is adapted for your website and follows the academic project page style.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var button = document.getElementById("copy-bibtex");
+      var source = document.getElementById("bibtex-text");
+      if (!button || !source) {
+        return;
+      }
+      button.addEventListener("click", function () {
+        var text = source.textContent || "";
+        navigator.clipboard.writeText(text).then(function () {
+          button.textContent = "Copied";
+          setTimeout(function () {
+            button.textContent = "Copy BibTeX";
+          }, 1400);
+        }).catch(function () {
+          button.textContent = "Copy failed";
+          setTimeout(function () {
+            button.textContent = "Copy BibTeX";
+          }, 1400);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
