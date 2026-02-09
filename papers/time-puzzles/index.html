@@ -31,9 +31,6 @@
   <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2601.07148">
 
   <title>Measuring Iterative Temporal Reasoning with Time Puzzles</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -145,11 +142,16 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Time Puzzles is a benchmark for measuring iterative temporal reasoning in language models.
-                The benchmark builds controlled puzzle tasks that require step-by-step temporal updates,
-                requiring models to maintain and revise temporal states instead of relying on one-shot pattern
-                matching. Results show that even strong recent models still have clear weaknesses on these
-                iterative settings, highlighting temporal consistency as an open challenge.
+                We introduce Time Puzzles, a constraint-based date inference task for evaluating iterative temporal
+                reasoning. Each puzzle combines factual temporal anchors with (cross-cultural) calendar relations,
+                admits one or multiple valid solution dates, and is algorithmically generated for controlled,
+                dynamic, and continual evaluation. Across 13 diverse LLMs, Time Puzzles well distinguishes their
+                iterative temporal reasoning capabilities and remains challenging without tools: GPT-5 reaches only
+                49.3% accuracy and all other models stay below 31%, despite the dataset's simplicity. Web search
+                consistently yields substantial gains and using code interpreter shows mixed effects, but all
+                models perform much better when constraints are rewritten with explicit dates, revealing a gap in
+                reliable tool use. Overall, Time Puzzles presents a simple, cost-effective diagnostic for
+                tool-augmented iterative temporal reasoning.
               </p>
             </div>
           </div>
@@ -166,10 +168,6 @@
               <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles benchmark overview" loading="lazy">
               <h2 class="subtitle has-text-centered">Benchmark setup and puzzle design overview.</h2>
             </div>
-            <div class="item">
-              <img src="../../images/research/acl2026_accuracy_efficiency_entrainment.png" alt="Time Puzzles representative quantitative results" loading="lazy">
-              <h2 class="subtitle has-text-centered">Representative results highlighting iterative temporal reasoning gaps.</h2>
-            </div>
           </div>
         </div>
       </div>
@@ -182,10 +180,12 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                Time Puzzles provides a focused testbed for iterative temporal reasoning and shows that current
-                language models still struggle when temporal updates must be chained over multiple steps. These
-                findings indicate that improved temporal state tracking and iterative reasoning mechanisms are
-                important directions for future model and evaluation design.
+                We propose Time Puzzles, a constraint-based date inference task that targets iterative,
+                tool-augmented temporal reasoning. Although puzzles are synthetically generated and easy to
+                verify, they expose persistent failures of current instruction-and reasoning-tuned LLMs to
+                reliably resolve implicit temporal constraints, even with tool access. Overall, Time Puzzles
+                offers a simple, cost-effective diagnostic for tool-augmented iterative temporal reasoning and
+                can be systematically extended to support more challenging evaluations.
               </p>
             </div>
           </div>
