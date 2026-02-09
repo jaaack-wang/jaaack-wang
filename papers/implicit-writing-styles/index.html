@@ -127,13 +127,6 @@
                       <span>Code</span>
                     </a>
                   </span>
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2509.14543" target="_blank" rel="noopener"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
                 </div>
               </div>
             </div>
@@ -175,26 +168,37 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3 has-text-centered">Main Results</h2>
-          <div id="results-carousel" class="carousel results-carousel">
+          <div class="results-carousel">
             <div class="item">
+              <div class="content has-text-justified">
+                <p>
+                  Across authors, few-shot prompting consistently improves authorship attribution over zero-shot
+                  prompting, but performance still varies by dataset and author, indicating that implicit personal
+                  style imitation remains uneven and domain-sensitive.
+                </p>
+              </div>
               <img src="static/images/AA_plot.png" alt="Per-author authorship attribution accuracy distributions under few-shot and zero-shot settings." loading="lazy">
               <h2 class="subtitle has-text-centered">Distribution of per-author AA accuracy averaged across all LLMs. Few-shot prompting achieves higher per-author accuracy than zero-shot.</h2>
             </div>
             <div class="item">
-              <img src="static/images/style_ccat50.png" alt="Mahalanobis style distance distribution for CCAT50 dataset." loading="lazy">
-              <h2 class="subtitle has-text-centered">CCAT50: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/style_enron.png" alt="Mahalanobis style distance distribution for Enron dataset." loading="lazy">
-              <h2 class="subtitle has-text-centered">Enron: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/style_reddit.png" alt="Mahalanobis style distance distribution for Reddit dataset." loading="lazy">
-              <h2 class="subtitle has-text-centered">Reddit: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/style_blog.png" alt="Mahalanobis style distance distribution for Blog dataset." loading="lazy">
-              <h2 class="subtitle has-text-centered">Blog: distribution of average Mahalanobis distances to target author style models (lower is better).</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Style-model analysis complements AA/AV results: generated texts move closer to target author
+                  style distributions under few-shot prompting, but the remaining distance, especially on informal
+                  domains, reflects a persistent personalization gap.
+                </p>
+              </div>
+              <div class="columns is-multiline">
+                <div class="column is-half">
+                  <img src="static/images/style_ccat50.png" alt="Mahalanobis style distance distribution for CCAT50 dataset." loading="lazy">
+                  <p class="has-text-centered">CCAT50</p>
+                </div>
+                <div class="column is-half">
+                  <img src="static/images/style_blog.png" alt="Mahalanobis style distance distribution for Blog dataset." loading="lazy">
+                  <p class="has-text-centered">Blog</p>
+                </div>
+              </div>
+              <h2 class="subtitle has-text-centered">Distribution of average Mahalanobis distances to target author style models on representative datasets (lower is better).</h2>
             </div>
           </div>
         </div>

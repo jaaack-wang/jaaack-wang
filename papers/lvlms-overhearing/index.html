@@ -127,13 +127,6 @@
                       <span>Code</span>
                     </a>
                   </span>
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2509.11514" target="_blank" rel="noopener"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
                 </div>
               </div>
             </div>
@@ -171,12 +164,26 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3 has-text-centered">Main Results</h2>
-          <div id="results-carousel" class="carousel results-carousel">
+          <div class="results-carousel">
             <div class="item">
+              <div class="content has-text-justified">
+                <p>
+                  The main result is that overhearer matching remains challenging for current LVLMs. Accuracy
+                  trends across rounds show that state-of-the-art models still fail to achieve robust, consistent
+                  improvements as they overhear repeated interactions.
+                </p>
+              </div>
               <img src="static/images/main_results.png" alt="Average accuracy of LVLMs in the overhearer task over rounds." loading="lazy">
               <h2 class="subtitle has-text-centered">Average accuracy of various LVLMs in the overhearer task over rounds. Shaded areas and error bars denote 95% confidence intervals.</h2>
             </div>
             <div class="item">
+              <div class="content has-text-justified">
+                <p>
+                  Robustness analysis further shows substantial variance across human pairs and object orderings.
+                  Even top-performing models show unstable outcomes, highlighting sensitivity to interaction context
+                  and indicating limited reliability in overhearing settings.
+                </p>
+              </div>
               <img src="static/images/R1_30_runs_accu_boxplot.png" alt="Round 1 accuracy boxplots for two best-performing LVLMs across human pairs." loading="lazy">
               <h2 class="subtitle has-text-centered">Round 1 accuracy boxplots of two best-performing LVLMs across 10 human pairs. Each boxplot summarizes 30 runs with different object orderings.</h2>
             </div>
