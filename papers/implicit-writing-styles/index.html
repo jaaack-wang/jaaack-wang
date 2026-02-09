@@ -4,33 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="title" content="Measuring Iterative Temporal Reasoning with Time Puzzles - Zhengxiang Wang, Zeyu Dong">
-  <meta name="description" content="Time Puzzles benchmarks iterative temporal reasoning and reveals persistent gaps in temporal state tracking for modern language models.">
-  <meta name="keywords" content="temporal reasoning, language models, benchmark, iterative reasoning, NLP">
-  <meta name="author" content="Zhengxiang Wang, Zeyu Dong">
+  <meta name="title" content="Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors">
+  <meta name="description" content="Comprehensive evaluation of LLMs' ability to imitate implicit personal writing styles from limited user examples.">
+  <meta name="keywords" content="LLM personalization, writing style imitation, authorship, style transfer, NLP">
+  <meta name="author" content="Zhengxiang Wang, Nafis Irtiza Tripto, Solha Park, Zhenzhen Li, Jiawei Zhou">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Zhengxiang Wang">
-  <meta property="og:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
-  <meta property="og:description" content="A benchmark for iterative temporal reasoning in language models.">
-  <meta property="og:url" content="https://www.zhengxiang-wang.me/papers/time-puzzles/">
-  <meta property="og:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+  <meta property="og:title" content="Catch Me If You Can? Not Yet">
+  <meta property="og:description" content="LLMs still struggle to imitate implicit writing styles of everyday authors.">
+  <meta property="og:url" content="https://www.zhengxiang-wang.me/papers/implicit-writing-styles/">
+  <meta property="og:image" content="https://www.zhengxiang-wang.me/images/research/personalized_writing_2025.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
-  <meta name="twitter:description" content="A benchmark for iterative temporal reasoning in language models.">
-  <meta name="twitter:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+  <meta name="twitter:title" content="Catch Me If You Can? Not Yet">
+  <meta name="twitter:description" content="LLMs still struggle to imitate implicit writing styles of everyday authors.">
+  <meta name="twitter:image" content="https://www.zhengxiang-wang.me/images/research/personalized_writing_2025.png">
 
-  <meta name="citation_title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
+  <meta name="citation_title" content="Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors">
   <meta name="citation_author" content="Wang, Zhengxiang">
-  <meta name="citation_author" content="Dong, Zeyu">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="Preprint">
-  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2601.07148">
+  <meta name="citation_author" content="Tripto, Nafis Irtiza">
+  <meta name="citation_author" content="Park, Solha">
+  <meta name="citation_author" content="Li, Zhenzhen">
+  <meta name="citation_author" content="Zhou, Jiawei">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="EMNLP 2025 (Findings)">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2509.14543.pdf">
 
-  <title>Measuring Iterative Temporal Reasoning with Time Puzzles</title>
+  <title>Catch Me If You Can? Not Yet</title>
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -73,7 +77,7 @@
         <a href="/papers/time-puzzles/" class="work-item">
           <div class="work-info">
             <h5>Measuring Iterative Temporal Reasoning with Time Puzzles</h5>
-            <p>Constraint-based date inference benchmark for iterative temporal reasoning.</p>
+            <p>Constraint-based temporal reasoning benchmark for LLMs.</p>
             <span class="work-venue">Preprint 2026</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -89,7 +93,7 @@
         <a href="/papers/implicit-writing-styles/" class="work-item">
           <div class="work-info">
             <h5>Catch Me If You Can? Not Yet</h5>
-            <p>LLMs still struggle to imitate the implicit writing styles of everyday authors.</p>
+            <p>LLMs still struggle to imitate implicit writing styles of everyday authors.</p>
             <span class="work-venue">EMNLP 2025 Findings</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -104,32 +108,35 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">Measuring Iterative Temporal Reasoning with Time Puzzles</h1>
+              <h1 class="title is-1 publication-title">Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors</h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><a href="https://www.zhengxiang-wang.me/" target="_blank" rel="noopener">Zhengxiang Wang</a>,</span>
-                <span class="author-block">Zeyu Dong</span>
+                <span class="author-block"><a href="https://www.zhengxiang-wang.me/" target="_blank" rel="noopener">Zhengxiang Wang</a>*,</span>
+                <span class="author-block">Nafis Irtiza Tripto*,</span>
+                <span class="author-block">Solha Park,</span>
+                <span class="author-block">Zhenzhen Li,</span>
+                <span class="author-block">Jiawei Zhou</span>
               </div>
               <div class="is-size-5 publication-authors">
-                <span class="author-block">Preprint, 2026</span>
+                <span class="author-block">EMNLP 2025 (Findings)</span>
               </div>
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2601.07148.pdf" target="_blank" rel="noopener"
+                    <a href="https://arxiv.org/pdf/2509.14543.pdf" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Paper</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank" rel="noopener"
+                    <a href="https://github.com/jaaack-wang/llms-implicit-writing-styles-imitation" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fab fa-github"></i></span>
                       <span>Code</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/2601.07148" target="_blank" rel="noopener"
+                    <a href="https://arxiv.org/abs/2509.14543" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="ai ai-arxiv"></i></span>
                       <span>arXiv</span>
@@ -150,16 +157,14 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce Time Puzzles, a constraint-based date inference task for evaluating iterative temporal
-                reasoning. Each puzzle combines factual temporal anchors with (cross-cultural) calendar relations,
-                admits one or multiple valid solution dates, and is algorithmically generated for controlled,
-                dynamic, and continual evaluation. Across 13 diverse LLMs, Time Puzzles well distinguishes their
-                iterative temporal reasoning capabilities and remains challenging without tools: GPT-5 reaches only
-                49.3% accuracy and all other models stay below 31%, despite the dataset's simplicity. Web search
-                consistently yields substantial gains and using code interpreter shows mixed effects, but all
-                models perform much better when constraints are rewritten with explicit dates, revealing a gap in
-                reliable tool use. Overall, Time Puzzles presents a simple, cost-effective diagnostic for
-                tool-augmented iterative temporal reasoning.
+                As large language models become increasingly integrated into personal writing tools, a central
+                question is whether they can faithfully imitate an individual's writing style from only a few
+                examples. We present a comprehensive evaluation of state-of-the-art LLMs on implicit personal
+                style imitation via in-context learning. We use an ensemble of complementary metrics including
+                authorship attribution, authorship verification, style matching, and AI detection, with over
+                40,000 generations per model across news, email, forums, and blogs from more than 400 real-world
+                authors. Results show that while models can approximate style in structured formats, they still
+                struggle with nuanced and informal personal writing styles.
               </p>
             </div>
           </div>
@@ -173,8 +178,8 @@
           <h2 class="title is-3 has-text-centered">Main Results</h2>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
-              <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles benchmark overview" loading="lazy">
-              <h2 class="subtitle has-text-centered">Benchmark setup and puzzle design overview.</h2>
+              <img src="../../images/research/personalized_writing_2025.png" alt="Implicit writing style imitation results" loading="lazy">
+              <h2 class="subtitle has-text-centered">LLMs perform better on structured genres and remain weak on nuanced informal writing styles.</h2>
             </div>
           </div>
         </div>
@@ -188,12 +193,10 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                We propose Time Puzzles, a constraint-based date inference task that targets iterative,
-                tool-augmented temporal reasoning. Although puzzles are synthetically generated and easy to
-                verify, they expose persistent failures of current instruction-and reasoning-tuned LLMs to
-                reliably resolve implicit temporal constraints, even with tool access. Overall, Time Puzzles
-                offers a simple, cost-effective diagnostic for tool-augmented iterative temporal reasoning and
-                can be systematically extended to support more challenging evaluations.
+                Current LLMs do not yet provide reliable personalization for implicit user writing style,
+                especially in informal and nuanced domains. The results reveal a fundamental gap between
+                surface-level stylistic matching and faithful style-consistent generation, indicating the
+                need for stronger adaptation methods for robust, user-aligned writing assistance.
               </p>
             </div>
           </div>
@@ -210,12 +213,12 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre id="bibtex-code"><code>@article{wang2026timepuzzles,
-  title={Measuring Iterative Temporal Reasoning with Time Puzzles},
-  author={Wang, Zhengxiang and Dong, Zeyu},
-  journal={arXiv preprint arXiv:2601.07148},
-  year={2026},
-  url={https://arxiv.org/abs/2601.07148}
+        <pre id="bibtex-code"><code>@article{wang2025catchme,
+  title={Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors},
+  author={Wang, Zhengxiang and Tripto, Nafis Irtiza and Park, Solha and Li, Zhenzhen and Zhou, Jiawei},
+  journal={arXiv preprint arXiv:2509.14543},
+  year={2025},
+  url={https://arxiv.org/abs/2509.14543}
 }</code></pre>
       </div>
     </section>
