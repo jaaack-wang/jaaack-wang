@@ -1,255 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="Measuring Iterative Temporal Reasoning with Time Puzzles - Zhengxiang Wang, Zeyu Dong">
+  <meta name="description" content="Time Puzzles benchmarks iterative temporal reasoning and reveals persistent gaps in temporal state tracking for modern language models.">
+  <meta name="keywords" content="temporal reasoning, language models, benchmark, iterative reasoning, NLP">
+  <meta name="author" content="Zhengxiang Wang, Zeyu Dong">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Zhengxiang Wang">
+  <meta property="og:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
+  <meta property="og:description" content="A benchmark for iterative temporal reasoning in language models.">
+  <meta property="og:url" content="https://www.zhengxiang-wang.me/papers/time-puzzles/">
+  <meta property="og:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
+  <meta name="twitter:description" content="A benchmark for iterative temporal reasoning in language models.">
+  <meta name="twitter:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+
+  <meta name="citation_title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
+  <meta name="citation_author" content="Wang, Zhengxiang">
+  <meta name="citation_author" content="Dong, Zeyu">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Preprint">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2601.07148">
+
   <title>Measuring Iterative Temporal Reasoning with Time Puzzles</title>
-  <meta name="description" content="Project page for Measuring Iterative Temporal Reasoning with Time Puzzles." />
-  <style>
-    :root {
-      --bg: #f8f8f4;
-      --panel: #ffffff;
-      --text: #1f2328;
-      --muted: #55606e;
-      --accent: #0b5fff;
-      --border: #d9dde3;
-    }
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
 
-    * {
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      background: linear-gradient(160deg, #f4f2ea 0%, var(--bg) 55%, #eef5ff 100%);
-      color: var(--text);
-      line-height: 1.55;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 56px;
-    }
-
-    .hero {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 22px;
-      box-shadow: 0 10px 25px rgba(20, 35, 60, 0.08);
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      line-height: 1.2;
-      letter-spacing: 0.01em;
-    }
-
-    .authors {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .venue {
-      margin-top: 4px;
-      color: var(--muted);
-    }
-
-    .actions {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    section {
-      margin-top: 22px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-      box-shadow: 0 8px 18px rgba(20, 35, 60, 0.06);
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.3rem;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .fig-grid {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-    }
-
-    figure {
-      margin: 0;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    figcaption {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-    }
-
-    pre {
-      margin: 0;
-      padding: 14px;
-      overflow-x: auto;
-      background: #f4f8ff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 0.9rem;
-    }
-
-    .copy-row {
-      margin-top: 10px;
-    }
-
-    .copy-btn {
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--text);
-      border-radius: 8px;
-      padding: 8px 10px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .footnote {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    @media (min-width: 850px) {
-      .fig-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <h1>Measuring Iterative Temporal Reasoning with Time Puzzles</h1>
-      <p class="authors"><strong>Zhengxiang Wang</strong>, Zeyu Dong</p>
-      <p class="venue">Preprint (2026)</p>
-      <div class="actions">
-        <a class="btn primary" href="https://arxiv.org/abs/2601.07148" target="_blank" rel="noopener">Paper</a>
-        <a class="btn" href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank" rel="noopener">Code</a>
-        <a class="btn" href="#bibtex">BibTeX</a>
-      </div>
-    </header>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-    <section>
-      <h2>Abstract</h2>
-      <p>
-        Time Puzzles is a benchmark for measuring iterative temporal reasoning in language models.
-        The benchmark builds controlled puzzle tasks that require step-by-step updates over time,
-        so models must maintain and revise temporal states rather than rely on one-shot pattern
-        matching. Results show that even strong recent models have clear gaps on these iterative
-        settings, highlighting temporal consistency as an open challenge.
-      </p>
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://arxiv.org/abs/2601.19792" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>LVLMs and Humans Ground Differently in Referential Communication</h5>
+            <p>Comparative grounding behavior in referential communication.</p>
+            <span class="work-venue">Preprint 2026</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/2509.11514" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>LVLMs are Bad at Overhearing Human Referential Communication</h5>
+            <p>Evaluation of LVLM limitations in overhearing settings.</p>
+            <span class="work-venue">EMNLP 2025 Main</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Measuring Iterative Temporal Reasoning with Time Puzzles</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://www.zhengxiang-wang.me/" target="_blank" rel="noopener">Zhengxiang Wang</a>,</span>
+                <span class="author-block">Zeyu Dong</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Preprint, 2026</span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2601.07148.pdf" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2601.07148" target="_blank" rel="noopener"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Main Results</h2>
-      <div class="fig-grid">
-        <figure>
-          <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles overview illustration." />
-          <figcaption>Benchmark overview and task construction.</figcaption>
-        </figure>
-        <figure>
-          <img src="../../images/research/acl2026_accuracy_efficiency_entrainment.png" alt="Main quantitative results for Time Puzzles." />
-          <figcaption>Representative results showing performance gaps in iterative temporal reasoning.</figcaption>
-        </figure>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Time Puzzles is a benchmark for measuring iterative temporal reasoning in language models.
+                The benchmark builds controlled puzzle tasks that require step-by-step temporal updates,
+                requiring models to maintain and revise temporal states instead of relying on one-shot pattern
+                matching. Results show that even strong recent models still have clear weaknesses on these
+                iterative settings, highlighting temporal consistency as an open challenge.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Conclusion</h2>
-      <p>
-        The paper introduces Time Puzzles as a targeted testbed for iterative temporal reasoning
-        and shows that current models still struggle when temporal updates must be chained over
-        multiple steps. The results suggest that improving temporal state tracking and iterative
-        reasoning should be a core direction for future model and evaluation design.
-      </p>
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Main Results</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="../../images/research/acl2026_timePuzzlesIllustration.png" alt="Time Puzzles benchmark overview" loading="lazy">
+              <h2 class="subtitle has-text-centered">Benchmark setup and puzzle design overview.</h2>
+            </div>
+            <div class="item">
+              <img src="../../images/research/acl2026_accuracy_efficiency_entrainment.png" alt="Time Puzzles representative quantitative results" loading="lazy">
+              <h2 class="subtitle has-text-centered">Representative results highlighting iterative temporal reasoning gaps.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="bibtex">
-      <h2>BibTeX</h2>
-      <pre id="bibtex-text">@article{wang2026timepuzzles,
-  title   = {Measuring Iterative Temporal Reasoning with Time Puzzles},
-  author  = {Wang, Zhengxiang and Dong, Zeyu},
-  journal = {arXiv preprint arXiv:2601.07148},
-  year    = {2026},
-  url     = {https://arxiv.org/abs/2601.07148}
-}</pre>
-      <div class="copy-row">
-        <button class="copy-btn" id="copy-bibtex" type="button">Copy BibTeX</button>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Conclusion</h2>
+            <div class="content has-text-justified">
+              <p>
+                Time Puzzles provides a focused testbed for iterative temporal reasoning and shows that current
+                language models still struggle when temporal updates must be chained over multiple steps. These
+                findings indicate that improved temporal state tracking and iterative reasoning mechanisms are
+                important directions for future model and evaluation design.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="footnote">This project page is adapted for your website and follows the academic project page style.</p>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{wang2026timepuzzles,
+  title={Measuring Iterative Temporal Reasoning with Time Puzzles},
+  author={Wang, Zhengxiang and Dong, Zeyu},
+  journal={arXiv preprint arXiv:2601.07148},
+  year={2026},
+  url={https://arxiv.org/abs/2601.07148}
+}</code></pre>
+      </div>
     </section>
   </main>
 
-  <script>
-    (function () {
-      var button = document.getElementById("copy-bibtex");
-      var source = document.getElementById("bibtex-text");
-      if (!button || !source) {
-        return;
-      }
-      button.addEventListener("click", function () {
-        var text = source.textContent || "";
-        navigator.clipboard.writeText(text).then(function () {
-          button.textContent = "Copied";
-          setTimeout(function () {
-            button.textContent = "Copy BibTeX";
-          }, 1400);
-        }).catch(function () {
-          button.textContent = "Copy failed";
-          setTimeout(function () {
-            button.textContent = "Copy BibTeX";
-          }, 1400);
-        });
-      });
-    })();
-  </script>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>,
+              adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
