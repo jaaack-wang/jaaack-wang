@@ -63,10 +63,11 @@ chmod +x check-deployment.sh
 
 ## Recommendations
 
-1. **Trigger a manual deployment** if needed through GitHub Actions
-2. **Check for any errors** in the Actions tab
-3. **Verify GitHub Pages settings** in repository settings
-4. **Wait a bit longer** - sometimes deployments take time to process
+1. **Trigger a manual deployment** - See [DEPLOY_INSTRUCTIONS.md](./DEPLOY_INSTRUCTIONS.md) for detailed steps
+2. **Use the trigger script** - Run `./trigger-deployment.sh` if you have push access to main
+3. **Check for any errors** in the Actions tab
+4. **Verify GitHub Pages settings** in repository settings
+5. **Wait a bit longer** - sometimes deployments take time to process
 
 ---
 
