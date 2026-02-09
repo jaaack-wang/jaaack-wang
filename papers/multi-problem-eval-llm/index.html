@@ -4,33 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="title" content="Measuring Iterative Temporal Reasoning with Time Puzzles - Zhengxiang Wang, Zeyu Dong">
-  <meta name="description" content="Time Puzzles benchmarks iterative temporal reasoning and reveals persistent gaps in temporal state tracking for modern language models.">
-  <meta name="keywords" content="temporal reasoning, language models, benchmark, iterative reasoning, NLP">
-  <meta name="author" content="Zhengxiang Wang, Zeyu Dong">
+  <meta name="title" content="Evaluating LLMs with Multiple Problems at once - Zhengxiang Wang, Jordan Kodner, Owen Rambow">
+  <meta name="description" content="A systematic zero-shot benchmark showing when LLMs can and cannot solve multiple problems in one prompt.">
+  <meta name="keywords" content="LLM evaluation, multi-problem prompting, zero-shot, reasoning, benchmarking">
+  <meta name="author" content="Zhengxiang Wang, Jordan Kodner, Owen Rambow">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Zhengxiang Wang">
-  <meta property="og:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
-  <meta property="og:description" content="A benchmark for iterative temporal reasoning in language models.">
-  <meta property="og:url" content="https://www.zhengxiang-wang.me/papers/time-puzzles/">
-  <meta property="og:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+  <meta property="og:title" content="Evaluating LLMs with Multiple Problems at once">
+  <meta property="og:description" content="Comprehensive multi-problem evaluation of LLMs under zero-shot settings.">
+  <meta property="og:url" content="https://www.zhengxiang-wang.me/papers/multi-problem-eval-llm/">
+  <meta property="og:image" content="https://www.zhengxiang-wang.me/images/research/multi_problem_eval.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
-  <meta name="twitter:description" content="A benchmark for iterative temporal reasoning in language models.">
-  <meta name="twitter:image" content="https://www.zhengxiang-wang.me/images/research/acl2026_timePuzzlesIllustration.png">
+  <meta name="twitter:title" content="Evaluating LLMs with Multiple Problems at once">
+  <meta name="twitter:description" content="Comprehensive multi-problem evaluation of LLMs under zero-shot settings.">
+  <meta name="twitter:image" content="https://www.zhengxiang-wang.me/images/research/multi_problem_eval.png">
 
-  <meta name="citation_title" content="Measuring Iterative Temporal Reasoning with Time Puzzles">
+  <meta name="citation_title" content="Evaluating LLMs with Multiple Problems at once">
   <meta name="citation_author" content="Wang, Zhengxiang">
-  <meta name="citation_author" content="Dong, Zeyu">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="Preprint">
-  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2601.07148">
+  <meta name="citation_author" content="Kodner, Jordan">
+  <meta name="citation_author" content="Rambow, Owen">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="GEM 2025">
+  <meta name="citation_pdf_url" content="https://aclanthology.org/2025.gem-1.14.pdf">
 
-  <title>Measuring Iterative Temporal Reasoning with Time Puzzles</title>
+  <title>Evaluating LLMs with Multiple Problems at once</title>
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -70,6 +72,14 @@
         </button>
       </div>
       <div class="works-list">
+        <a href="/papers/time-puzzles/" class="work-item">
+          <div class="work-info">
+            <h5>Measuring Iterative Temporal Reasoning with Time Puzzles</h5>
+            <p>Constraint-based date inference benchmark for iterative temporal reasoning.</p>
+            <span class="work-venue">Preprint 2026</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
         <a href="/papers/lvlms-overhearing/" class="work-item">
           <div class="work-info">
             <h5>LVLMs are Bad at Overhearing Human Referential Communication</h5>
@@ -91,14 +101,6 @@
             <h5>LLMs can Perform Multi-Dimensional Analytic Writing Assessments</h5>
             <p>A case study of L2 graduate-level academic English writing.</p>
             <span class="work-venue">ACL 2025 Main</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="/papers/multi-problem-eval-llm/" class="work-item">
-          <div class="work-info">
-            <h5>Evaluating LLMs with Multiple Problems at once</h5>
-            <p>A comprehensive benchmark for zero-shot multi-problem evaluation.</p>
-            <span class="work-venue">GEM 2025</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -129,25 +131,26 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">Measuring Iterative Temporal Reasoning with Time Puzzles</h1>
+              <h1 class="title is-1 publication-title">Evaluating LLMs with Multiple Problems at once</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><a href="https://www.zhengxiang-wang.me/" target="_blank" rel="noopener">Zhengxiang Wang</a>,</span>
-                <span class="author-block">Zeyu Dong</span>
+                <span class="author-block"><a href="https://jordankodner.github.io/" target="_blank" rel="noopener">Jordan Kodner</a>,</span>
+                <span class="author-block"><a href="https://owenrambow.com/" target="_blank" rel="noopener">Owen Rambow</a></span>
               </div>
               <div class="is-size-5 publication-authors">
-                <span class="author-block">Preprint, 2026</span>
+                <span class="author-block">GEM 2025</span>
               </div>
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2601.07148.pdf" target="_blank" rel="noopener"
+                    <a href="https://aclanthology.org/2025.gem-1.14.pdf" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Paper</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank" rel="noopener"
+                    <a href="https://github.com/jaaack-wang/multi-problem-eval-llm" target="_blank" rel="noopener"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fab fa-github"></i></span>
                       <span>Code</span>
@@ -168,16 +171,14 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce Time Puzzles, a constraint-based date inference task for evaluating iterative temporal
-                reasoning. Each puzzle combines factual temporal anchors with (cross-cultural) calendar relations,
-                admits one or multiple valid solution dates, and is algorithmically generated for controlled,
-                dynamic, and continual evaluation. Across 13 diverse LLMs, Time Puzzles well distinguishes their
-                iterative temporal reasoning capabilities and remains challenging without tools: GPT-5 reaches only
-                49.3% accuracy and all other models stay below 31%, despite the dataset's simplicity. Web search
-                consistently yields substantial gains and using code interpreter shows mixed effects, but all
-                models perform much better when constraints are rewritten with explicit dates, revealing a gap in
-                reliable tool use. Overall, Time Puzzles presents a simple, cost-effective diagnostic for
-                tool-augmented iterative temporal reasoning.
+                We present a comprehensive multiple-problem evaluation (MPE) of large language models under
+                zero-shot settings. Across 7 LLMs from 4 model families, we test both classification and
+                reasoning prompts that contain multiple problems at once. The benchmark suite, ZeMPE,
+                includes 53,100 zero-shot prompts spanning 6 classification and 12 reasoning benchmarks.
+                Results show that LLMs can often handle multiple classifications in one prompt with only
+                small degradation and better token efficiency, but performance drops consistently when task
+                format changes (e.g., index-selection formulations) and when reasoning problems are mixed
+                from different sources.
               </p>
             </div>
           </div>
@@ -193,27 +194,27 @@
             <div class="item">
               <div class="content has-text-justified">
                 <p>
-                  Time Puzzles remains difficult for current tool-less LLMs despite low-cost, easy-to-verify
-                  construction: GPT-5 reaches 49.3% exact match and all other evaluated models stay below 31%.
-                  This figure shows exact-match trends across solution counts and that web search consistently
-                  improves performance, but does not close the gap between implicit constraints and explicit-date
-                  counterparts.
+                  For classification tasks, LLMs are generally robust to solving many items in one prompt.
+                  Aggregated over models and benchmarks, SingleClf reaches 75.5% while BatchClf reaches
+                  72.3% (3.2-point drop). However, reformulating the same underlying problems as selection
+                  tasks causes large, consistent declines: SelectOne trails BatchClf by about 32 points and
+                  SelectAll by about 10 points.
                 </p>
               </div>
-              <img src="static/images/em_across_solution_counts.png" alt="Average exact match accuracy across solution counts with and without web search." loading="lazy">
-              <h2 class="subtitle has-text-centered">Average exact match accuracy across solution counts, with and without web search (solution counts 1, 3, 5 for web-search conditions).</h2>
+              <img src="static/images/main_results.png" alt="Average accuracy across LLMs, benchmarks, and task sizes for multiple-problem evaluation tasks." loading="lazy">
+              <h2 class="subtitle has-text-centered">Average accuracy of 7 LLMs across four classification-related tasks and task sizes in MPE.</h2>
             </div>
             <div class="item">
               <div class="content has-text-justified">
                 <p>
-                  The Code Interpreter analysis on single-solution puzzles shows mixed effects: enabling Code
-                  Interpreter degrades GPT-5 on implicit constraints (with and without web search), while GPT-4.1
-                  benefits from it, especially with web search. Performance on explicit constraints remains mostly
-                  stable, and output-token reductions are more consistent for GPT-5.
+                  Multi-problem prompting can substantially reduce inference costs. At operating points that
+                  preserve at least 95% of single-problem accuracy, reported token-cost savings range from
+                  30.7% to 82.0% across model-benchmark pairs. This efficiency trend is visible in the
+                  lower cost/accuracy ratio as task size grows, with only a few long-context outliers.
                 </p>
               </div>
-              <img src="static/images/code_interpreter_conditions_comparison.png" alt="Exact-match accuracy and output token comparisons under web search and code interpreter settings." loading="lazy">
-              <h2 class="subtitle has-text-centered">Exact-match accuracy and output tokens for GPT-5 and GPT-4.1 under different conditions (+Web, +CI) on single-solution puzzles.</h2>
+              <img src="static/images/cost_accuracy_ratio.png" alt="Cost-accuracy ratio comparison between single-problem and multi-problem prompting across models and benchmarks." loading="lazy">
+              <h2 class="subtitle has-text-centered">Cost/accuracy ratio (lower is better) for SingleClf versus BatchClf across six benchmarks.</h2>
             </div>
           </div>
         </div>
@@ -227,12 +228,12 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                We propose Time Puzzles, a constraint-based date inference task that targets iterative,
-                tool-augmented temporal reasoning. Although puzzles are synthetically generated and easy to
-                verify, they expose persistent failures of current instruction-and reasoning-tuned LLMs to
-                reliably resolve implicit temporal constraints, even with tool access. Overall, Time Puzzles
-                offers a simple, cost-effective diagnostic for tool-augmented iterative temporal reasoning and
-                can be systematically extended to support more challenging evaluations.
+                LLMs show strong innate capacity for zero-shot multiple-problem handling in standard
+                batch classification and single-source reasoning, but this capability is brittle under
+                format shifts and mixed-source reasoning prompts. The study introduces ZeMPE as a broad,
+                reproducible benchmark for multi-problem evaluation and highlights a practical tradeoff:
+                large cost savings are achievable, yet robust problem understanding across reformulations
+                remains a central limitation.
               </p>
             </div>
           </div>
@@ -249,12 +250,33 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre id="bibtex-code"><code>@article{wang2026timepuzzles,
-  title={Measuring Iterative Temporal Reasoning with Time Puzzles},
-  author={Wang, Zhengxiang and Dong, Zeyu},
-  journal={arXiv preprint arXiv:2601.07148},
-  year={2026},
-  url={https://arxiv.org/abs/2601.07148}
+        <pre id="bibtex-code"><code>@inproceedings{wang-etal-2025-evaluating,
+    title = "Evaluating {LLM}s with Multiple Problems at once",
+    author = "Wang, Zhengxiang  and
+      Kodner, Jordan  and
+      Rambow, Owen",
+    editor = "Arviv, Ofir  and
+      Clinciu, Miruna  and
+      Dhole, Kaustubh  and
+      Dror, Rotem  and
+      Gehrmann, Sebastian  and
+      Habba, Eliya  and
+      Itzhak, Itay  and
+      Mille, Simon  and
+      Perlitz, Yotam  and
+      Santus, Enrico  and
+      Sedoc, Jo{\~a}o  and
+      Shmueli Scheuer, Michal  and
+      Stanovsky, Gabriel  and
+      Tafjord, Oyvind",
+    booktitle = "Proceedings of the Fourth Workshop on Generation, Evaluation and Metrics (GEM{\texttwosuperior})",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.gem-1.14/",
+    pages = "178--199",
+    ISBN = "979-8-89176-261-9"
 }</code></pre>
       </div>
     </section>
