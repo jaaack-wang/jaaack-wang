@@ -150,11 +150,13 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                This work studies whether modern LLMs can provide reliable multi-dimensional analytic writing
-                assessments for graduate-level L2 academic English writing. The paper introduces a corpus of 141
-                annotated literature reviews and presents ProEval, an evaluation framework for analyzing the quality
-                of generated feedback comments. Together, the corpus and framework enable systematic analysis of
-                rubric-based writing assessment quality across multiple analytic dimensions.
+                This paper explores whether LLMs can perform multi-dimensional analytic writing assessments, that is,
+                provide both scores and comments across multiple criteria. Using a corpus of 141 literature reviews
+                written by L2 graduate students and assessed by human experts on nine analytic criteria, the study
+                prompts several popular LLMs under different interaction settings. To evaluate feedback-comment
+                quality, it applies a problem-focused evaluation framework (ProEval) designed to be interpretable,
+                scalable, and reproducible. Overall, the paper finds that LLMs can generate reasonably good and
+                generally reliable multi-dimensional analytic assessments.
               </p>
             </div>
           </div>
@@ -165,18 +167,21 @@
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
-          <h2 class="title is-3 has-text-centered">Overview</h2>
+          <h2 class="title is-3 has-text-centered">Main Results</h2>
           <div class="results-carousel">
             <div class="item">
               <div class="content has-text-justified">
                 <p>
-                  The project contributes a previously unpublished L2 graduate writing corpus with human analytic
-                  assessments and an open implementation of ProEval. This setup supports reproducible comparison of
-                  feedback-generation quality and assessment consistency.
+                  The main experiments show that LLMs can assign sensible scores that are often within one point of
+                  human scores on the 10-point scale (best human-LLM AAR1 ranges from 0.59 to 0.88). The paper also
+                  finds that interaction mode matters for comment quality: asking criteria independently (IM3) leads
+                  to more elaborate, specific, and potentially more helpful comments. In addition, both human- and
+                  LLM-generated assessments exhibit the expected negative score-comment correlation, supporting the
+                  internal consistency of LLM assessments.
                 </p>
               </div>
-              <img src="/images/research/wang_writing_assess_2025.png" alt="Overview figure for multi-dimensional analytic writing assessment study." loading="lazy">
-              <h2 class="subtitle has-text-centered">ACL 2025 paper on multi-dimensional analytic writing assessment with LLMs.</h2>
+              <img src="/images/research/wang_writing_assess_2025.png" alt="Main findings for multi-dimensional analytic writing assessment with LLMs." loading="lazy">
+              <h2 class="subtitle has-text-centered">LLMs produce generally reliable rubric-based assessments, with stronger comment quality under IM3 prompting.</h2>
             </div>
           </div>
         </div>
@@ -190,9 +195,12 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                The paper shows how corpus construction plus targeted automatic evaluation can support more rigorous
-                study of LLM-based writing assessment. It also provides practical resources for future work on
-                educational NLP, L2 writing feedback, and reliable rubric-based assessment.
+                The study concludes that LLMs can generate reasonably good and generally reliable multi-dimensional
+                analytic assessments for graduate-level academic English writing. It highlights practical pedagogical
+                potential for both L2 learners and instructors, and introduces ProEval as a time- and cost-efficient,
+                interpretable, and reproducible framework for feedback-comment analysis. The released corpus and code
+                support future work on deeper human-versus-LLM feedback characterization and stronger comparative
+                metrics for comment quality.
               </p>
             </div>
           </div>
