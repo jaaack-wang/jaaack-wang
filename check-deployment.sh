@@ -6,10 +6,20 @@ echo "GitHub Pages Deployment Status Checker"
 echo "================================================"
 echo ""
 
-# Get the latest commit on main branch
-MAIN_SHA=$(git rev-parse origin/main 2>/dev/null || git rev-parse main)
-MAIN_MSG=$(git log -1 --pretty=format:"%s" "$MAIN_SHA")
-MAIN_DATE=$(git log -1 --pretty=format:"%ci" "$MAIN_SHA")
+# Fetch latest from origin
+git fetch origin 2>/dev/null
+
+# Get the latest commit on main branch from remote
+MAIN_SHA=$(git ls-remote origin main 2>/dev/null | awk '{print $1}')
+
+if [ -z "$MAIN_SHA" ]; then
+    echo "Error: Unable to fetch main branch SHA"
+    exit 1
+fi
+
+# Try to get commit details if we have the commit locally
+MAIN_MSG=$(git log -1 --pretty=format:"%s" "$MAIN_SHA" 2>/dev/null || echo "Commit message not available locally")
+MAIN_DATE=$(git log -1 --pretty=format:"%ci" "$MAIN_SHA" 2>/dev/null || echo "Commit date not available locally")
 
 echo "Latest commit on main branch:"
 echo "  SHA: $MAIN_SHA"
@@ -24,5 +34,8 @@ echo "  https://github.com/jaaack-wang/jaaack-wang/actions/workflows/pages/pages
 echo ""
 echo "Or use GitHub CLI:"
 echo "  gh run list --workflow=pages-build-deployment --limit=1"
+echo ""
+echo "To view the deployed site:"
+echo "  https://www.zhengxiang-wang.me"
 echo ""
 echo "================================================"
