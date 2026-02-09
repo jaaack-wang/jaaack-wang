@@ -167,13 +167,18 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                This paper studies how RNN seq2seq models learn four classic string transductions:
-                identity, reversal, total reduplication, and quadratic copying. Under controlled training
-                and evaluation settings, it compares SRNN, GRU, and LSTM architectures with and without
-                attention on both in-distribution and out-of-distribution sequence lengths. The study
-                shows that models often fit in-distribution data well but struggle to learn truly
-                length-general functions, and it characterizes how attention and architecture choice
-                change learning efficiency and task difficulty.
+                The paper studies the capabilities of Recurrent-Neural-Network sequence to sequence
+                (RNN seq2seq) models in learning four transduction tasks: identity, reversal, total
+                reduplication, and quadratic copying. These transductions are traditionally well studied
+                under finite state transducers and attributed with increasing complexity. We find that
+                RNN seq2seq models are only able to approximate a mapping that fits the training or
+                in-distribution data, instead of learning the underlying functions. Although attention
+                makes learning more efficient and robust, it does not overcome the out-of-distribution
+                generalization limitation. We establish a novel complexity hierarchy for learning the
+                four tasks for attention-less RNN seq2seq models, which may be understood in terms of
+                the complexity hierarchy of formal languages, instead of string transductions. RNN
+                variants also play a role in the results. In particular, we show that Simple RNN
+                seq2seq models cannot count the input length.
               </p>
             </div>
           </div>
@@ -222,12 +227,66 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                RNN seq2seq models primarily learn mappings that fit seen lengths rather than the
-                underlying transduction functions, yielding weak out-of-distribution generalization.
-                Attention improves convergence speed, sample efficiency, and robustness, but does not remove
-                this core limitation. The experiments also support a task-complexity hierarchy for
-                attention-less models and show architecture-specific behaviors, including SRNN difficulty
-                with counting in quadratic copying.
+                This study investigated how well the three major types of RNN seq2seq models, with and
+                without attention, learn four transduction tasks that require learning varying alignments
+                or dependencies between the input and target sequences. Through unified training/evaluation
+                conditions and comprehensive experiments, we compared the learning results across tasks,
+                different model configurations, and test/gen set performance etc., and highlighted factors
+                that influence the learning capabilities and generalization capacity of RNN seq2seq models.
+                Unlike previous research, the input alphabet Sigma for our experiments has 26 unique symbols,
+                instead of binary, making our results more relevant to real-world tasks that concern, say,
+                morpho-phonological transductions. The major findings are further discussed below.
+              </p>
+              <p>
+                <strong>Generalization abilities.</strong> For our experiments, RNN seq2seq models, regardless
+                of attention, tend to approximate the training or in-distribution data, instead of learning the
+                underlying functions. This makes their out-of-distribution generalization abilities restricted,
+                which, however, may not be surprising. For an auto-regressive model like RNN seq2seq models to
+                learn these transductions with bounded precision or parameter size, the probability of the correct
+                output decreases exponentially as a function of the output length n, i.e., P(target) = (1-epsilon)^n,
+                where epsilon is the expected error rate. As n increases indefinitely, the probability of correct
+                generation eventually becomes infinitesimal and indistinguishably small. It is true for both
+                training and testing where strings of (unseen) longer lengths are generally more difficult to
+                fit and generalize to.
+              </p>
+              <p>
+                <strong>Attention.</strong> Attention greatly improves the learning efficiency, by reducing both
+                model complexity and sample complexity, as well as the learning robustness, in terms of the
+                generalization performance and overfitting problem. However, attention does not overcome the
+                out-of-distribution generalization limitation, since it does not change the auto-regressive
+                nature of the models. Nonetheless, the impressive learning efficiency accelerated by attention
+                echoes its original motivation, i.e., "learning to align".
+              </p>
+              <p>
+                <strong>Task complexity.</strong> For the four tasks: identity (f_A), reversal (f_B), total
+                reduplication (f_C), quadratic copying (f_D), we established the following task complexity
+                hierarchy for attention-less RNN seq2seq models: f_D > f_C > f_A > f_B. This differs from
+                the traditional FST-theoretic viewpoint, which sees f_B strictly more complex than f_A.
+                As discussed in the paper, f_B is easier than f_A for RNN seq2seq models because learning
+                f_B contains many initially shorter input-target dependencies, instead of constantly-distanced
+                dependencies for f_A. This makes iteratively optimizing the model parameters easier with
+                backpropagation and results in less complexity for f_B. However, for attentional models, we
+                find that f_D > f_C > f_B > f_A, which appears to align with the FST characterizations but
+                contradicts with our expectation that f_A and f_B are comparably complex with attention.
+              </p>
+              <p>
+                <strong>RNN variants.</strong> The effect of RNN variants on the seq2seq models is a complicated
+                one and interacts with other factors, e.g., attention and the task to learn. When attention is
+                not used, GRU and LSTM are generally more expressive than SRNN. The only exception is reversal,
+                which SRNN consistently outperforms GRU and LSTM in the test/gen set, regardless of attention.
+                Please note that, this exception is only true when SRNN seq2seq models fit the related train set
+                with (nearly) 100% full-sequence accuracy. Moreover, for quadratic copying and regardless of
+                attention, both GRU and LSTM can count the input length while SRNN cannot, which arguably is not
+                a matter of model parameter size.
+              </p>
+              <p>
+                Besides some unexplained puzzles brought up in the paper, good continuations of the current
+                research may include experimenting with (1) other types of seq2seq models, such as other
+                configuration of RNN seq2seq (e.g., bidirectional encoder), CNN seq2seq and transformer;
+                (2) Tape-RNN, which show promising generalization results in various transduction tasks;
+                and (3) other novel transduction tasks that specifically test the predictions of the
+                complexity hierarchy discussed in the paper. We hope that our study encourages more works
+                at the intersection of neural networks and formal language theory in the future.
               </p>
             </div>
           </div>

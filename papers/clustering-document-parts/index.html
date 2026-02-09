@@ -169,12 +169,18 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We propose a pipeline that detects influence campaigns by clustering document parts,
-                classifying high-influence clusters, and projecting cluster decisions back to documents.
-                Unlike direct document-level classification, this framework isolates the specific spans that
-                drive campaign signals and supports interpretable characterization of coordinated influence
-                behavior. The method combines non-lexical linguistic features, SBERT-based clustering,
-                and aggregation over many clustering runs to improve robustness.
+                We propose a novel clustering pipeline to detect and characterize influence campaigns from
+                documents. This approach clusters parts of document, detects clusters that likely reflect an
+                influence campaign, and then identifies documents linked to an influence campaign via their
+                association with the high-influence clusters. Our approach outperforms both the direct
+                document-level classification and the direct document-level clustering approach in predicting
+                if a document is part of an influence campaign. We propose various novel techniques to enhance
+                our pipeline, including using an existing event factuality prediction system to obtain document
+                parts, and aggregating multiple clustering experiments to improve the performance of both cluster
+                and document classification. Classifying documents after clustering not only accurately extracts
+                the parts of the documents that are relevant to influence campaigns, but also captures influence
+                campaigns as a coordinated and holistic phenomenon. Our approach makes possible more fine-grained
+                and interpretable characterizations of influence campaigns from documents.
               </p>
             </div>
           </div>
@@ -223,12 +229,30 @@
             <h2 class="title is-3">Conclusion</h2>
             <div class="content has-text-justified">
               <p>
-                Clustering document parts before document classification offers a stronger and more
-                interpretable route for influence-campaign analysis than direct document-level approaches.
-                The approach better captures campaign-related signals that occur in only parts of long,
-                heterogeneous documents, and cluster aggregation further stabilizes performance across
-                clustering choices. The framework also opens a path toward finer-grained campaign
-                characterization beyond binary detection.
+                We have presented a new approach to finding influence campaigns, which relies on four core
+                features: (1) we cluster parts of documents; (2) we classify clusters of parts of documents
+                using non-lexical features; (3) we relate the classification result back to documents;
+                (4) we use cluster aggregation, the use of many clustering runs over the same dataset, to
+                augment training data for the cluster classifier. The resulting classification of the documents
+                does not only show a predicted label for the document (part of influence campaign or not), but
+                it also shows which parts of the document are responsible for this classification. We believe
+                that our general approach can profit other document classification tasks, including detecting
+                scientific influence in published papers, or themes in literature.
+              </p>
+              <p>
+                There are several avenues for possible future work and we list three below. (1) Datasets.
+                Given the increasing importance of detecting influence campaigns, we hope there will be more
+                datasets annotated on the document collection level for an influence campaign.
+                (2) Incorporating non-textual information. Our current pipeline is a text-only system.
+                Leveraging non-textual information, such as social interactions and the authors' past activities,
+                may help us create a more complicated and comprehensive system (e.g., using graph neural network)
+                that enhances the accurate and reliable detection of influence campaigns. However, such work
+                cannot be possible without good datasets. (3) Automatic characterization of influence campaigns.
+                Our work captures influence campaigns by the high-influence clusters, which may contain a large
+                number of semantically related document parts, possibly with noise. To fully make sense of these
+                clusters, we need to have some automatic ways of characterizing them in a fine-grained and
+                interpretable way aligned with the downstream needs. Our preliminary experiments show that LLMs
+                may be a potential option.
               </p>
             </div>
           </div>
