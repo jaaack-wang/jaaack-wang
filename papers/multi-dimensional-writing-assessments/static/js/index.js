@@ -72,62 +72,6 @@ function copyBibTeX() {
     }
 }
 
-function loadBibTeXIfNeeded() {
-    const bibSection = document.getElementById('BibTeX');
-    const bibtexElement = document.getElementById('bibtex-code');
-
-    if (!bibSection || !bibtexElement || bibSection.dataset.loaded === 'true') {
-        return;
-    }
-
-    const bibSrc = bibSection.getAttribute('data-bib-src');
-    if (!bibSrc) {
-        return;
-    }
-
-    bibtexElement.textContent = 'Loading BibTeX...';
-    fetch(bibSrc)
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Failed to load BibTeX');
-            }
-            return response.text();
-        })
-        .then(function(text) {
-            bibtexElement.textContent = text.trim();
-            bibSection.dataset.loaded = 'true';
-        })
-        .catch(function() {
-            bibtexElement.textContent = 'Unable to load BibTeX right now.';
-        });
-}
-
-function toggleBibTeX(event) {
-    if (event) {
-        event.preventDefault();
-    }
-
-    const bibSection = document.getElementById('BibTeX');
-    const toggleButton = document.querySelector('.bibtex-toggle-btn');
-    if (!bibSection) {
-        return;
-    }
-
-    const isHidden = bibSection.hasAttribute('hidden');
-    if (isHidden) {
-        bibSection.removeAttribute('hidden');
-        loadBibTeXIfNeeded();
-        if (toggleButton) {
-            toggleButton.setAttribute('aria-expanded', 'true');
-        }
-    } else {
-        bibSection.setAttribute('hidden', '');
-        if (toggleButton) {
-            toggleButton.setAttribute('aria-expanded', 'false');
-        }
-    }
-}
-
 // Scroll to top functionality
 function scrollToTop() {
     window.scrollTo({
