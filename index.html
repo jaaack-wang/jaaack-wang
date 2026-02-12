@@ -107,6 +107,27 @@ layout: null
 			fill: currentColor;
 			vertical-align: middle;
 		}
+
+		#Research .bibtex-block {
+			margin-top: 0.75rem;
+			padding: 0.75rem 0.9rem;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			border-radius: 6px;
+			background: #f7f8fa;
+			overflow-x: auto;
+		}
+
+		#Research .bibtex-block pre {
+			margin: 0;
+			font-size: 0.85em;
+			line-height: 1.4;
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		#Research .bibtex-toggle i {
+			pointer-events: none;
+		}
 	</style>
 
 </head>
@@ -323,7 +344,15 @@ layout: null
 										<a class="btn btn-primary btn-lg" style="border-style: none"
 											href="/papers/time-puzzles/" target="_blank" rel="noopener" role="button"><i
 												class="fas fa-globe"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-time-puzzles" role="button"
+											aria-expanded="false" aria-controls="bib-time-puzzles" title="Show BibTeX"><i
+												class="fas fa-quote-right"></i></a>
 									</p>
+									<div id="bib-time-puzzles" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-time-puzzles.bib">
+										<pre><code></code></pre>
+									</div>
 								</div>
 							</article>
 
@@ -340,12 +369,20 @@ layout: null
 										Kaliosis, Dimitris Samaras, Greg Zelinsky, Susan Brennan, Owen Rambow </i>
 									<br />
 									<u>Preprint, 2026</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://arxiv.org/abs/2601.19792" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="https://arxiv.org/abs/2601.19792" target="_blank" rel="noopener"
+											role="button"><i class="fas fa-file-pdf"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-lvlms-humans-ground-2026" role="button"
+											aria-expanded="false" aria-controls="bib-lvlms-humans-ground-2026"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-lvlms-humans-ground-2026" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-lvlms-humans-ground-2026.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -369,14 +406,22 @@ layout: null
 											href="https://github.com/jaaack-wang/lvlms-overhearing" target="_blank"
 											rel="noopener" role="button"><i class="fab fa-github"></i></a>
 										&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="/papers/lvlms-overhearing/" target="_blank" rel="noopener"
-											role="button"><i class="fas fa-globe"></i></a>
-										&nbsp
-										<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
-									</p>
-								</div>
-							</article>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="/papers/lvlms-overhearing/" target="_blank" rel="noopener"
+												role="button"><i class="fas fa-globe"></i></a>
+											&nbsp
+											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+												href="#" data-bib-target="bib-lvlms-overhearing-2025" role="button"
+												aria-expanded="false" aria-controls="bib-lvlms-overhearing-2025"
+												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+											&nbsp
+											<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
+										</p>
+									<div id="bib-lvlms-overhearing-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-lvlms-overhearing-2025.bib">
+										<pre><code></code></pre>
+									</div>
+									</div>
+								</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -403,14 +448,22 @@ layout: null
 											href="https://github.com/jaaack-wang/llms-implicit-writing-styles-imitation"
 											target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
 										&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="/papers/implicit-writing-styles/" target="_blank" rel="noopener"
-											role="button"><i class="fas fa-globe"></i></a>
-										&nbsp
-										<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
-									</p>
-								</div>
-							</article>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="/papers/implicit-writing-styles/" target="_blank" rel="noopener"
+												role="button"><i class="fas fa-globe"></i></a>
+											&nbsp
+											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+												href="#" data-bib-target="bib-implicit-writing-styles-2025" role="button"
+												aria-expanded="false" aria-controls="bib-implicit-writing-styles-2025"
+												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+											&nbsp
+											<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
+										</p>
+									<div id="bib-implicit-writing-styles-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-implicit-writing-styles-2025.bib">
+										<pre><code></code></pre>
+									</div>
+									</div>
+								</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -439,12 +492,21 @@ layout: null
 											href="/papers/multi-dimensional-writing-assessments/" target="_blank"
 											rel="noopener" role="button"><i class="fas fa-globe"></i></a>
 										&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="materials/2025_main-978.pdf" target="_blank" rel="noopener"
-											role="button"><i class="fa fa-file-powerpoint"></i></a>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="materials/2025_main-978.pdf" target="_blank" rel="noopener"
+												role="button"><i class="fa fa-file-powerpoint"></i></a>
+											&nbsp
+											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+												href="#" data-bib-target="bib-multi-dimensional-writing-assessments-2025"
+												role="button" aria-expanded="false"
+												aria-controls="bib-multi-dimensional-writing-assessments-2025"
+												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
 								</p>
-							</div>
-						</article>
+									<div id="bib-multi-dimensional-writing-assessments-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-multi-dimensional-writing-assessments-2025.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -471,12 +533,20 @@ layout: null
 										href="/papers/multi-problem-eval-llm/" target="_blank" rel="noopener"
 										role="button"><i class="fas fa-globe"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="materials/multi-problem-eval.pdf" target="_blank" rel="noopener"
-										role="button"><i class="fa fa-file-powerpoint"></i></a>
-								</p>
-							</div>
-						</article>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="materials/multi-problem-eval.pdf" target="_blank" rel="noopener"
+												role="button"><i class="fa fa-file-powerpoint"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-multi-problem-eval-2025" role="button"
+											aria-expanded="false" aria-controls="bib-multi-problem-eval-2025"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+										</p>
+									<div id="bib-multi-problem-eval-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-multi-problem-eval-2025.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 						<article style="display: flex; align-items: center;">
 							<a class="image" style="flex: 1.35;">
@@ -502,12 +572,20 @@ layout: null
 										href="/papers/clustering-document-parts/" target="_blank" rel="noopener"
 										role="button"><i class="fas fa-globe"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="materials/Clustering-Influence-Campaign-Poster-2024.pdf" target="_blank"
-										rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a>
-								</p>
-							</div>
-						</article>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="materials/Clustering-Influence-Campaign-Poster-2024.pdf" target="_blank"
+												rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-clustering-document-parts-2024" role="button"
+											aria-expanded="false" aria-controls="bib-clustering-document-parts-2024"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+										</p>
+									<div id="bib-clustering-document-parts-2024" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-clustering-document-parts-2024.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -533,12 +611,20 @@ layout: null
 										href="/papers/rnn-seq2seq-learning/" target="_blank" rel="noopener"
 										role="button"><i class="fas fa-globe"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="materials/ICGI2023Slides.pdf" target="_blank" rel="noopener"
-										role="button"><i class="fa fa-file-powerpoint"></i></a>
-								</p>
-							</div>
-						</article>
+											<a class="btn btn-primary btn-lg" style="border-style: none"
+												href="materials/ICGI2023Slides.pdf" target="_blank" rel="noopener"
+												role="button"><i class="fa fa-file-powerpoint"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-rnn-seq2seq-2023" role="button"
+											aria-expanded="false" aria-controls="bib-rnn-seq2seq-2023"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+										</p>
+									<div id="bib-rnn-seq2seq-2023" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-rnn-seq2seq-2023.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -553,12 +639,20 @@ layout: null
 									<i>Zhi Li, Makarova Veronika, <b>Zhengxiang Wang</b></i>
 									<br />
 									<u>Frontiers in Communication 2023</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://www.frontiersin.org/articles/10.3389/fcomm.2023.1035394/full"
-										target="_blank" rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="https://www.frontiersin.org/articles/10.3389/fcomm.2023.1035394/full"
+											target="_blank" rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-frontiers-communication-2023" role="button"
+											aria-expanded="false" aria-controls="bib-frontiers-communication-2023"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-frontiers-communication-2023" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-frontiers-communication-2023.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 						<article style="display: flex; align-items: center;">
 							<a class="image" style="flex: 1.35;">
@@ -571,12 +665,20 @@ layout: null
 									<i> <b>Zhengxiang Wang</b> </i>
 									<br />
 									<u>Eval4NLP @ AACL-IJCNLP 2022</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://aclanthology.org/2022.eval4nlp-1.6/" target="_blank"
-										rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="https://aclanthology.org/2022.eval4nlp-1.6/" target="_blank"
+											rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-eval4nlp-2022" role="button"
+											aria-expanded="false" aria-controls="bib-eval4nlp-2022"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-eval4nlp-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-eval4nlp-2022.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -594,12 +696,20 @@ layout: null
 										href="https://ieeexplore.ieee.org/abstract/document/9903512" target="_blank"
 										rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/hongtaoh/32vis" target="_blank" rel="noopener"
-										role="button"><i class="fab fa-github"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="https://github.com/hongtaoh/32vis" target="_blank" rel="noopener"
+											role="button"><i class="fab fa-github"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-ieee-vis-2022" role="button"
+											aria-expanded="false" aria-controls="bib-ieee-vis-2022"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-ieee-vis-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-ieee-vis-2022.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 						<article style="display: flex; align-items: center;">
 							<a class="image" style="flex: 1.35;">
@@ -617,12 +727,20 @@ layout: null
 										href="https://aclanthology.org/2022.icnlsp-1.5/" target="_blank" rel="noopener"
 										role="button"><i class="fas fa-file-pdf"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/jaaack-wang/linguistic-knowledge-in-DA-for-NLP"
-										target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="https://github.com/jaaack-wang/linguistic-knowledge-in-DA-for-NLP"
+											target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-icnlsp-2022" role="button"
+											aria-expanded="false" aria-controls="bib-icnlsp-2022"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-icnlsp-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-icnlsp-2022.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 						<article style="display: flex; align-items: center;">
@@ -645,12 +763,20 @@ layout: null
 										href="https://github.com/jaaack-wang/ling_feature_extractor/tree/Thesis_Project_Version"
 										target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
 									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="materials/MA-Thesis-Wang-Slides-2021.pdf" target="_blank" rel="noopener"
-										role="button"><i class="fa fa-file-powerpoint"></i></a>
-								</p>
-							</div>
-						</article>
+										<a class="btn btn-primary btn-lg" style="border-style: none"
+											href="materials/MA-Thesis-Wang-Slides-2021.pdf" target="_blank" rel="noopener"
+											role="button"><i class="fa fa-file-powerpoint"></i></a>
+										&nbsp
+										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
+											href="#" data-bib-target="bib-ma-thesis-2021" role="button"
+											aria-expanded="false" aria-controls="bib-ma-thesis-2021"
+											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
+									</p>
+									<div id="bib-ma-thesis-2021" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-ma-thesis-2021.bib">
+										<pre><code></code></pre>
+									</div>
+								</div>
+							</article>
 
 
 					</div>
@@ -765,6 +891,50 @@ layout: null
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			function loadBibTeX(block) {
+				if (!block || block.dataset.loaded === 'true') return;
+
+				var bibSrc = block.getAttribute('data-bib-src');
+				var codeEl = block.querySelector('code');
+				if (!bibSrc || !codeEl) return;
+
+				codeEl.textContent = 'Loading BibTeX...';
+				fetch(bibSrc)
+					.then(function (response) {
+						if (!response.ok) {
+							throw new Error('Failed to load BibTeX.');
+						}
+						return response.text();
+					})
+					.then(function (text) {
+						codeEl.textContent = text.trim();
+						block.dataset.loaded = 'true';
+					})
+					.catch(function () {
+						codeEl.textContent = 'Unable to load BibTeX right now.';
+					});
+			}
+
+			var toggles = document.querySelectorAll('.bibtex-toggle');
+			toggles.forEach(function (toggle) {
+				toggle.addEventListener('click', function (event) {
+					event.preventDefault();
+					var targetId = toggle.getAttribute('data-bib-target');
+					if (!targetId) return;
+					var block = document.getElementById(targetId);
+					if (!block) return;
+
+					loadBibTeX(block);
+					var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+					block.hidden = isExpanded;
+					toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+					toggle.title = isExpanded ? 'Show BibTeX' : 'Hide BibTeX';
+				});
+			});
+		});
+	</script>
 	<!-- <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a"></script> -->
 
 </body>
