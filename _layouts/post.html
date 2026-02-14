@@ -185,17 +185,6 @@
       color: #41b883;
     }
 
-    .post-comments {
-      margin-top: 2rem;
-    }
-
-    .post-comments h3 {
-      color: #41b883;
-      border-bottom: 2px solid #41b883;
-      display: inline-block;
-      padding-bottom: .25rem;
-    }
-
     .post-tags a {
       margin-right: .35rem;
       text-decoration: none;
@@ -232,8 +221,12 @@
         {%- assign __lang = page.lang | default: "en" -%}
         {%- assign __lang_s = __lang | append: "" -%}
         {%- assign __is_zh = false -%}
+        {%- assign __is_en = false -%}
         {%- if __lang_s contains "zh" -%}
         {%- assign __is_zh = true -%}
+        {%- endif -%}
+        {%- if __lang_s contains "en" -%}
+        {%- assign __is_en = true -%}
         {%- endif -%}
 
         {% assign sib = site.posts | where: "pair_id", page.pair_id | where_exp: "p", "p.lang != page.lang" | first %}
@@ -295,26 +288,37 @@
         {{ content }}
 
         {%- comment -%}
-        Navigation:
-        Use simple, GitHub Pages-safe pools.
-        - If translated: pool = posts where translated/is_translation is true
-        - Else: pool = posts where both flags are not true
+        Navigation pools:
+        - English posts: all English posts (original + translated)
+        - Non-English originals: all original posts across all languages
+        - Non-English translated: translated posts in the same language
         {%- endcomment -%}
-
-        {%- assign __pool = site.posts | where: "lang", page.lang -%}
         {%- assign __pool_filtered = "" | split: "" -%}
 
-        {%- for p in __pool -%}
+        {%- for p in site.posts -%}
         {%- assign _raw = p.translated | default: p.is_translation | default: false -%}
         {%- assign _json = _raw | jsonify -%}
         {%- assign _is_t = false -%}
+        {%- assign _lang = p.lang | default: "en" -%}
+        {%- assign _lang_s = _lang | append: "" -%}
+        {%- assign _is_en_post = false -%}
         {%- if _raw == true or _json == '"true"' or _json == 'true' -%}
         {%- assign _is_t = true -%}
         {%- endif -%}
+        {%- if _lang_s contains "en" -%}
+        {%- assign _is_en_post = true -%}
+        {%- endif -%}
+        {%- assign _keep = false -%}
 
-        {%- if __is_translated and _is_t -%}
-        {%- assign __pool_filtered = __pool_filtered | push: p -%}
-        {%- elsif __is_translated == false and _is_t == false -%}
+        {%- if __is_en and _is_en_post -%}
+        {%- assign _keep = true -%}
+        {%- elsif __is_en == false and __is_translated == false and _is_t == false -%}
+        {%- assign _keep = true -%}
+        {%- elsif __is_en == false and __is_translated and _is_t and _lang_s == __lang_s -%}
+        {%- assign _keep = true -%}
+        {%- endif -%}
+
+        {%- if _keep -%}
         {%- assign __pool_filtered = __pool_filtered | push: p -%}
         {%- endif -%}
         {%- endfor -%}
@@ -362,18 +366,6 @@
               target="_blank" rel="noopener">Reddit</a>
             <a class="share em"
               href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}">Email</a>
-          </div>
-
-          <div id="comments" class="post-comments">
-            <h3 style="margin-top:2rem">Comments</h3>
-
-            <script src="https://giscus.app/client.js" data-repo="jaaack-wang/jaaack-wang" data-repo-id="R_kgDOGO-aLw"
-              data-category="Announcements" data-category-id="DIC_kwDOGO-aL84Cw1ix" data-mapping="url" data-strict="0"
-              data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light"
-              data-lang="en" crossorigin="anonymous" async>
-              </script>
-
-            <noscript>Please enable JavaScript to view the comments.</noscript>
           </div>
 
           <p class="post-footer">
