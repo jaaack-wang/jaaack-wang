@@ -125,6 +125,25 @@ layout: null
 			word-break: break-word;
 		}
 
+		#Research .bibtex-toolbar {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 0.55rem;
+		}
+
+		#Research .bibtex-copy-btn {
+			border: 1px solid rgba(0, 0, 0, 0.12);
+			border-radius: 4px;
+			background: #ffffff;
+			padding: 0.2rem 0.6rem;
+			font-size: 0.78rem;
+			cursor: pointer;
+		}
+
+		#Research .bibtex-copy-btn:hover {
+			background: #f2f4f7;
+		}
+
 		#Research .bibtex-toggle i {
 			pointer-events: none;
 		}
@@ -896,6 +915,75 @@ layout: null
 	<script src="assets/js/main.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			function copyToClipboard(text) {
+				if (navigator.clipboard && window.isSecureContext) {
+					return navigator.clipboard.writeText(text);
+				}
+				return new Promise(function (resolve, reject) {
+					var textArea = document.createElement('textarea');
+					textArea.value = text;
+					textArea.style.position = 'fixed';
+					textArea.style.left = '-9999px';
+					document.body.appendChild(textArea);
+					textArea.focus();
+					textArea.select();
+					try {
+						var ok = document.execCommand('copy');
+						document.body.removeChild(textArea);
+						if (ok) {
+							resolve();
+						} else {
+							reject(new Error('Copy failed'));
+						}
+					} catch (err) {
+						document.body.removeChild(textArea);
+						reject(err);
+					}
+				});
+			}
+
+			function ensureCopyButton(block) {
+				if (!block) return;
+				var existing = block.querySelector('.bibtex-copy-btn');
+				if (existing) return;
+
+				var toolbar = document.createElement('div');
+				toolbar.className = 'bibtex-toolbar';
+
+				var button = document.createElement('button');
+				button.type = 'button';
+				button.className = 'bibtex-copy-btn';
+				button.textContent = 'Copy';
+				button.addEventListener('click', function () {
+					var codeEl = block.querySelector('code');
+					if (!codeEl) return;
+					var text = codeEl.textContent.trim();
+					if (!text || text === 'Loading BibTeX...') return;
+
+					copyToClipboard(text)
+						.then(function () {
+							button.textContent = 'Copied';
+							setTimeout(function () {
+								button.textContent = 'Copy';
+							}, 1400);
+						})
+						.catch(function () {
+							button.textContent = 'Failed';
+							setTimeout(function () {
+								button.textContent = 'Copy';
+							}, 1400);
+						});
+				});
+
+				toolbar.appendChild(button);
+				var pre = block.querySelector('pre');
+				if (pre) {
+					block.insertBefore(toolbar, pre);
+				} else {
+					block.appendChild(toolbar);
+				}
+			}
+
 			function loadBibTeX(block) {
 				if (!block || block.dataset.loaded === 'true') return;
 
@@ -903,6 +991,7 @@ layout: null
 				var codeEl = block.querySelector('code');
 				if (!bibSrc || !codeEl) return;
 
+				ensureCopyButton(block);
 				codeEl.textContent = 'Loading BibTeX...';
 				fetch(bibSrc)
 					.then(function (response) {
@@ -929,6 +1018,7 @@ layout: null
 					var block = document.getElementById(targetId);
 					if (!block) return;
 
+					ensureCopyButton(block);
 					loadBibTeX(block);
 					var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
 					block.hidden = isExpanded;
