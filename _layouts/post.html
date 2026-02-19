@@ -191,6 +191,51 @@
       color: #41b883;
       font-weight: 600
     }
+
+    .back-to-top {
+      position: fixed;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 999px;
+      background: #41b883;
+      color: #fff;
+      font-size: 1.25rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background 0.2s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: #359a72;
+    }
+
+    @media (max-width: 640px) {
+      .back-to-top {
+        width: 40px;
+        height: 40px;
+        right: 0.85rem;
+        bottom: 0.85rem;
+      }
+    }
   </style>
 </head>
 
@@ -375,11 +420,34 @@
     </section>
   </div>
 
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/browser.min.js"></script>
   <script src="/assets/js/breakpoints.min.js"></script>
   <script src="/assets/js/util.js"></script>
   <script src="/assets/js/main.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById('backToTopBtn');
+      if (!btn) return;
+
+      function toggleButton() {
+        if (window.scrollY > 280) {
+          btn.classList.add('show');
+        } else {
+          btn.classList.remove('show');
+        }
+      }
+
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', toggleButton, { passive: true });
+      toggleButton();
+    })();
+  </script>
 </body>
 
 </html>
