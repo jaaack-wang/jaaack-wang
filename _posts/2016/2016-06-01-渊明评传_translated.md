@@ -5,7 +5,7 @@ lang: en
 is_translation: true
 pair_id: 渊明评传
 title: "A Critical Biography of Tao Yuanming"
-tags: ["Character Analysis"]
+tags: [Character Analysis, Classical Chinese]
 ---
 ![img](https://picx.zhimg.com/80/141b66273dcc8edac595c59fb3bef26b_1440w.webp?source=d16d100b)
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "否定词“没”“没有”词汇语法化历程新探——兼论现代汉语否定词系统的形成"
+title: "Lexical grammaticalization of negators Mei and Meiyou: Some reflection on the formation of Modern Chinese negation system"
 approx_date: "2018-05"
-tags: [语言学]
+tags: [Linguistics]
 lang: en
 is_translation: true
 pair_id: 否定词-没-没有-词汇语法化
