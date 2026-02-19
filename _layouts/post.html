@@ -192,6 +192,16 @@
       font-weight: 600
     }
 
+    .post-meta .post-tag-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .post-meta .post-tag-link:hover {
+      text-decoration: underline;
+    }
+
     .back-to-top {
       position: fixed;
       right: 1.1rem;
@@ -311,7 +321,15 @@
           {{ page.date | date: "%b %-d, %Y" }}
           {%- endif -%}
           {% if page.tags and page.tags.size > 0 %}
-          · {{ page.tags | join: ", " }}
+          ·
+          {%- if __is_en -%}
+          {%- assign __tags_base = '/blogs/en/tags/' -%}
+          {%- else -%}
+          {%- assign __tags_base = '/blogs/tags/' -%}
+          {%- endif -%}
+          {% for t in page.tags %}
+          <a class="post-tag-link" href="{{ __tags_base | relative_url }}#{{ t | slugify }}">#{{ t }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
           {% endif %}
         </p>
 
