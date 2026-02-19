@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "不确定性的不可战胜之恐惧"
+title: "对不确定性的不可战胜的恐惧"
 approx_date: "2016-05"
 tags: [哲学]
 lang: zh
