@@ -290,8 +290,8 @@
         {%- comment -%}
         Navigation pools:
         - English posts: all English posts (original + translated)
-        - Non-English originals: all original posts across all languages
-        - Non-English translated: translated posts in the same language
+        - Other original posts (non-English): all originals across all languages
+        - Other translated posts: translated posts in the same language
         {%- endcomment -%}
         {%- assign __pool_filtered = "" | split: "" -%}
 
@@ -312,7 +312,7 @@
 
         {%- if __is_en and _is_en_post -%}
         {%- assign _keep = true -%}
-        {%- elsif __is_en == false and __is_translated == false and _is_t == false -%}
+        {%- elsif __is_translated == false and _is_t == false -%}
         {%- assign _keep = true -%}
         {%- elsif __is_en == false and __is_translated and _is_t and _lang_s == __lang_s -%}
         {%- assign _keep = true -%}
