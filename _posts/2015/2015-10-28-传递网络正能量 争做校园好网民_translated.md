@@ -2,7 +2,7 @@
 layout: post
 title: "Pass on positive energy on the internet; strive to be a good netizen on campus"
 approx_date: "2015-10"
-tags: [随笔,记事]
+tags: [Essay]
 lang: en
 is_translation: true
 pair_id: 传递网络正能量 争做校园好网民
