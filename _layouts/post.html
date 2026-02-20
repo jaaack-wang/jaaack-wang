@@ -156,6 +156,16 @@
       color: #1f5e43;
       -webkit-text-fill-color: #1f5e43;
       background: rgba(65, 184, 131, 0.22);
+      animation: ghostFadeOut 1.6s ease-out forwards;
+    }
+
+    @keyframes ghostFadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
     .post-wrapper p.post-ghost-note::selection {
@@ -591,6 +601,8 @@
       var ghostNote = document.querySelector('.post-ghost-note');
       var prevLink = document.getElementById('postPrevLink');
       var nextLink = document.getElementById('postNextLink');
+      var ghostFlashTimer = null;
+      var ghostWasTouched = false;
 
       function toggleButton() {
         if (!btn) return;
@@ -621,9 +633,19 @@
         if (!ghostNote || !window.getSelection) return;
         var sel = window.getSelection();
         if (selectionTouchesGhost(sel, ghostNote)) {
-          ghostNote.classList.add('is-selected');
+          if (!ghostWasTouched) {
+            ghostNote.classList.remove('is-selected');
+            void ghostNote.offsetWidth;
+            ghostNote.classList.add('is-selected');
+            if (ghostFlashTimer) clearTimeout(ghostFlashTimer);
+            ghostFlashTimer = setTimeout(function () {
+              ghostNote.classList.remove('is-selected');
+              ghostFlashTimer = null;
+            }, 1650);
+          }
+          ghostWasTouched = true;
         } else {
-          ghostNote.classList.remove('is-selected');
+          ghostWasTouched = false;
         }
       }
 
