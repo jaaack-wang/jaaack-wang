@@ -378,11 +378,11 @@
         {% assign sib = site.posts | where: "pair_id", page.pair_id | where_exp: "p", "p.lang != page.lang" | first %}
 
         {% if sib %}
-        <p class="archive-tags-link">
+        <p id="langSwitchWrap" class="archive-tags-link">
           {% if __is_zh %}
-          <a href="{{ sib.url | relative_url }}?nav=en">English →</a>
+          <a id="langSwitchLink" href="{{ sib.url | relative_url }}?nav=en">English →</a>
           {% else %}
-          <a href="{{ sib.url | relative_url }}?nav=zh">中文 →</a>
+          <a id="langSwitchLink" href="{{ sib.url | relative_url }}?nav=zh">中文 →</a>
           {% endif %}
         </p>
         {% endif %}
@@ -601,6 +601,7 @@
       var ghostNote = document.querySelector('.post-ghost-note');
       var prevLink = document.getElementById('postPrevLink');
       var nextLink = document.getElementById('postNextLink');
+      var langSwitchWrap = document.getElementById('langSwitchWrap');
       var ghostFlashTimer = null;
       var ghostWasTouched = false;
 
@@ -685,6 +686,9 @@
         var mode = normalizeNavMode(params.get('nav'));
         applyNavLink(prevLink, mode, '← Previous: ');
         applyNavLink(nextLink, mode, 'Next: ', ' →');
+        if (langSwitchWrap && mode === 'en') {
+          langSwitchWrap.style.display = 'none';
+        }
       }
 
       if (btn) {

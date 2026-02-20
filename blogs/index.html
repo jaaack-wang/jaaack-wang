@@ -11,144 +11,85 @@ layout: null
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
   <style>
-  /* Accent color from your sidebar */
   :root {
-    --accent-color: #41b883;
+    --accent: #41b883;
   }
 
-  h2 {
-    color: var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
-    padding-bottom: 0.25rem;
-    display: inline-block;
+  .archive-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  a {
-    color: var(--accent-color);
+  .archive-page h3 {
+    margin-bottom: 1rem;
+  }
+
+  .post-row {
+    margin: .65rem 0;
+  }
+
+  .post-row a {
+    color: var(--accent);
     text-decoration: none;
   }
 
-  a:hover {
+  .post-row a:hover {
     text-decoration: underline;
   }
 
-  .button, .box a.button {
-    background-color: var(--accent-color);
-    color: #fff !important;
-    border: none;
-    padding: 0.6em 1.2em;
-    border-radius: 4px;
-    font-weight: 500;
+  .muted {
+    color: #888;
   }
 
-  .button:hover {
-    background-color: #369d6b;
+  .archive-tags-link a {
+    color: var(--accent);
   }
-</style>
 
-
+  @media (max-width: 480px) {
+    .archive-page {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  </style>
 </head>
 <body class="is-preload">
 
-  <span id="logo" style="display:none;">Zhengxiang Wang</span>
-
-  <section style="background-color:#41b883; color:white; padding:3rem 0; text-align:center;">
-  <div class="inner">
-    <!-- <h1 style="margin-bottom:0.5rem;">Zhengxiang Wang’s Blogs</h1> -->
-    <!-- <p style="opacity:0.85;">Thoughts, research notes, and stories in progress.</p> -->
-  </div>
-</section>
-
-
   <div id="wrapper">
     <section class="wrapper style1 fade-up">
-      <div class="container" style="margin-left:3rem; margin-top:2.5rem;">
-        <h2>Zhengxiang Wang's Blogs</h2>
+      <div class="container archive-page">
+        <h3>Blogs</h3>
 
-        <p>
-          <a href="{{ "/blogs/archive/" | relative_url }}" style="color:#41b883">Browse by year →</a>
-          &nbsp;·&nbsp;
-          <a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
+        <p class="archive-tags-link">
+          <a href="{{ "/blogs/tags/" | relative_url }}">Browse by tag →</a>
+          &nbsp;|&nbsp;
+          <a href="{{ "/blogs/en/" | relative_url }}">English →</a>
         </p>
 
+        {% assign originals = site.posts | where_exp: "p", "p.is_translation != true" %}
+        {% assign grouped = originals | group_by_exp: "p", "p.date | date: '%Y'" %}
 
-        {% if site.posts and site.posts != empty %}
-          {% for post in site.posts %}
-            <article class="box" style="margin-bottom:1.25rem">
-              <h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
-              
-              {%- comment -%}
-          Flexible date display:
-          - If page.display_date is set, show it.
-          - Else if page.approx_date: "YYYY-MM" → "Month YYYY".
-          - Else if year/month fields provided (and no day), show "Month YYYY".
-          - Else fall back to full page.date.
-        {%- endcomment -%}
-        {%- assign __human_date = nil -%}
-        {%- if page.display_date -%}
-          {%- assign __human_date = page.display_date -%}
-        {%- elsif page.approx_date -%}
-          {%- assign parts = page.approx_date | split: "-" -%}
-          {%- assign y = parts[0] -%}
-          {%- assign m_raw = parts[1] -%}
-          {%- assign m = m_raw | plus: 0 -%}
-          {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
-          {%- assign m_index = m | minus: 1 -%}
-          {%- assign __human_date = months[m_index] | append: " " | append: y -%}
-        {%- elsif page.year and page.month and page.day == nil -%}
-          {%- assign m = page.month | plus: 0 -%}
-          {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
-          {%- assign m_index = m | minus: 1 -%}
-          {%- assign __human_date = months[m_index] | append: " " | append: page.year -%}
-        {%- endif -%}
+        {% for yr in grouped %}
+          <div class="year" id="{{ yr.name }}">
+            <h3>{{ yr.name }}</h3>
 
-              <p class="post-meta">
-  {% if __human_date %}
-    {{ __human_date }}
-  {% else %}
-    {{ post.date | date: "%b %-d, %Y" }}
-  {% endif %}
-</p>
+            {% for post in yr.items %}
+              <div class="post-row">
+                <span class="muted">{{ post.date | date: "%b %-d" }}</span>
+                &nbsp;—&nbsp;
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
 
-
-              {% if post.excerpt %}
-                <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
-              {% endif %}
-
-              <!-- {% if post.tags %}
-                <p>
-                  {% for t in post.tags %}
-                    <a href="/blogs/tags.html#{{ t | slugify }}" style="margin-right:.35rem; text-decoration:none; color:#41b883">#{{ t }}</a>
-                  {% endfor %}
-                </p>
-              {% endif %} -->
-
-            </article>
-          {% endfor %}
-        {% else %}
-          <p>No posts yet.</p>
-        {% endif %}
-
+        <p class="archive-tags-link" style="margin-top:2rem;">
+          <a href="/">← Back to Home</a>
+        </p>
       </div>
     </section>
-
-     
-    <!-- Home Button -->
-<div style="max-width:800px; margin-left:3rem; margin-top:2.5rem;">
-  <a href="/" class="button" 
-     style="
-       background-color:#41b883;
-       color:#fff;
-       border:none;
-       padding:0em 1.5em;
-       border-radius:4px;
-       font-weight:600;
-       text-decoration:none;
-     ">
-     ← Back to Home
-  </a>
-</div>
-
   </div>
 
   <script src="/assets/js/jquery.min.js"></script>

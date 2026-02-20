@@ -1,63 +1,102 @@
 ---
-layout: default
+layout: null
 permalink: /blogs/en/
 ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blogs (English) — {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
-<section class="wrapper style1 fade-up">
-  <div class="inner container archive-page">
-    <h2>Blogs (English)</h2>
-
-    <p class="muted" style="margin-top: .25rem;">
-      Disclaimer: All posts that were originally written in Chinese were translated into English by GPT-5.2.
-    </p>
-
-    <p class="archive-tags-link" style="margin-top:1rem;">
-      <a href="{{ '/blogs/en/tags/' | relative_url }}" style="color:var(--accent)">Browse by tag →</a>
-      &nbsp;|&nbsp;
-      <a href="{{ '/' | relative_url }}#latest-blogs" style="color:var(--accent)">All (originals) →</a>
-    </p>
-
-    {% assign en_posts = site.posts | where: "lang", "en" %}
-    {% assign grouped = en_posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-
-    {% for yr in grouped %}
-    <div class="year" id="{{ yr.name }}">
-      <h3>{{ yr.name }}</h3>
-      {% for post in yr.items %}
-      <div class="post-row">
-        <span class="muted">{{ post.date | date: "%b %-d" }}</span>
-        &nbsp;—&nbsp;
-        <a href="{{ post.url | relative_url }}?nav=en" style="color:var(--accent)">{{ post.title }}</a>
-      </div>
-      {% endfor %}
-    </div>
-    {% endfor %}
-
-    <p style="margin-top:2rem;">
-      <a href="/" style="color:#41b883">← Back to Home</a>
-    </p>
-  </div>
-</section>
-
-<style>
+  <style>
   :root {
     --accent: #41b883;
   }
 
-  .container {
+  .archive-page {
     max-width: 900px;
-    margin: 5rem auto 4rem;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  h2 {
+  .archive-page h3 {
+    margin-bottom: 1rem;
+  }
+
+  .post-row {
+    margin: .65rem 0;
+  }
+
+  .post-row a {
     color: var(--accent);
-    border-bottom: 3px solid var(--accent);
-    display: inline-block;
-    padding-bottom: .25rem;
+    text-decoration: none;
+  }
+
+  .post-row a:hover {
+    text-decoration: underline;
   }
 
   .muted {
     color: #888;
   }
-</style>
+
+  .archive-tags-link a {
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    .archive-page {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  </style>
+</head>
+<body class="is-preload">
+
+  <div id="wrapper">
+    <section class="wrapper style1 fade-up">
+      <div class="container archive-page">
+        <h3>Blogs (English)</h3>
+
+        <p class="archive-tags-link">
+          <a href="{{ "/blogs/en/tags/" | relative_url }}">Browse by tag →</a>
+          &nbsp;|&nbsp;
+          <a href="{{ "/blogs/" | relative_url }}">中文 →</a>
+        </p>
+
+        {% assign en_posts = site.posts | where: "lang", "en" %}
+        {% assign grouped = en_posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+
+        {% for yr in grouped %}
+          <div class="year" id="{{ yr.name }}">
+            <h3>{{ yr.name }}</h3>
+
+            {% for post in yr.items %}
+              <div class="post-row">
+                <span class="muted">{{ post.date | date: "%b %-d" }}</span>
+                &nbsp;—&nbsp;
+                <a href="{{ post.url | relative_url }}?nav=en">{{ post.title }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+
+        <p class="archive-tags-link" style="margin-top:2rem;">
+          <a href="/">← Back to Home</a>
+        </p>
+      </div>
+    </section>
+    </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
