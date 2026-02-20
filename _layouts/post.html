@@ -156,7 +156,7 @@
       color: #1f5e43;
       -webkit-text-fill-color: #1f5e43;
       background: rgba(65, 184, 131, 0.22);
-      animation: ghostFadeOut 1.6s ease-out forwards;
+      animation: ghostFadeOut 3.2s ease-out forwards;
     }
 
     @keyframes ghostFadeOut {
@@ -169,13 +169,13 @@
     }
 
     .post-wrapper p.post-ghost-note::selection {
-      background: rgba(65, 184, 131, 0.22);
-      color: #1f5e43;
+      background: transparent;
+      color: transparent;
     }
 
     .post-wrapper p.post-ghost-note::-moz-selection {
-      background: rgba(65, 184, 131, 0.22);
-      color: #1f5e43;
+      background: transparent;
+      color: transparent;
     }
 
     .post-wrapper p.post-footer {
@@ -641,8 +641,16 @@
             if (ghostFlashTimer) clearTimeout(ghostFlashTimer);
             ghostFlashTimer = setTimeout(function () {
               ghostNote.classList.remove('is-selected');
+              var s = window.getSelection ? window.getSelection() : null;
+              if (selectionTouchesGhost(s, ghostNote)) {
+                try {
+                  s.removeAllRanges();
+                } catch (e) {
+                  // Ignore selection clearing failures.
+                }
+              }
               ghostFlashTimer = null;
-            }, 1650);
+            }, 3250);
           }
           ghostWasTouched = true;
         } else {
