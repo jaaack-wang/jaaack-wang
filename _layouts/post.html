@@ -116,18 +116,25 @@
       line-height: 1.6;
     }
 
-    .post-ghost-note {
+    .post-wrapper p.post-ghost-note {
       margin: 0;
-      font-size: 1px;
-      line-height: 1;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 1.7;
       color: transparent;
       letter-spacing: .01em;
       user-select: text;
       -webkit-user-select: text;
     }
 
-    .post-wrapper p.post-ghost-note {
-      margin-bottom: 0;
+    .post-wrapper p.post-ghost-note::selection {
+      background: rgba(65, 184, 131, 0.22);
+      color: #1f5e43;
+    }
+
+    .post-wrapper p.post-ghost-note::-moz-selection {
+      background: rgba(65, 184, 131, 0.22);
+      color: #1f5e43;
     }
 
     .post-wrapper p.post-footer {
