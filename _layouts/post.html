@@ -96,7 +96,7 @@
     }
 
     .post-footer {
-      margin-top: 3rem;
+      margin-top: .9rem;
       font-size: 1rem;
     }
 
@@ -106,7 +106,7 @@
     }
 
     .post-legal {
-      margin-top: 1.6rem;
+      margin-top: .9rem;
       padding: .75rem .95rem;
       border-left: 4px solid #d9d9d9;
       background: #fafafa;
@@ -123,6 +123,15 @@
       letter-spacing: .01em;
       user-select: text;
       -webkit-user-select: text;
+    }
+
+    .post-wrapper p.post-ghost-note {
+      margin-bottom: 0;
+    }
+
+    .post-wrapper p.post-footer {
+      margin-top: .15rem;
+      margin-bottom: 0;
     }
 
     .post-nav {
@@ -458,8 +467,15 @@
 
           <p class="post-ghost-note">Now you see me. Now you don’t. 萍水相逢，当相忘于江湖。</p>
 
+          {%- if __is_translated -%}
+          {%- assign __back_blogs_href = '/blogs/en/' -%}
+          {%- else -%}
+          {%- assign __back_blogs_href = '/#latest-blogs' -%}
+          {%- endif -%}
           <p class="post-footer">
-            <a href="/">← Back to Home</a>
+            <a href="{{ __back_blogs_href | relative_url }}">&lt;- Back to Blogs</a>
+            &nbsp;|&nbsp;
+            <a href="{{ '/' | relative_url }}">← Back to Home</a>
           </p>
       </div>
     </section>
