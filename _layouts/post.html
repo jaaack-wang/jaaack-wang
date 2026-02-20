@@ -25,6 +25,7 @@
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ desc }}">
   <meta name="twitter:image" content="{{ image }}">
+  <meta name="robots" content="noai, noimageai, noindex, nofollow">
   <link rel="canonical" href="{{ url }}">
 
   <style>
@@ -102,6 +103,25 @@
     .post-footer a {
       color: var(--accent);
       font-weight: 500;
+    }
+
+    .post-legal {
+      margin-top: 1.6rem;
+      padding: .75rem .95rem;
+      border-left: 4px solid #d9d9d9;
+      background: #fafafa;
+      color: #444;
+      font-size: .98rem;
+      line-height: 1.6;
+    }
+
+    .post-ghost-note {
+      margin: .35rem 0 .2rem;
+      font-size: .68rem;
+      line-height: 1.15;
+      color: rgba(0, 0, 0, 0.08);
+      letter-spacing: .01em;
+      user-select: none;
     }
 
     .post-nav {
@@ -353,8 +373,8 @@
         {%- comment -%}
         Navigation pools:
         - English posts: all English posts (original + translated)
-        - Other original posts (non-English): all originals across all languages
         - Other translated posts: translated posts in the same language
+        - Other original posts (non-English): all originals across all languages
         {%- endcomment -%}
         {%- assign __pool_filtered = "" | split: "" -%}
 
@@ -375,9 +395,9 @@
 
         {%- if __is_en and _is_en_post -%}
         {%- assign _keep = true -%}
-        {%- elsif __is_translated == false and _is_t == false -%}
+        {%- elsif __is_translated and _is_t and _lang_s == __lang_s -%}
         {%- assign _keep = true -%}
-        {%- elsif __is_en == false and __is_translated and _is_t and _lang_s == __lang_s -%}
+        {%- elsif __is_translated == false and _is_t == false -%}
         {%- assign _keep = true -%}
         {%- endif -%}
 
@@ -430,6 +450,12 @@
             <a class="share em"
               href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}">Email</a>
           </div>
+
+          <p class="post-legal">
+            &copy; {{ page.date | date: "%Y" }} {{ site.title }}. No automated scraping, dataset inclusion, or machine learning training permitted without written permission.
+          </p>
+
+          <p class="post-ghost-note">Now you see me. Now you don’t. 萍水相逢，当相忘于江湖。</p>
 
           <p class="post-footer">
             <a href="/">← Back to Home</a>
