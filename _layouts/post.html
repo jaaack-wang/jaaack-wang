@@ -41,6 +41,21 @@
       color: var(--text);
     }
 
+    /* Post pages don't use desktop sidebar; keep mobile panel behavior. */
+    #wrapper {
+      padding-right: 0 !important;
+    }
+
+    #header {
+      display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      #header {
+        display: block;
+      }
+    }
+
     .post-wrapper {
       max-width: 850px;
       margin: 6rem auto 4rem;
@@ -122,9 +137,16 @@
       font-size: 1.1rem;
       line-height: 1.7;
       color: transparent;
+      -webkit-text-fill-color: transparent;
       letter-spacing: .01em;
       user-select: text;
       -webkit-user-select: text;
+    }
+
+    .post-wrapper p.post-ghost-note.is-selected {
+      color: #1f5e43;
+      -webkit-text-fill-color: #1f5e43;
+      background: rgba(65, 184, 131, 0.22);
     }
 
     .post-wrapper p.post-ghost-note::selection {
@@ -288,7 +310,19 @@
 </head>
 
 <body class="is-preload">
-  <span id="logo" style="display:none;">Zhengxiang Wang</span>
+  <span id="logo" style="display:none;"><a href="{{ '/' | relative_url }}">Zhengxiang Wang</a></span>
+
+  <section id="header">
+    <nav id="nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/' | relative_url }}#Bio">Bio</a></li>
+        <li><a href="{{ '/' | relative_url }}#News">News</a></li>
+        <li><a href="{{ '/' | relative_url }}#Research">Research</a></li>
+        <li><a href="{{ '/' | relative_url }}#latest-blogs">Blogs</a></li>
+      </ul>
+    </nav>
+  </section>
 
   <div id="wrapper">
     <section class="wrapper style1 fade-up">
@@ -499,9 +533,10 @@
   <script>
     (function () {
       var btn = document.getElementById('backToTopBtn');
-      if (!btn) return;
+      var ghostNote = document.querySelector('.post-ghost-note');
 
       function toggleButton() {
+        if (!btn) return;
         if (window.scrollY > 280) {
           btn.classList.add('show');
         } else {
@@ -509,12 +544,46 @@
         }
       }
 
-      btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      function selectionTouchesGhost(selection, el) {
+        if (!selection || !el || selection.isCollapsed || selection.rangeCount === 0) return false;
+
+        if ((selection.anchorNode && el.contains(selection.anchorNode)) ||
+          (selection.focusNode && el.contains(selection.focusNode))) {
+          return true;
+        }
+
+        for (var i = 0; i < selection.rangeCount; i++) {
+          var range = selection.getRangeAt(i);
+          var common = range.commonAncestorContainer;
+          if (common && (common === el || el.contains(common))) return true;
+        }
+        return false;
+      }
+
+      function updateGhostSelectionState() {
+        if (!ghostNote || !window.getSelection) return;
+        var sel = window.getSelection();
+        if (selectionTouchesGhost(sel, ghostNote)) {
+          ghostNote.classList.add('is-selected');
+        } else {
+          ghostNote.classList.remove('is-selected');
+        }
+      }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
 
       window.addEventListener('scroll', toggleButton, { passive: true });
+      document.addEventListener('selectionchange', updateGhostSelectionState);
+      document.addEventListener('mouseup', updateGhostSelectionState, { passive: true });
+      document.addEventListener('touchend', function () {
+        setTimeout(updateGhostSelectionState, 0);
+      }, { passive: true });
       toggleButton();
+      updateGhostSelectionState();
     })();
   </script>
 </body>
