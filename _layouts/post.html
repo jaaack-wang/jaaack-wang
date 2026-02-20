@@ -370,9 +370,9 @@
         {% if sib %}
         <p class="archive-tags-link">
           {% if __is_zh %}
-          <a href="{{ sib.url | relative_url }}">English →</a>
+          <a href="{{ sib.url | relative_url }}?nav=en">English →</a>
           {% else %}
-          <a href="{{ sib.url | relative_url }}">中文 →</a>
+          <a href="{{ sib.url | relative_url }}?nav=zh">中文 →</a>
           {% endif %}
         </p>
         {% endif %}
@@ -433,11 +433,13 @@
 
         {%- comment -%}
         Navigation pools:
-        - English posts: all English posts (original + translated)
-        - Other translated posts: translated posts in the same language
-        - Other original posts (non-English): all originals across all languages
+        - default: follow content type (original -> originals, translated -> translated)
+        - en mode: all English posts (original + translated)
+        - zh mode: all Chinese posts (original + translated)
         {%- endcomment -%}
-        {%- assign __pool_filtered = "" | split: "" -%}
+        {%- assign __pool_default = "" | split: "" -%}
+        {%- assign __pool_en = "" | split: "" -%}
+        {%- assign __pool_zh = "" | split: "" -%}
 
         {%- for p in site.posts -%}
         {%- assign _raw = p.translated | default: p.is_translation | default: false -%}
@@ -445,54 +447,98 @@
         {%- assign _is_t = false -%}
         {%- assign _lang = p.lang | default: "en" -%}
         {%- assign _lang_s = _lang | append: "" -%}
-        {%- assign _is_en_post = false -%}
         {%- if _raw == true or _json == '"true"' or _json == 'true' -%}
         {%- assign _is_t = true -%}
         {%- endif -%}
-        {%- if _lang_s contains "en" -%}
-        {%- assign _is_en_post = true -%}
-        {%- endif -%}
-        {%- assign _keep = false -%}
 
-        {%- if __is_en and _is_en_post -%}
-        {%- assign _keep = true -%}
-        {%- elsif __is_translated and _is_t and _lang_s == __lang_s -%}
-        {%- assign _keep = true -%}
+        {%- if __is_translated and _is_t -%}
+        {%- assign __pool_default = __pool_default | push: p -%}
         {%- elsif __is_translated == false and _is_t == false -%}
-        {%- assign _keep = true -%}
+        {%- assign __pool_default = __pool_default | push: p -%}
         {%- endif -%}
 
-        {%- if _keep -%}
-        {%- assign __pool_filtered = __pool_filtered | push: p -%}
+        {%- if _lang_s contains "en" -%}
+        {%- assign __pool_en = __pool_en | push: p -%}
+        {%- endif -%}
+        {%- if _lang_s contains "zh" -%}
+        {%- assign __pool_zh = __pool_zh | push: p -%}
         {%- endif -%}
         {%- endfor -%}
 
-        {%- assign __pool_sorted = __pool_filtered | sort: "date" | reverse -%}
+        {%- assign __pool_default_sorted = __pool_default | sort: "date" | reverse -%}
+        {%- assign __pool_en_sorted = __pool_en | sort: "date" | reverse -%}
+        {%- assign __pool_zh_sorted = __pool_zh | sort: "date" | reverse -%}
 
-        {%- assign __prev = nil -%}
-        {%- assign __next = nil -%}
-        {%- for p in __pool_sorted -%}
+        {%- assign __prev_default = nil -%}
+        {%- assign __next_default = nil -%}
+        {%- for p in __pool_default_sorted -%}
         {%- if p.url == page.url -%}
         {%- assign __idx = forloop.index0 -%}
         {%- if __idx > 0 -%}
         {%- assign __prev_i = __idx | minus: 1 -%}
-        {%- assign __prev = __pool_sorted[__prev_i] -%}
+        {%- assign __prev_default = __pool_default_sorted[__prev_i] -%}
         {%- endif -%}
         {%- assign __next_i = __idx | plus: 1 -%}
-        {%- if __next_i < __pool_sorted.size -%} {%- assign __next=__pool_sorted[__next_i] -%} {%- endif -%} {%- break
-          -%} {%- endif -%} {%- endfor -%} <nav class="post-nav" aria-label="Post">
-          {% if __prev %}
-          <a class="post-nav-link prev" href="{{ __prev.url | relative_url }}" rel="prev">
-            ← Previous: {{ __prev.title }}
-          </a>
-          {% endif %}
+        {%- if __next_i < __pool_default_sorted.size -%} {%- assign __next_default = __pool_default_sorted[__next_i] -%} {%- endif -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
 
-          {% if __next %}
-          <a class="post-nav-link next" href="{{ __next.url | relative_url }}" rel="next">
-            Next: {{ __next.title }} →
+        {%- assign __prev_en = nil -%}
+        {%- assign __next_en = nil -%}
+        {%- for p in __pool_en_sorted -%}
+        {%- if p.url == page.url -%}
+        {%- assign __idx = forloop.index0 -%}
+        {%- if __idx > 0 -%}
+        {%- assign __prev_i = __idx | minus: 1 -%}
+        {%- assign __prev_en = __pool_en_sorted[__prev_i] -%}
+        {%- endif -%}
+        {%- assign __next_i = __idx | plus: 1 -%}
+        {%- if __next_i < __pool_en_sorted.size -%} {%- assign __next_en = __pool_en_sorted[__next_i] -%} {%- endif -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign __prev_zh = nil -%}
+        {%- assign __next_zh = nil -%}
+        {%- for p in __pool_zh_sorted -%}
+        {%- if p.url == page.url -%}
+        {%- assign __idx = forloop.index0 -%}
+        {%- if __idx > 0 -%}
+        {%- assign __prev_i = __idx | minus: 1 -%}
+        {%- assign __prev_zh = __pool_zh_sorted[__prev_i] -%}
+        {%- endif -%}
+        {%- assign __next_i = __idx | plus: 1 -%}
+        {%- if __next_i < __pool_zh_sorted.size -%} {%- assign __next_zh = __pool_zh_sorted[__next_i] -%} {%- endif -%}
+        {%- break -%}
+        {%- endif -%}
+        {%- endfor -%}
+
+        <nav class="post-nav" aria-label="Post">
+          <a id="postPrevLink" class="post-nav-link prev" rel="prev"
+            {% unless __prev_default %}style="display:none"{% endunless %}
+            data-default-url="{% if __prev_default %}{{ __prev_default.url | relative_url }}{% endif %}"
+            data-default-title="{% if __prev_default %}{{ __prev_default.title | escape }}{% endif %}"
+            data-en-url="{% if __prev_en %}{{ __prev_en.url | relative_url }}{% endif %}"
+            data-en-title="{% if __prev_en %}{{ __prev_en.title | escape }}{% endif %}"
+            data-zh-url="{% if __prev_zh %}{{ __prev_zh.url | relative_url }}{% endif %}"
+            data-zh-title="{% if __prev_zh %}{{ __prev_zh.title | escape }}{% endif %}"
+            href="{% if __prev_default %}{{ __prev_default.url | relative_url }}{% endif %}">
+            {% if __prev_default %}← Previous: {{ __prev_default.title }}{% endif %}
           </a>
-          {% endif %}
-          </nav>
+
+          <a id="postNextLink" class="post-nav-link next" rel="next"
+            {% unless __next_default %}style="display:none"{% endunless %}
+            data-default-url="{% if __next_default %}{{ __next_default.url | relative_url }}{% endif %}"
+            data-default-title="{% if __next_default %}{{ __next_default.title | escape }}{% endif %}"
+            data-en-url="{% if __next_en %}{{ __next_en.url | relative_url }}{% endif %}"
+            data-en-title="{% if __next_en %}{{ __next_en.title | escape }}{% endif %}"
+            data-zh-url="{% if __next_zh %}{{ __next_zh.url | relative_url }}{% endif %}"
+            data-zh-title="{% if __next_zh %}{{ __next_zh.title | escape }}{% endif %}"
+            href="{% if __next_default %}{{ __next_default.url | relative_url }}{% endif %}">
+            {% if __next_default %}Next: {{ __next_default.title }} →{% endif %}
+          </a>
+        </nav>
 
           <div class="share-bar">
             <span>Share:</span>
@@ -543,6 +589,8 @@
     (function () {
       var btn = document.getElementById('backToTopBtn');
       var ghostNote = document.querySelector('.post-ghost-note');
+      var prevLink = document.getElementById('postPrevLink');
+      var nextLink = document.getElementById('postNextLink');
 
       function toggleButton() {
         if (!btn) return;
@@ -579,6 +627,44 @@
         }
       }
 
+      function normalizeNavMode(mode) {
+        return (mode === 'en' || mode === 'zh') ? mode : 'default';
+      }
+
+      function withNavMode(url, mode) {
+        if (!url) return '';
+        if (mode !== 'en' && mode !== 'zh') return url;
+        try {
+          var u = new URL(url, window.location.origin);
+          u.searchParams.set('nav', mode);
+          return u.pathname + u.search + u.hash;
+        } catch (e) {
+          return url;
+        }
+      }
+
+      function applyNavLink(link, mode, prefix, suffix) {
+        if (!link) return;
+        var baseUrl = link.getAttribute('data-' + mode + '-url') || '';
+        var title = link.getAttribute('data-' + mode + '-title') || '';
+        if (!baseUrl || !title) {
+          link.style.display = 'none';
+          link.removeAttribute('href');
+          link.textContent = '';
+          return;
+        }
+        link.style.display = '';
+        link.textContent = prefix + title + (suffix || '');
+        link.setAttribute('href', withNavMode(baseUrl, mode));
+      }
+
+      function applyPostNavMode() {
+        var params = new URLSearchParams(window.location.search);
+        var mode = normalizeNavMode(params.get('nav'));
+        applyNavLink(prevLink, mode, '← Previous: ');
+        applyNavLink(nextLink, mode, 'Next: ', ' →');
+      }
+
       if (btn) {
         btn.addEventListener('click', function () {
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -593,6 +679,7 @@
       }, { passive: true });
       toggleButton();
       updateGhostSelectionState();
+      applyPostNavMode();
     })();
   </script>
 </body>

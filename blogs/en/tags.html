@@ -42,7 +42,7 @@ permalink: /blogs/en/tags/
       <div class="post-row">
         <span class="muted">{{ p.date | date: "%b %-d, %Y" }}</span>
         &nbsp;—&nbsp;
-        <a href="{{ p.url | relative_url }}" style="color:var(--accent)">{{ p.title }}</a>
+        <a href="{{ p.url | relative_url }}?nav=en" style="color:var(--accent)">{{ p.title }}</a>
       </div>
       {% endfor %}
     </div>
