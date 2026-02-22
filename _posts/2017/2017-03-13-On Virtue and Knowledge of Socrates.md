@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "On Virtue and Knowledge of Socrates"
-approx_date: "2016-03"
+approx_date: "2017-03"
 tags: [Philosophy]
 lang: en
 is_translation: false

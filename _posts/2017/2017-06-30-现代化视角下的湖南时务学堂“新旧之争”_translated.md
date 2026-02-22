@@ -1,9 +1,6 @@
 ---
 layout: post
-
-
-approx_date: "2016-06"
-
+approx_date: "2017-06"
 lang: en
 is_translation: true
 pair_id: 现代化视角下的湖南时务学堂“新旧之争”

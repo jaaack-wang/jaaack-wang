@@ -1,6 +1,6 @@
 ---
 layout: post
-approx_date: "2018-06"
+approx_date: "2017-12"
 lang: en
 is_translation: true
 pair_id: 《菊与刀》与文化模式研究

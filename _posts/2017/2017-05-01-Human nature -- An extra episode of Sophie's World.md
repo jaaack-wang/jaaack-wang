@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Human nature -- An extra episode of Sophie's World"
-approx_date: "2016-05"
+approx_date: "2017-05"
 tags: [Philosophy, Creative Writing]
 lang: en
 is_translation: false

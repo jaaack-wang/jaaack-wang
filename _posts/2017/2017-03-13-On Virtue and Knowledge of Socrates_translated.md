@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "论苏格拉底的美德与知识"
-approx_date: "2016-03"
+approx_date: "2017-03"
 tags: [哲学]
 lang: zh
 is_translation: true
