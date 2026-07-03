@@ -1,1035 +1,178 @@
----
-layout: null
----
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<title>Zhengxiang Wang</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-
-	<style>
-		#News ul.news li {
-			margin-bottom: 0.4em;
-		}
-
-		#News ul.news p {
-			margin: 0;
-		}
-
-		/* --- MapMyVisitors: keep inside main column and make smaller --- */
-		.mmv-wrap {
-			max-width: 100%;
-			width: 900px;
-			/* adjust: 700 / 800 / 900 */
-			margin: 1.5rem auto;
-			/* center it */
-			overflow: hidden;
-		}
-
-		/* If their embed uses iframe/canvas/div, force it to fit wrapper */
-		.mmv-wrap iframe,
-		.mmv-wrap canvas,
-		.mmv-wrap>div {
-			max-width: 100% !important;
-		}
-
-		/* --- Archive styles (scoped to #latest-blogs) --- */
-		:root {
-			--accent: #41b883;
-		}
-
-		/* Use the same feel as other sections: centered and padded */
-		#latest-blogs .archive-page {
-			max-width: 900px;
-			margin: 0 auto;
-			padding-left: 2rem;
-			padding-right: 2rem;
-		}
-
-		/* match other section titles (h3) */
-		#latest-blogs h3 {
-			margin-bottom: 1rem;
-			/* optional, matches spacing vibe */
-		}
-
-		/* keep your accent link styling */
-		#latest-blogs .post-row {
-			margin: .65rem 0;
-		}
-
-		#latest-blogs .post-row a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		#latest-blogs .post-row a:hover {
-			text-decoration: underline;
-		}
-
-		#latest-blogs .muted {
-			color: #888;
-		}
-
-		#latest-blogs .archive-tags-link a {
-			color: var(--accent);
-		}
-
-		/* optional: extra breathing room on very small screens */
-		@media (max-width: 480px) {
-			#latest-blogs .archive-page {
-				padding-left: 1.25rem;
-				padding-right: 1.25rem;
-			}
-		}
-
-		/* Match Academicons links in header footer to existing icon sizing/style */
-		#header>footer .icons li a.ai {
-			border-bottom: none;
-			text-decoration: none;
-			font-size: 1.25em;
-			line-height: 1;
-		}
-
-		#header>footer .icons li a.x-link {
-			border-bottom: none;
-			text-decoration: none;
-			line-height: 1;
-		}
-
-		#header>footer .icons li a.x-link svg {
-			display: inline-block;
-			width: 1.25em;
-			height: 1.25em;
-			fill: currentColor;
-			vertical-align: middle;
-		}
-
-		#Research .bibtex-block {
-			margin-top: 0.75rem;
-			padding: 0.75rem 0.9rem;
-			border: 1px solid rgba(0, 0, 0, 0.08);
-			border-radius: 6px;
-			background: #f7f8fa;
-			overflow-x: auto;
-		}
-
-		#Research .bibtex-block pre {
-			margin: 0;
-			font-size: 0.85em;
-			line-height: 1.4;
-			white-space: pre-wrap;
-			word-break: break-word;
-		}
-
-		#Research .bibtex-toolbar {
-			display: flex;
-			justify-content: flex-end;
-			margin-bottom: 0.55rem;
-		}
-
-		#Research .bibtex-copy-btn {
-			border: 1px solid rgba(0, 0, 0, 0.12);
-			border-radius: 4px;
-			background: #ffffff;
-			padding: 0.2rem 0.6rem;
-			font-size: 0.78rem;
-			cursor: pointer;
-		}
-
-		#Research .bibtex-copy-btn:hover {
-			background: #f2f4f7;
-		}
-
-		#Research .bibtex-toggle i {
-			pointer-events: none;
-		}
-	</style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description"
+		content="Zhengxiang Wang is a PhD candidate in Computational Linguistics at Stony Brook University, working on human-centric evaluation of multimodal and agentic language models." />
+	<link rel="canonical" href="https://www.zhengxiang-wang.me/" />
+	<meta property="og:title" content="Zhengxiang Wang" />
+	<meta property="og:description"
+		content="Computational linguistics, human-centric evaluation, multimodal language models, and writing." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="images/me.png" />
+	<link rel="icon" href="images/me.png" />
+	<link rel="stylesheet" href="assets/css/home.css?v=20260702-2" />
 </head>
 
-<body class="is-preload">
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-	<!-- Header -->
-	<section id="header">
-		<header>
-			<span class="image avatar"><img src="images/me.png" alt="Me" /></span>
-			<h1 id="logo"><a href="#">Zhengxiang Wang</a></h1>
-			<p> 王政祥 <br />
-				Commonly known as <ins>Jack Wang</ins></p>
-
-			<p>“因真理，得自由，以服务。”<br />"Freedom through Truth for Service."</p>
-
-		</header>
-		<nav id="nav">
-			<ul>
-				<li><a href="#Bio">Bio</a></li>
-				<li><a href="#News">News</a></li>
-				<li><a href="#Research">Research</a></li>
-				<li><a href="#latest-blogs">Blogs</a></li>
-			</ul>
+	<header class="site-header" aria-label="Primary navigation">
+		<a class="site-name" href="#top">
+			<span>Zhengxiang Wang</span>
+			<span lang="zh-Hans">王政祥</span>
+		</a>
+		<!--
+		<nav class="nav-links">
+			<a href="#top">Home</a>
+			<a href="blogs/">Writing</a>
 		</nav>
-		<footer>
-			<ul class="icons">
-				<li><a href="mailto:jackwang196531@gmail.com" class="icon solid fa-envelope"><span
-							class="label">Email</span></a></li>
-				<li><a href="https://github.com/jaaack-wang" class="icon brands fa-github" target="_blank"><span
-							class="label">GitHub</span></a></li>
-				<li><a href="https://www.linkedin.com/in/zhengxiang-wang-560735191/" class="icon brands fa-linkedin"
-						target="_blank"><span class="label">LinkedIn</span></a></li>
-				<li><a href="https://scholar.google.ca/citations?hl=en&user=mQwDy4MAAAAJ&view_op=list_works&sortby=pubdate"
-						class="icon solid fa-graduation-cap" target="_blank"><span class="label">Google
-							Scholar</span></a></li>
-				<li><a href="https://www.semanticscholar.org/author/Zhengxiang-Wang/50219235"
-						class="ai ai-semantic-scholar" target="_blank" aria-label="Semantic Scholar"></a></li>
-				<li><a href="https://x.com/ZhengXian9_Wang" class="x-link" target="_blank" aria-label="X">
-						<svg viewBox="0 0 512 512" role="img" aria-hidden="true" focusable="false">
-							<path
-								d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L273.1 180.3 389.2 48zM364.4 421.8h39.1L151.1 88.3H109.2z" />
-						</svg>
-					</a></li>
-			</ul>
-		</footer>
-	</section>
-	<!-- Wrapper -->
-	<div id="wrapper">
+		-->
+	</header>
 
-		<!-- Main -->
-		<div id="main">
-
-			<section id="Bio">
-				<div class="image main" data-position="center">
-					<img src="images/banner.jpg" alt="" />
-				</div>
-				<div class="container">
+	<main id="main">
+		<section id="top" class="hero" aria-label="Introduction">
+			<div class="container hero-grid">
+				<figure class="hero-portrait">
+					<img src="images/me.png" alt="Zhengxiang Wang by the water" />
+				</figure>
+				<div class="hero-copy">
 					<p>
-						I am a PhD candidate in Computational Linguistics at <a href="https://www.stonybrook.edu/"
-							target="_blank">Stony Brook University</a>,
-						affiliated with <a href="https://iacs.stonybrook.edu/" target="_blank">Institute for Advanced
-							Computational Science</a> (IACS).
-						I am fortunate to be advised by <a href="https://owenrambow.com" target="_blank">Dr. Owen
-							Rambow</a>.
+						I am a PhD candidate at Stony Brook University, advised by <a href="https://owenrambow.com/"
+							target="_blank" rel="noopener">Owen Rambow</a>.
 					</p>
-
-					<p>Prior to coming to Stony Brook, I completed a bachelor's degree in Chinese Language and
-						Literature from <a href="https://www-en.hnu.edu.cn/" target="_blank">Hunan University</a>,
-						and a master's degree in Applied linguistics from <a href="https://www.usask.ca/"
-							target="_blank">University of Saskatchewan</a>. </p>
-
 					<p>
-						I am a lifelong learner at heart, and as a result my research interests have evolved over time (ever since senior high school back in 2015).
-						Currently, my work focuses on evaluating large (vision/audio/omni) language models from a
-						<b>human-centric</b> perspective, spanning themes such as multi-step and agentic reasoning,
-						human–AI interaction, personalization, multimodality, and post-training. I prioritize research
-						grounded in real-world use cases and open-ended challenges, with an emphasis on scalable and
-						interpretable evaluation methodologies.
+						I work on evaluation, post-training, multi-modality, and human-AI interaction.
 					</p>
-
 					<p>
-						I enjoy making new connections, so feel free to reach out to me for any reason and have a coffee
-						chat!
+						My research connects LLMs to everyday tasks, such as writing
+						(<a href="https://aclanthology.org/2025.acl-long.423.pdf" target="_blank" rel="noopener">ACL
+							2025</a>,
+						<a href="https://arxiv.org/pdf/2509.14543" target="_blank" rel="noopener">EMNLP 2025</a>),
+						and referential communication
+						(<a href="https://aclanthology.org/2025.emnlp-main.849.pdf" target="_blank" rel="noopener">EMNLP
+							2025</a>,
+						<a href="https://arxiv.org/pdf/2601.19792" target="_blank" rel="noopener">ACL 2026</a>).
 					</p>
-
-				</div>
-			</section>
-
-			<section id="News">
-				<div class="container">
-					<h3>News</h3>
-					<ul class="news">
-						<li>
-							<p><b>Jan, 2026:</b> Launched a new Blogs section on my website, featuring various essays (mostly Chinese with English translations by GPT-5.2) I
-								wrote between 2015 and 2019. I hope this will motivate me to write more going forward.
-							</p>
-						</li>
-
-						<li>
-							<p><b>Aug, 2025:</b> I started working for <b>Amazon</b> as an Applied Scientist intern, 
-								researching Large Audio Language Models for Alexa AI, developing audio integration methods 
-								for user satisfaction prediction, and fine-tuning LALMs and Omni models to reduce modality gaps.</p>
-						</li>
-
-						<li>
-							<p><b>Aug, 2025:</b> My first-authored paper <a href="https://aclanthology.org/2025.emnlp-main.849.pdf"
-									target="_blank"><i>LVLMs are Bad at Overhearing Human Referential
-										Communication</i></a> has been accepted to
-								<a href="https://2025.emnlp.org/" target="_blank"><b>EMNLP 2025 (Main)</b>.</a>
-							</p>
-						</li>
-
-						<li>
-							<p><b>Aug, 2025:</b> My first-authored paper <a href="https://arxiv.org/abs/2509.14543"
-									target="_blank"><i>Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the
-										Implicit Writing Styles of Everyday Authors</i></a>
-								has been accepted to <a href="https://2025.emnlp.org/" target="_blank"><b>EMNLP 2025
-										(Findings)</b>.</a></p>
-						</li>
-
-						<li>
-							<p><b>May, 2025:</b> I started working for <b>Meta</b> as a Software Engineer (Machine
-								Learning) intern. Using Hack (PHP), I built an LVLM-based agentic workflow for trend
-								detection, validation, magnitude labeling, and post content quality rating.</p>
-						</li>
-
-						<li>
-							<p><b>May, 2025:</b> My first-authored paper <a href="https://arxiv.org/abs/2502.11368"
-									target="_blank"><i>LLMs can Perform Multi-Dimensional Analytic Writing Assessments:
-										A Case Study of L2 Graduate-Level Academic English Writing</i></a> has been
-								accepted to
-								<a href="https://2025.aclweb.org/" target="_blank"><b>ACL 2025 (Main)</b></a>.
-							</p>
-						</li>
-
-						<li>
-							<p>
-								<b>Feb, 2025:</b> I advanced to <b>PhD candidacy</b> after passing my second qualifying
-								paper.
-							</p>
-						</li>
-
-						<li>
-							<p>
-								<b>Aug, 2024:</b> I received the <a
-									href="https://iacs.stonybrook.edu/opportunities/awards/junior-researcher-award.php"
-									target="_blank"><b>Junior Researcher Award</b></a> from the Institute for Advanced
-								Computational Science at Stony Brook University.
-							</p>
-						</li>
-
-						<li>
-							<p>
-								<b>May, 2024:</b> I started working for <a
-									href="https://careers.homedepot.com/datascience/" target="_blank"><b>the Home
-										Depot</b></a> as a Data Scientist intern where I developed various LLM-based
-								systems for topic modeling, classification, and validation. 
-								See this 
-								<a href="https://roundtable.datascience.salon/understanding-customer-concerns-in-retail-a-review-of-llms-and-traditional-ml-based-methods-for-topic-modeling-and-multi-label-classification" target="_blank">blog post</a> 
-								for details.
-							</p>
-						</li>
-
-						<li>
-							<p>
-								<b>June, 2023:</b> I became a trainee for the <a
-									href="https://www.stonybrook.edu/commcms/bias-nrt/" target="_blank"><b>Bias-NRT
-										(National Science Foundation Research Traineeship) program</b></a> at Stony
-								Brook University,
-							</p>
-						</li>
-
-						<li>
-							<p>
-								<b>Aug, 2022:</b> I started my PhD in Computational Linguistics at <a
-									href="https://www.stonybrook.edu/" target="_blank"><b>Stony Brook
-										University</b></a>.
-							</p>
-						</li>
-
-					</ul>
-
-				</div>
-			</section>
-
-			<section id="Research">
-				<div class="container">
-					<h3>Research</h3>
-
-					<p>For a full, up-to-date list of publications, please check my <a
-							href="https://scholar.google.ca/citations?hl=en&user=mQwDy4MAAAAJ&view_op=list_works&sortby=pubdate"
-							target="_blank">Google Scholar</a> page.</p>
-
-					<div class="features">
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/acl2026_timePuzzlesIllustration.png" alt=""
-									style="width: 85%; height: 85%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Measuring Iterative Temporal Reasoning with Time Puzzles</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b>, Zeyu Dong </i>
-									<br />
-									<u>Preprint, 2026</u><br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://arxiv.org/abs/2601.07148" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/jaaack-wang/Time-Puzzles" target="_blank"
-											rel="noopener" role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="/papers/time-puzzles/" target="_blank" rel="noopener" role="button"><i
-												class="fas fa-globe"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-time-puzzles" role="button"
-											aria-expanded="false" aria-controls="bib-time-puzzles" title="Show BibTeX"><i
-												class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-time-puzzles" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-time-puzzles.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/acl2026_accuracy_efficiency_entrainment.png" alt=""
-									style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>LVLMs and Humans Ground Differently in Referential Communication</b>
-									<br />
-									<i> Peter Zeng, Weiling Li, Amie J. Paige, <b>Zhengxiang Wang</b>, Panagiotis
-										Kaliosis, Dimitris Samaras, Greg Zelinsky, Susan Brennan, Owen Rambow </i>
-									<br />
-									<u>Preprint, 2026</u> <br />
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://arxiv.org/abs/2601.19792" target="_blank" rel="noopener"
-											role="button"><i class="fas fa-file-pdf"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-lvlms-humans-ground-2026" role="button"
-											aria-expanded="false" aria-controls="bib-lvlms-humans-ground-2026"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-lvlms-humans-ground-2026" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-lvlms-humans-ground-2026.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/lvlm_overhearing.png" alt=""
-									style="width: 85%; height: 85%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>LVLMs are Bad at Overhearing Human Referential Communication</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b>, Weiling Li, Panagiotis Kaliosis, Owen Rambow, Susan
-										Brennan </i>
-									<br />
-									<u>EMNLP 2025 (Main)</u> <br />
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://aclanthology.org/2025.emnlp-main.849.pdf" target="_blank" rel="noopener"
-											role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/jaaack-wang/lvlms-overhearing" target="_blank"
-											rel="noopener" role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="/papers/lvlms-overhearing/" target="_blank" rel="noopener"
-												role="button"><i class="fas fa-globe"></i></a>
-											&nbsp
-											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-												href="#" data-bib-target="bib-lvlms-overhearing-2025" role="button"
-												aria-expanded="false" aria-controls="bib-lvlms-overhearing-2025"
-												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-											&nbsp
-											<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
-										</p>
-									<div id="bib-lvlms-overhearing-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-lvlms-overhearing-2025.bib">
-										<pre><code></code></pre>
-									</div>
-									</div>
-								</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/personalized_writing_2025.png" alt=""
-									style="width: 85%; height: 85%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing
-										Styles of Everyday Authors</b>
-									<br />
-									<i> <b>Zhengxiang Wang*</b>, Nafis Irtiza Tripto*, Solha Park, Zhenzhen Li, Jiawei
-										Zhou</i>
-									<br />
-
-									<u>EMNLP 2025 (Findings)</u> <br />
-
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://arxiv.org/abs/2509.14543" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/jaaack-wang/llms-implicit-writing-styles-imitation"
-											target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="/papers/implicit-writing-styles/" target="_blank" rel="noopener"
-												role="button"><i class="fas fa-globe"></i></a>
-											&nbsp
-											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-												href="#" data-bib-target="bib-implicit-writing-styles-2025" role="button"
-												aria-expanded="false" aria-controls="bib-implicit-writing-styles-2025"
-												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-											&nbsp
-											<!-- <a class="btn btn-primary btn-lg" style="border-style: none" href="materials/2025_main-978.pdf" target="_blank" rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a> -->
-										</p>
-									<div id="bib-implicit-writing-styles-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-implicit-writing-styles-2025.bib">
-										<pre><code></code></pre>
-									</div>
-									</div>
-								</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/wang_writing_assess_2025.png" alt=""
-									style="width: 85%; height: 85%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>LLMs can Perform Multi-Dimensional Analytic Writing Assessments: A Case Study of
-										L2 Graduate-Level Academic English Writing</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b>, Veronika Makarova, Zhi Li, Jordan Kodner, Owen
-										Rambow</i>
-									<br />
-									<u>ACL 2025 (Main)</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://aclanthology.org/2025.acl-long.423/" target="_blank"
-										rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/jaaack-wang/multi-dimensional-analytic-writing-assessments"
-											target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="/papers/multi-dimensional-writing-assessments/" target="_blank"
-											rel="noopener" role="button"><i class="fas fa-globe"></i></a>
-										&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="materials/2025_main-978.pdf" target="_blank" rel="noopener"
-												role="button"><i class="fa fa-file-powerpoint"></i></a>
-											&nbsp
-											<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-												href="#" data-bib-target="bib-multi-dimensional-writing-assessments-2025"
-												role="button" aria-expanded="false"
-												aria-controls="bib-multi-dimensional-writing-assessments-2025"
-												title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-								</p>
-									<div id="bib-multi-dimensional-writing-assessments-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-multi-dimensional-writing-assessments-2025.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/multi_problem_eval.png" alt=""
-									style="width: 85%; height: 85%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Evaluating LLMs with Multiple Problems at once</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b>, Jordan Kodner, Owen Rambow</i>
-									<br />
-									<u>GEM 2025</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://aclanthology.org/2025.gem-1.14/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/jaaack-wang/multi-problem-eval-llm" target="_blank"
-										rel="noopener" role="button"><i class="fab fa-github"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="/papers/multi-problem-eval-llm/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-globe"></i></a>
-									&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="materials/multi-problem-eval.pdf" target="_blank" rel="noopener"
-												role="button"><i class="fa fa-file-powerpoint"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-multi-problem-eval-2025" role="button"
-											aria-expanded="false" aria-controls="bib-multi-problem-eval-2025"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-										</p>
-									<div id="bib-multi-problem-eval-2025" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-multi-problem-eval-2025.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/wang_rambow2024.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Clustering Document Parts: Detecting and Characterizing Influence Campaigns from
-										Documents</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b>, Owen Rambow</i>
-									<br />
-									<u>NLP+CSS @ NAACL 2024</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://aclanthology.org/2024.nlpcss-1.10/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/jaaack-wang/detect-influence-campaigns" target="_blank"
-										rel="noopener" role="button"><i class="fab fa-github"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="/papers/clustering-document-parts/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-globe"></i></a>
-									&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="materials/Clustering-Influence-Campaign-Poster-2024.pdf" target="_blank"
-												rel="noopener" role="button"><i class="fa fa-file-powerpoint"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-clustering-document-parts-2024" role="button"
-											aria-expanded="false" aria-controls="bib-clustering-document-parts-2024"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-										</p>
-									<div id="bib-clustering-document-parts-2024" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-clustering-document-parts-2024.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/icgi2023.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Learning Transductions and Alignments with RNN Seq2seq Models</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b></i>
-									<br />
-									<u>ICGI 2023 | PMLR </u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://proceedings.mlr.press/v217/wang23a.html" target="_blank"
-										rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/jaaack-wang/rnn-seq2seq-learning" target="_blank"
-										rel="noopener" role="button"><i class="fab fa-github"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="/papers/rnn-seq2seq-learning/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-globe"></i></a>
-									&nbsp
-											<a class="btn btn-primary btn-lg" style="border-style: none"
-												href="materials/ICGI2023Slides.pdf" target="_blank" rel="noopener"
-												role="button"><i class="fa fa-file-powerpoint"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-rnn-seq2seq-2023" role="button"
-											aria-expanded="false" aria-controls="bib-rnn-seq2seq-2023"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-										</p>
-									<div id="bib-rnn-seq2seq-2023" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-rnn-seq2seq-2023.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/zhi_VM_wang2023.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Developing literature review writing skills through an online writing tutorial
-										series: Corpus-based evidence</b>
-									<br />
-									<i>Zhi Li, Makarova Veronika, <b>Zhengxiang Wang</b></i>
-									<br />
-									<u>Frontiers in Communication 2023</u> <br />
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://www.frontiersin.org/articles/10.3389/fcomm.2023.1035394/full"
-											target="_blank" rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-frontiers-communication-2023" role="button"
-											aria-expanded="false" aria-controls="bib-frontiers-communication-2023"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-frontiers-communication-2023" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-frontiers-communication-2023.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/eval4nlp_2022.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Random Text Perturbations Work, but not Always</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b> </i>
-									<br />
-									<u>Eval4NLP @ AACL-IJCNLP 2022</u> <br />
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://aclanthology.org/2022.eval4nlp-1.6/" target="_blank"
-											rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-eval4nlp-2022" role="button"
-											aria-expanded="false" aria-controls="bib-eval4nlp-2022"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-eval4nlp-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-eval4nlp-2022.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/hao_cui_wang_kim_2022.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations</b>
-									<br />
-									<i>Hongtao Hao, Yumian Cui, <b>Zhengxiang Wang</b>, Yea-Seul Kim</i>
-									<br />
-									<u>IEEE Transactions on Visualization and Computer Graphics 2022</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://ieeexplore.ieee.org/abstract/document/9903512" target="_blank"
-										rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/hongtaoh/32vis" target="_blank" rel="noopener"
-											role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-ieee-vis-2022" role="button"
-											aria-expanded="false" aria-controls="bib-ieee-vis-2022"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-ieee-vis-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-ieee-vis-2022.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/icnlsp_2022.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>Linguistic Knowledge in Data Augmentation for Natural Language Processing: An
-										Example on Chinese Question Matching</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b></i>
-									<br />
-									<u>ICNLSP 2022 | ACL Anthology</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://aclanthology.org/2022.icnlsp-1.5/" target="_blank" rel="noopener"
-										role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="https://github.com/jaaack-wang/linguistic-knowledge-in-DA-for-NLP"
-											target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-icnlsp-2022" role="button"
-											aria-expanded="false" aria-controls="bib-icnlsp-2022"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-icnlsp-2022" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-icnlsp-2022.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
-						<article style="display: flex; align-items: center;">
-							<a class="image" style="flex: 1.35;">
-								<img src="images/research/wang_thesis_2021.png" alt="" style="width: 100%;" />
-							</a>
-							<div class="inner" style="flex: 1; padding-left: 20px;">
-								<p>
-									<b>A macroscopic re-examination of language and gender: a corpus-based case study in
-										the university classroom setting</b>
-									<br />
-									<i> <b>Zhengxiang Wang</b> </i>
-									<br />
-									<u>MA Thesis, University of Saskatchewan, 2021</u> <br />
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://harvest.usask.ca/items/175f7750-57eb-4254-81b5-a9d9b0a2bdeb"
-										target="_blank" rel="noopener" role="button"><i class="fas fa-file-pdf"></i></a>
-									&nbsp
-									<a class="btn btn-primary btn-lg" style="border-style: none"
-										href="https://github.com/jaaack-wang/ling_feature_extractor/tree/Thesis_Project_Version"
-										target="_blank" rel="noopener" role="button"><i class="fab fa-github"></i></a>
-									&nbsp
-										<a class="btn btn-primary btn-lg" style="border-style: none"
-											href="materials/MA-Thesis-Wang-Slides-2021.pdf" target="_blank" rel="noopener"
-											role="button"><i class="fa fa-file-powerpoint"></i></a>
-										&nbsp
-										<a class="btn btn-primary btn-lg bibtex-toggle" style="border-style: none"
-											href="#" data-bib-target="bib-ma-thesis-2021" role="button"
-											aria-expanded="false" aria-controls="bib-ma-thesis-2021"
-											title="Show BibTeX"><i class="fas fa-quote-right"></i></a>
-									</p>
-									<div id="bib-ma-thesis-2021" class="bibtex-block" hidden data-bib-src="assets/bibtex/bib-ma-thesis-2021.bib">
-										<pre><code></code></pre>
-									</div>
-								</div>
-							</article>
-
-
+					<p>
+						In industry, I have worked on bringing LLMs to customer-facing applications, including topic
+						modeling, ranking, audio processing, and creative ads.
+					</p>
+					<div class="link-row" aria-label="Profile links">
+						<a href="Resume_2026.pdf" target="_blank" rel="noopener">Resume</a>
+						<a href="https://www.linkedin.com/in/zhengxiang-wang-560735191/" target="_blank"
+							rel="noopener">LinkedIn</a>
+						<a href="https://x.com/ZhengXian9_Wang" target="_blank" rel="noopener">X</a>
+						<a href="https://scholar.google.ca/citations?hl=en&user=mQwDy4MAAAAJ&view_op=list_works&sortby=pubdate"
+							target="_blank" rel="noopener">Google Scholar</a>
+						<a href="https://github.com/jaaack-wang" target="_blank" rel="noopener">GitHub</a>
+						<a href="mailto:jackwang196531@gmail.com">Email</a>
 					</div>
 				</div>
-			</section>
-
-			<section id="latest-blogs">
-				<div class="container archive-page">
-					<h3>Blogs</h3>
-
-					<p class="archive-tags-link">
-						<a href="{{ '/blogs/tags/' | relative_url }}">Browse by tag →</a>
-						&nbsp;|&nbsp;
-						<a href="{{ '/blogs/en/' | relative_url }}">English →</a>
-					</p>
-
-					{% assign originals = site.posts | where_exp: "p", "p.is_translation != true" %}
-					{% assign grouped = originals | group_by_exp: "p", "p.date | date: '%Y'" %}
-
-					{% for yr in grouped %}
-					<div class="year" id="{{ yr.name }}">
-						<h3>{{ yr.name }}</h3>
-
-						{% for post in yr.items %}
-						<div class="post-row">
-							<span class="muted">{{ post.date | date: "%b %-d" }}</span>
-							&nbsp;—&nbsp;
-							<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-						</div>
-						{% endfor %}
-					</div>
-					{% endfor %}
-				</div>
-			</section>
-
-
-			<!-- <section id="latest-blogs" class="wrapper style1 fade-up">
-								<div class="container">
-									<h2>Blogs</h2>
-
-									<p>
-									<a href="{{ "/blogs/tags/" | relative_url }}" style="color:#41b883">Browse by tag →</a>
-									</p>
-
-							<div style="max-width:800px; margin-left:2rem;">
-							{% for post in site.posts limit:5 %}
-								<article class="box" style="margin:1.5rem 0;">
-								<h3><a href="{{ post.url }}" style="color:#41b883;">{{ post.title }}</a></h3>
-								<p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
-								{% if post.excerpt %}
-									<p>{{ post.excerpt | strip_html | truncate:180 }}</p>
-								{% endif %}
-								</article>
-							{% endfor %}
-
-
-							<p style="margin-top:2rem;">
-								<a class="button" href="/blogs/" style="
-								background-color:#41b883;
-								color:white;
-								border:none;
-								padding:0em 1.2em;
-								border-radius:4px;
-								text-decoration:none;
-								">
-								All posts →
-								</a>
-								</p>
-								</div>
-							</div>
-							</section> -->
-
-			<div class="image main" data-position="center">
-				<img src="images/banner2.JPG" alt="" />
-			</div>
-
-		</div>
-
-
-		<section id="footer">
-			<div class="container">
-				<ul class="copyright">
-					<li>
-						Unique visitors since Oct 2022:
-						<a href="https://www.hitwebcounter.com" target="_blank">
-							<img src="https://hitwebcounter.com/counter/counter.php?page=8048690&style=0038&nbdigits=4&type=ip&initCount=0"
-								title="Free Counter" Alt="web counter" border="0" style="width:50px;height:17px;" />
-						</a>
-					</li>
-					<li>Design: <a href="https://html5up.net/read-only" target="_blank"> Read Only</a> by <a
-							href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-					<li><a href="https://github.com/jaaack-wang/jaaack-wang" target="_blank">Source Code</a></li>
-				</ul>
-
-				<!-- MapMyVisitors (inside main column, not overlapping sidebar) -->
-				<div class="mmv-wrap">
-					<script type="text/javascript" id="mapmyvisitors"
-						src="https://mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a">
-						</script>
-				</div>
-
 			</div>
 		</section>
 
-	</div>
+		<section id="industry" class="section" aria-labelledby="industry-title">
+			<div class="container section-grid">
+				<div class="section-heading">
+					<h2 id="industry-title">Industry</h2>
+				</div>
+				<ul class="industry-list" aria-label="Industry experience">
+					<li><strong>Meta</strong><span class="industry-role">Software Engineer, ML Intern</span><span
+							class="industry-time">06/2026 - Present</span>
+					</li>
+					<li><strong>Amazon</strong><span class="industry-role">Applied Scientist Intern</span><span
+							class="industry-time">08/2025 -
+							01/2026</span></li>
+					<li><strong>Meta</strong><span class="industry-role">Software Engineer, ML Intern</span><span
+							class="industry-time">05/2025 -
+							08/2025</span></li>
+					<li><strong>The Home Depot</strong><span class="industry-role">Data Scientist Intern</span><span
+							class="industry-time">05/2024
+							- 08/2024</span></li>
+				</ul>
+			</div>
+		</section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			function copyToClipboard(text) {
-				if (navigator.clipboard && window.isSecureContext) {
-					return navigator.clipboard.writeText(text);
-				}
-				return new Promise(function (resolve, reject) {
-					var textArea = document.createElement('textarea');
-					textArea.value = text;
-					textArea.style.position = 'fixed';
-					textArea.style.left = '-9999px';
-					document.body.appendChild(textArea);
-					textArea.focus();
-					textArea.select();
-					try {
-						var ok = document.execCommand('copy');
-						document.body.removeChild(textArea);
-						if (ok) {
-							resolve();
-						} else {
-							reject(new Error('Copy failed'));
-						}
-					} catch (err) {
-						document.body.removeChild(textArea);
-						reject(err);
-					}
-				});
-			}
+		<section id="research" class="section" aria-labelledby="research-title">
+			<div class="container">
+				<div class="section-grid section-intro">
+					<div class="section-heading">
+						<h2 id="research-title">Research <a class="section-more"
+								href="https://scholar.google.ca/citations?hl=en&user=mQwDy4MAAAAJ&view_op=list_works&sortby=pubdate"
+								target="_blank" rel="noopener">(More)</a></h2>
+					</div>
+				</div>
 
-			function ensureCopyButton(block) {
-				if (!block) return;
-				var existing = block.querySelector('.bibtex-copy-btn');
-				if (existing) return;
+				<div class="publication-list">
+					<article class="publication">
+						<p class="venue">ACL 2026 Oral</p>
+						<div class="publication-main">
+							<h3><a href="https://arxiv.org/pdf/2601.19792" target="_blank" rel="noopener">LVLMs and
+									Humans Ground Differently in Referential Communication</a></h3>
+							<p class="publication-authors">Peter Zeng, Weiling Li, Amie J. Paige, <strong>Zhengxiang
+									Wang</strong>, Panagiotis Kaliosis, Dimitris Samaras, Greg Zelinsky, Susan Brennan,
+								Owen Rambow</p>
+						</div>
+					</article>
 
-				var toolbar = document.createElement('div');
-				toolbar.className = 'bibtex-toolbar';
+					<article class="publication">
+						<p class="venue">arXiv 2026</p>
+						<div class="publication-main">
+							<h3><a href="https://arxiv.org/pdf/2601.07148" target="_blank" rel="noopener">Measuring
+									Iterative Temporal Reasoning with Time Puzzles</a></h3>
+							<p class="publication-authors"><strong>Zhengxiang Wang</strong>, Zeyu Dong</p>
+						</div>
+					</article>
 
-				var button = document.createElement('button');
-				button.type = 'button';
-				button.className = 'bibtex-copy-btn';
-				button.textContent = 'Copy';
-				button.addEventListener('click', function () {
-					var codeEl = block.querySelector('code');
-					if (!codeEl) return;
-					var text = codeEl.textContent.trim();
-					if (!text || text === 'Loading BibTeX...') return;
+					<article class="publication">
+						<p class="venue">EMNLP 2025 Main</p>
+						<div class="publication-main">
+							<h3><a href="https://aclanthology.org/2025.emnlp-main.849.pdf" target="_blank"
+									rel="noopener">LVLMs are Bad at Overhearing Human Referential Communication</a></h3>
+							<p class="publication-authors"><strong>Zhengxiang Wang</strong>, Weiling Li, Panagiotis
+								Kaliosis, Owen Rambow, Susan Brennan</p>
+						</div>
+					</article>
 
-					copyToClipboard(text)
-						.then(function () {
-							button.textContent = 'Copied';
-							setTimeout(function () {
-								button.textContent = 'Copy';
-							}, 1400);
-						})
-						.catch(function () {
-							button.textContent = 'Failed';
-							setTimeout(function () {
-								button.textContent = 'Copy';
-							}, 1400);
-						});
-				});
+					<article class="publication">
+						<p class="venue">EMNLP 2025 Findings</p>
+						<div class="publication-main">
+							<h3><a href="https://arxiv.org/pdf/2509.14543" target="_blank" rel="noopener">Catch Me If
+									You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of
+									Everyday Authors</a></h3>
+							<p class="publication-authors"><strong>Zhengxiang Wang*</strong>, Nafis Irtiza Tripto*,
+								Solha Park, Zhenzhen Li, Jiawei Zhou</p>
+						</div>
+					</article>
 
-				toolbar.appendChild(button);
-				var pre = block.querySelector('pre');
-				if (pre) {
-					block.insertBefore(toolbar, pre);
-				} else {
-					block.appendChild(toolbar);
-				}
-			}
+					<article class="publication">
+						<p class="venue">ACL 2025 Main</p>
+						<div class="publication-main">
+							<h3><a href="https://aclanthology.org/2025.acl-long.423.pdf" target="_blank"
+									rel="noopener">LLMs can Perform Multi-Dimensional Analytic Writing Assessments: A
+									Case Study of L2 Graduate-Level Academic English Writing</a></h3>
+							<p class="publication-authors"><strong>Zhengxiang Wang</strong>, Veronika Makarova, Zhi Li,
+								Jordan Kodner, Owen Rambow</p>
+						</div>
+					</article>
 
-			function loadBibTeX(block) {
-				if (!block || block.dataset.loaded === 'true') return;
-
-				var bibSrc = block.getAttribute('data-bib-src');
-				var codeEl = block.querySelector('code');
-				if (!bibSrc || !codeEl) return;
-
-				ensureCopyButton(block);
-				codeEl.textContent = 'Loading BibTeX...';
-				fetch(bibSrc)
-					.then(function (response) {
-						if (!response.ok) {
-							throw new Error('Failed to load BibTeX.');
-						}
-						return response.text();
-					})
-					.then(function (text) {
-						codeEl.textContent = text.trim();
-						block.dataset.loaded = 'true';
-					})
-					.catch(function () {
-						codeEl.textContent = 'Unable to load BibTeX right now.';
-					});
-			}
-
-			var toggles = document.querySelectorAll('.bibtex-toggle');
-			toggles.forEach(function (toggle) {
-				toggle.addEventListener('click', function (event) {
-					event.preventDefault();
-					var targetId = toggle.getAttribute('data-bib-target');
-					if (!targetId) return;
-					var block = document.getElementById(targetId);
-					if (!block) return;
-
-					ensureCopyButton(block);
-					loadBibTeX(block);
-					var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-					block.hidden = isExpanded;
-					toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
-					toggle.title = isExpanded ? 'Show BibTeX' : 'Hide BibTeX';
-				});
-			});
-		});
-	</script>
-	<!-- <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=aBK4cNQ8rtdQZ6IyFCz_meRspQnbt6HCflrxboJYPJs&cl=ffffff&w=a"></script> -->
-
+					<article class="publication">
+						<p class="venue">Insights Workshop @ NAACL 2025</p>
+						<div class="publication-main">
+							<h3><a href="materials/multi-problem-eval.pdf" target="_blank" rel="noopener">Exploring
+									Limitations of LLM Capabilities with Multi-Problem Evaluation</a></h3>
+							<p class="publication-authors"><strong>Zhengxiang Wang</strong>, Jordan Kodner, Owen
+								Rambow</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
 
 </html>
