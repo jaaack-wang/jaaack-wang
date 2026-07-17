@@ -6,6 +6,8 @@
 	--line: rgba(25, 24, 23, 0.08);
 	--accent: #75524d;
 	--link: #2f5d73;
+	--writing-link: #b35a3c;
+	--writing-link-hover: #8d3f2b;
 }
 
 * {
@@ -105,8 +107,18 @@ a:hover {
 }
 
 .writing-nav-link {
+	color: var(--writing-link);
 	font-size: 1.45rem;
 	font-weight: 700;
+}
+
+.nav-links a.writing-nav-link[aria-current="page"] {
+	color: var(--writing-link);
+}
+
+.writing-nav-link:hover,
+.nav-links a.writing-nav-link[aria-current="page"]:hover {
+	color: var(--writing-link-hover);
 }
 
 .container {
