@@ -65,9 +65,7 @@ Sophie Amundsen was on her way home from school. She had walked the first part o
 
 "Curious only. But you're whatsoever right, from now on, I'm a wholly new Sophie! You answer it please, my friend. By the way, being questioning is what make Socrate Socrate. We call it Socratic method or spirit.I just..."
 
-"That's enough! All right, I've been taught that human is good by nature, and...and I think so. 
-
-That's it." Joanna became impatient. 
+"That's enough! All right, I've been taught that human is good by nature, and...and I think so. That's it." Joanna became impatient.
 
 "So sue me," Sophie bursted into mischievous laughter and went on about human nature,"just kidding. Don't be that serious please. We're just working on an interesting philosophical project. Don't feel that annoyed."
 
@@ -95,9 +93,7 @@ How poorly educated, how ignorantly naive she is! Thought Sophie. And she said w
 
 "That's interesting and reasonable, kind of I mean." Joanna began to be ensnared by what Sophie had been saying and couldn't help commenting. 
 
-"You begin to get the point. That's nice." An approval smile spread on Sophie's face. "The biological researches have also shown that even our genes deep in our bodies are decisively and relatively selfish. A bestseller named the Selfish Gene reported it. It seems to me that human beings are all their lives in the pursuit of interest. The 'interest' herein is something with which they can survive or be mentally pleasant. Just imagine: what would you do if 
-
-someone or something be a menace to you to survive or to be pleasant, Joanna?"
+"You begin to get the point. That's nice." An approval smile spread on Sophie's face. "The biological researches have also shown that even our genes deep in our bodies are decisively and relatively selfish. A bestseller named the Selfish Gene reported it. It seems to me that human beings are all their lives in the pursuit of interest. The 'interest' herein is something with which they can survive or be mentally pleasant. Just imagine: what would you do if someone or something be a menace to you to survive or to be pleasant, Joanna?"
 
 Joanna was engrossed in thoughts for one minutes or so and then replied,"Not quite settled. But if it was a person, I guessed at least I would dislike him. And it was a thing, unless too colossal or terrible to handle, and I would smash, beat or throw away it without any ado."
 
@@ -163,9 +159,7 @@ Joanna was engrossed in thoughts for one minutes or so and then replied,"Not qui
 
 "Alberto! We are going to create our own world!" Sophie's eyes are sparkling. 
 
-"No. Because you've never thought that you got it all wrong from the very beginning."said 
-
-Alberto, loudly laughing. 
+"No. Because you've never thought that you got it all wrong from the very beginning," said Alberto, loudly laughing.
 
 "What? Say it again?"
 

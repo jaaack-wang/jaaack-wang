@@ -10,8 +10,15 @@ markdown: kramdown
 # Pretty blog URLs like /blog/2025/08/15/my-post/
 permalink: /blogs/:year/:month/:slug/
 
-social_image: /assets/images/site/og-default.jpg
+# Posts before this year appear in /blogs/archive/ instead of /blogs/.
+writing_archive_year: 2020
+
+social_image: /images/me.png
 
 # GitHub Pages allows this plugin; it auto-generates /feed.xml (RSS)
 plugins:
   - jekyll-feed
+
+# Local preview dependencies and generated files live here.
+exclude:
+  - Codex

@@ -124,12 +124,12 @@ Finally, pragmatic phenomena are extremely complex, and their ins and outs often
 
 1. 他的老师当得好——他老师当得好——他当老师当的好。
 2. 他的篮球打得好——他篮球打得好——他打篮球打得好。
-3. 他的三千米拿了金牌——他三千米拿了金牌——他跑三千米拿了金牌/*他拿三千米拿了金牌
-4. 去，别扫大家的兴——*去，别扫大家兴——*大家的兴。
-5. 别生我的气——别生我气——*我的气。
-6. 你走你的阳光道，我走我的独木桥——你走你阳光道，我走我独木桥——*你的阳光道/*我的独木桥。
-7. 你静你的坐，他示他的威——*你静你的坐，他示他的威——*你的坐/*他的威。
-8. 他看了两天的书——他看了两天书——*两天的书。
+3. 他的三千米拿了金牌——他三千米拿了金牌——他跑三千米拿了金牌/\*他拿三千米拿了金牌
+4. 去，别扫大家的兴——\*去，别扫大家兴——\*大家的兴。
+5. 别生我的气——别生我气——\*我的气。
+6. 你走你的阳光道，我走我的独木桥——你走你阳光道，我走我独木桥——\*你的阳光道/\*我的独木桥。
+7. 你静你的坐，他示他的威——\*你静你的坐，他示他的威——\*你的坐/\*他的威。
+8. 他看了两天的书——他看了两天书——\*两天的书。
 9. 他看了两场的电影——他看了两场电影——两场的电影。
 
 This article has no intention of analyzing the above examples in detail, nor is it easy to analyze them clearly within limited space, but it can be seen from this: even if they are all “的”-character phrases that are not attributive-middle structures, their internal usage situations are extremely complex and cannot be generalized.
@@ -142,14 +142,14 @@ This article has no intention of analyzing the above examples in detail, nor is 
 
 1. 你（是）什么时候来的北京？——你（是）什么时候来北京的？
 2. 我（是）在城里读的高中。——我（是）在城里读高中的。
-3. 这是我在城里读的高中。——*这是我在读城里高中的。
-4. 我本来准备写信的，但后来不小心忘记了。——*我本来准备写的信，但后来不小心忘记了。
+3. 这是我在城里读的高中。——\*这是我在读城里高中的。
+4. 我本来准备写信的，但后来不小心忘记了。——\*我本来准备写的信，但后来不小心忘记了。
 
 In examples (16) and (17), the so-called tense-aspect particle can both be placed at the end of the sentence to express an affirmative tone. We have added an omitted or implicit “（是）” between the subject and the adverbial-middle phrase in the two sentences to show that in sentence patterns where this kind of “tense-aspect particle” appears, the in-sentence focus or new information position is on the adverbial (usually a time or place adverbial), rather than on the object. Therefore, when the focus of example (17) shifts from the adverbial to the object, “的” becomes (in fact, it is not “changed” out, but collocated out) a structural particle rather than a modal particle; compare example (18). In addition, if the focus of the sentence is not on a time or place adverbial, then sentence-final “的气” cannot be moved to between the preceding predicate-object phrase, as in example (19). In short, the environment in which the “的” in “你什么时候来的北京”-type sentence patterns occurs (a predicative “的” middle phrase) itself contains the tense feature of “event completed,” so “的” here does not convey any tense information. If “的” is omitted, the focus of the whole sentence becomes unclear; at this time, whether the whole event occurred should be judged according to the specific context; compare: “我九点来北京，十点入住宾馆……一直在那住了几天才离开/决定在那住上几天再离开”. Therefore, “的” cannot be a tense-aspect particle.
 
 Although the above “的” is not at all the same word as the “的” in the two preceding subsections, structurally speaking, the “的气” middle phrase is obviously influenced by ordinary “的” phrases, and this influence is also likely to have come from analogy. For example, in the counterfactual sentences of the above patterns, although “的” can be omitted, it cannot be moved to the end of the sentence. For example:
 
-1. 如果我九点来（的）北京，现在人就已经在宾馆里面了。——*如果我九点来北京的，现在人就已经在宾馆里面了。
+1. 如果我九点来（的）北京，现在人就已经在宾馆里面了。——\*如果我九点来北京的，现在人就已经在宾馆里面了。
 2. 如果我在城里读（的）高中，现在可能就能去更好的大学读书。——如果我在城里读高中的，现在可能就能去更好的大学读书。
 
 It can thus be seen that analogy is an extremely complex linguistic phenomenon; it can even be only structural analogy while being completely unrelated functionally. This conclusion lends credibility to our analysis above.
@@ -172,7 +172,7 @@ In terms of phrase composition, the modifier of “的” final phrases can be n
 
 1. 你们班的（同学）到齐了没有？
 2. 这是他的（行李）。
-3. 我们的（*意见）是明天去，他的（*意见）是今天就走。
+3. 我们的（\*意见）是明天去，他的（\*意见）是今天就走。
 
 ② Predicative component + 的[+ potential head], which can further be divided into two subtypes:
 
@@ -180,18 +180,18 @@ In terms of phrase composition, the modifier of “的” final phrases can be n
 
 1. 他有两个小孩，大的（小孩）十岁，小的（小孩）七岁。
 2. 找到目击证人这是最重要的（事情）。
-3. 美丽的（*花朵）/光辉的（*形象）/宏伟的（*蓝图）/热烈的（*场面）
+3. 美丽的（\*花朵）/光辉的（\*形象）/宏伟的（\*蓝图）/热烈的（\*场面）
 
 1. Verbal component + 的[+ potential head]. Generally speaking, if the verbal component and the potential head have an implicit subject-predicate or predicate-object relationship, the phrase can simultaneously be a “的” final phrase and a “的”-character attributive-middle adverbial; otherwise it can only be a “的”-character attributive-middle adverbial.
 
 1. 看比赛的（人）很多。
 2. 他唱的（歌）是流行歌曲。
-3. 他游泳的（*姿势）不正确。
-4. 伴奏的（*声音）太大而唱的（*声音）太小。
+3. 他游泳的（\*姿势）不正确。
+4. 伴奏的（\*声音）太大而唱的（\*声音）太小。
 
 From this it can be seen: the ideal form of “的” final phrases is obtained from “的”-character attributive-middle phrases by omitting the head through reliance on a certain context; it is also a phenomenon in which a usage at the pragmatic level stably permeates into written language.
 
-3.4.3 The existence of non-typical “的” final phrases again confirms our argument about language analogy. If typical “的” final phrases are obtained under the作用 of context by omitting the head in “的”-character attributive-middle structures, then non-typical “的” final phrases are obtained by omitting non-typical “的” middle phrases through analogical action among different differentiated variants within the part-of-speech behavior of “的.” This is manifested in that a considerable number of non-typical “的” middle phrases, under certain contexts, can omit the “head” after “的” and become “的” final phrases, and this omission can occur in classes, such as:
+3.4.3 The existence of non-typical “的” final phrases again confirms our argument about language analogy. If typical “的” final phrases are obtained under the influence of context by omitting the head in “的”-character attributive-middle structures, then non-typical “的” final phrases are obtained by omitting non-typical “的” middle phrases through analogical action among different differentiated variants within the part-of-speech behavior of “的.” This is manifested in that a considerable number of non-typical “的” middle phrases, under certain contexts, can omit the “head” after “的” and become “的” final phrases, and this omission can occur in classes, such as:
 
 1. 他的老师当得好。——他的当得好（回答“哪个老师当得好？”）。
 2. 他的篮球打得好。——他的打得好（回答“谁的篮球打得好？”）。
@@ -200,10 +200,10 @@ From this it can be seen: the ideal form of “的” final phrases is obtained 
 
 Of course, in many non-typical “的” middle phrases the “head” cannot be omitted, or the meaning changes drastically after omission, such as:
 
-1. 他唱他的青衣——*他唱他的（意思大变）
-2. 你静你的坐，我示我的威——*你静你的，我示我的
-3. 扫大家的兴/告他的状/生你的气/介他的意——*扫大家的/告他的/生你的/介他的
-4. 他看了两场的电影——*他看了两场的
+1. 他唱他的青衣——\*他唱他的（意思大变）
+2. 你静你的坐，我示我的威——\*你静你的，我示我的
+3. 扫大家的兴/告他的状/生你的气/介他的意——\*扫大家的/告他的/生你的/介他的
+4. 他看了两场的电影——\*他看了两场的
 5. 你去捧你的梁朝伟的周瑜去吧，我还是喜欢我的林青霞的东方不败。——？你去捧你的，我还是喜欢我的。
 
 From this it can be seen how complex the process is of obtaining non-typical “的” final phrases by omitting the “head” from non-typical “的” middle phrases.
@@ -220,4 +220,4 @@ Of course, we can still try to explain: examples (41) and (42) are still obtaine
 1. ’这个会，你的（角色是）主席，他的（角色是）秘书。
 2. ‘这一场，梁朝伟（演）的周瑜，林青霞（演）的东方不败。
 
-3.4.4 In summary, language use is an extremely complex process, and the extremely high frequency of “的” strengthens the complexity of its part-of-speech behavior through repeated use. But undoubtedly, the formation of “的” final phrases is closely related to the extremely high frequency of “的” and the analogical作用 of language.
+3.4.4 In summary, language use is an extremely complex process, and the extremely high frequency of “的” strengthens the complexity of its part-of-speech behavior through repeated use. But undoubtedly, the formation of “的” final phrases is closely related to the extremely high frequency of “的” and the operation of linguistic analogy.

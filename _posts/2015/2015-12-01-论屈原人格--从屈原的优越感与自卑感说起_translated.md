@@ -134,7 +134,7 @@ Taking “Li Sao” as an example, Qu Yuan depicts his image like this:
 
 **With four jade-horned dragons I yoked tall birds; suddenly, riding the dusty wind, I went upward on expedition.  
 I ordered Xihe to slow his pace......  
-Ahead I had Wangshu serve as先锋; behind Feilian ran as attendant.  
+Ahead I had Wangshu serve as vanguard; behind Feilian ran as attendant.<br>
 Luanhuang went before to warn for me; the Thunder Master told me all was not yet prepared.  
 I ordered phoenix birds to fly and soar, following them day and night.  
 Whirlwind massed and separated from each other, leading cloud-rainbows to come and drive......**
@@ -245,7 +245,7 @@ From the above we can see a Qu Yuan lamenting that he was born at the wrong time
 Floating along the Yangtze and Huai and entering the sea, I follow Wu Zixu and make myself at ease.  
 Looking toward islets in the great river, I grieve at Shentu Di’s resistant traces.  
 Rushing to remonstrate with the ruler yet not being heard, what use is it to shoulder stones again and again!  
-My heart is knotted and cannot be untied; I think of Jianchan and cannot let go.**
+My heart is knotted and cannot be untied; my thoughts twist in anguish and cannot be released.**
 
 Although many Qu Yuan researchers through the ages, such as Wen Yiduo and Guo Moruo, believe the last few lines29 are “intruded by slipped strips and should be deleted,” the author believes that, without reliable historical materials, merely because “the meaning is opposite and the sentences are repetitive,” to consider that these words could not possibly accord with Qu Yuan’s thought and could not possibly have been written by Qu Yuan is somewhat overcorrective—just as we cannot deny the existence of Qu Yuan the person merely because of the insufficiency of historical materials and differences in claims. Even if these words really are “intruded by slipped strips,” the author still thinks they fit Qu Yuan’s psychology quite well. Because the opposition in meaning is precisely evidence of the contradiction in personality, and this is exactly the normal state manifested in Qu Yuan’s works; it is also precisely Branden’s so-called manifestation of “neurosis,” and even more the product of the conflict between Qu Yuan’s strong sense of superiority and enormous sense of inferiority. A sense of superiority and a sense of inferiority are a pair of contradictory sides; in fact, they are also a microcosm of Qu Yuan’s personality contradictions.......
 
@@ -290,14 +290,16 @@ Third is the contradiction between the subjective desire to seek spiritual compa
 
  
 
-Such lines as “Time cannot be regained twice” (*Xiang Jun*), “Time cannot be suddenly obtained” (*Xiang Furen*), and “No sorrow is sadder than living separation” (*Shao Siming*) can all be taken as footnotes to this sentence. As for the latter, Qu Yuan said “No joy is greater than new understanding,” (same as above) yet “new understanding” is either already “former sages” and “former cultivators” like the “three kings,” or else positions are unstable and the world has no such person! In the “Li Sao” he complains:
+Such lines as “Time cannot be regained twice” (*Xiang Jun*), “Time cannot be suddenly obtained” (*Xiang Furen*), and “No sorrow is sadder than living separation” (*Shao Siming*) can all be taken as footnotes to this sentence. As for the latter, Qu Yuan said “No joy is greater than a new acquaintance,” (same as above) yet a “new acquaintance” is either already among “former sages” and “former cultivators” like the “three kings,” or else their position is unstable or no such person exists in the world! In the “Li Sao” he complains:
 
  
 
 **I have already nourished orchids in nine plots, and also planted a hundred mu of sweet herbs.  
 I bordered with liuyi and jieshe, mixed with duheng and fragrant zhi.  
 Hoping their branches and leaves would grow lush, I wish to wait for the time when I shall harvest.  
-Though they wither and die, what harm is it? I grieve that all the fragrant ones are gone to weeds........****How fickle and changeable are the times; how could one linger? Orchids and angelica change and are no longer fragrant; thoroughwort and sweet-sedge turn into thatch. How is it that the fragrant grasses of former days have now become mere wormwood and mugwort? Could there be some other reason? There is no harm like not loving self-cultivation!**
+Though they wither and die, what harm is it? I grieve that all the fragrant ones are gone to weeds........**
+
+**How fickle and changeable are the times; how could one linger? Orchids and angelica change and are no longer fragrant; thoroughwort and sweet-sedge turn into thatch. How is it that the fragrant grasses of former days have now become mere wormwood and mugwort? Could there be some other reason? There is no harm like not loving self-cultivation!**
 
  
 
@@ -383,11 +385,11 @@ The first category of Qu Yuan’s attitude toward death—dying for self-identif
 
 **It is what my heart deems good; though I die nine times, I still will not regret... Lying low, keeping pure and dying upright—this is what the former sages valued... Bringing my body to the brink of peril and death, looking back to my beginning, I still have no regret... Though I cannot fit with the people of today, I wish to follow Peng Xian’s remaining rule... Since there is none with whom to carry out fine governance, I shall follow where Peng Xian dwells! (*Li Sao*)**
 
-**Though the body dies, the spirit is numinous; the soul and魄 are resolute, becoming a hero among ghosts. (*Guo Shang*)**
+**Though the body dies, the spirit is numinous; the soul and spirit are resolute, becoming a hero among ghosts. (*Guo Shang*)**
 
 **Gazing to the Three and Five as my image, pointing to Peng Xian as my model (*Chou Si*)**
 
-**I grieve that the returning wind shakes the蕙; my heart’s grievance knots and wounds within. Things may be slight and yet destroy one’s nature; voices may be hidden yet first to rise. Why did Peng Xian set his thoughts so, and with his chaste resolve not forget! How could myriad changes of feeling be covered—whose falsehood can last long! (*Bei Hui Feng*)**
+**I grieve that the returning wind shakes the sweet herb; my heart’s grievance knots and wounds within. Things may be slight and yet destroy one’s nature; voices may be hidden yet first to rise. Why did Peng Xian set his thoughts so, and with his chaste resolve not forget! How could myriad changes of feeling be covered—whose falsehood can last long! (*Bei Hui Feng*)**
 
  
 
@@ -459,13 +461,13 @@ From this we can see that the differences and contradictions between Qu Yuan and
 
 Qu Yuan’s so-called “independent and unchanging” independent personality has no problem at all; but the above passage’s “solitary without a match” kind of “isolated personality” is pathological and abnormal. Here, normal and pathological take the mental condition of humans in the usual state as the standard and contain no moral inclination. But from the point of view of the human instinctive pursuit of a sense of superiority, an isolated personality is clearly also inadvisable and will not last long—things reverse when they reach an extreme. As Laozi said: “Being and non-being give birth to each other; difficult and easy complete each other; long and short contrast each other; high and low lean on each other; sound and tone harmonize each other; before and after follow each other.”37 Therefore, as Qu Yuan’s personal moral superiority developed to this point, the inferiority complex that shadowed him must also have reached its peak; the contradiction between intense superiority and enormous inferiority also became irreconcilable—this is precisely the sign of his madness.
 
-Qu Yuan’s spiritual state developing from normal to madness is in fact a microcosm of his personality developing from independence to isolation. Jung has the famous formula “I + We = Fully I” (I + we = the perfect I), meaning that “the combination of self, personal consciousness, and the collective unconscious can make a perfect self.”38 In other words, pursuing the consistency of personality and a perfect personality cannot be established on the condition of isolation from the world. Because an “isolated personality” leads to a paradox—this paradox is destined by the great “contradiction” between pursuing personality consistency and perfect personality, and the tendency toward personality contradiction, and thus is necessarily unsolvable. We may take Shen Congwen’s experience as a side proof. In January 1949, Shen Congwen, “in an unprecedented sense of isolation under strong stimulation,” “became mentally ill.” In a note appended to Shen Congwen’s letter to Zhang Zhahe on January 30, he wrote:
+Qu Yuan’s spiritual state developing from normal to madness is in fact a microcosm of his personality developing from independence to isolation. Jung has the famous formula “I + We = Fully I” (I + we = the perfect I), meaning that “the combination of self, personal consciousness, and the collective unconscious can make a perfect self.”38 In other words, pursuing the consistency of personality and a perfect personality cannot be established on the condition of isolation from the world. Because an “isolated personality” leads to a paradox—this paradox is destined by the great “contradiction” between pursuing personality consistency and perfect personality, and the tendency toward personality contradiction, and thus is necessarily unsolvable. We may take Shen Congwen’s experience as a side proof. In January 1949, Shen Congwen, “in an unprecedented sense of isolation under strong stimulation,” “became mentally ill.” In a note appended to Shen Congwen’s letter to Zhang Zhaohe on January 30, he wrote:
 
  
 
 **Give me a rest that is not too painful; no need to wake up, and it will be fine. What I say no one understands at all. Not a single friend is willing to understand, dares to understand, that I am not mad. Everyone hems and haws and avoids it, afraid to get involved. What is this? People must rest; what’s wrong with tidying oneself up? Wang Xun, who studies philosophy, also doesn’t understand; he really treats me as a madman. I think many people are participating in a plot to harm me, because there’s something exciting to watch... I have no premise; I only hope for an ending that is not too humiliating. No one is willing to understand; they all brush it off. Completely in isolation. Isolated and despairing, I never had the illusion of survival. I ought to rest like that! ... If I force myself to conform, servilely seeking safety, what use is such optimism? Let people be optimistic; I am not pessimistic either... I am very tired, very tired. Hearing dogs bark endlessly. Why are you still calling? If they eat me I will be silent. I do not care to give away this body; whether it feeds dogs or tigers is originally the same.39**
 
-Shen Congwen, trapped in an isolated personality, has a fundamental similarity with Qu Yuan: distrust of everyone around him and a sense of persecution—wasn’t Qu Yuan exactly like this? In a rather metaphorical way, when Shen Congwen and Qu Yuan were in a state of madness, on the one hand they both regarded the people around them as dogs; on the other hand they both behaved calmly and fearlessly (“Hearing dogs bark endlessly. Why are you still calling? If they eat me I will be silent. I do not care to give away this body; whether it feeds dogs or tigers is originally the same.”). And Qu Yuan wrote in *Huai Sha*: “Town dogs bark in packs, barking at what they find strange; not doubting the swift or the outstanding is indeed the vulgar habit.” *Records of the Grand Historian* records that Qu Yuan “then composed the fu *Huai Sha*,” and then threw himself into the water and killed himself.40 Of course *Huai Sha* cannot possibly have been written shortly before Qu Yuan threw himself into the water, otherwise how could it have been transmitted? But taking *Huai Sha* as a work from before Qu Yuan’s suicide, when he was in a state of madness, does not seem unreasonable.
+Shen Congwen, trapped in an isolated personality, has a fundamental similarity with Qu Yuan: distrust of everyone around him and a sense of persecution—wasn’t Qu Yuan exactly like this? In a rather metaphorical way, when Shen Congwen and Qu Yuan were in a state of madness, on the one hand they both regarded the people around them as dogs; on the other hand they both behaved calmly and fearlessly (“Hearing dogs bark endlessly. Why are you still calling? If they eat me I will be silent. I do not care to give away this body; whether it feeds dogs or tigers is originally the same.”). And Qu Yuan wrote in *Huai Sha*: “Town dogs bark in packs, barking at what they find strange; rejecting the talented and suspecting the outstanding—such is the nature of mediocrity.” *Records of the Grand Historian* records that Qu Yuan “then composed the fu *Huai Sha*,” and then threw himself into the water and killed himself.40 Of course *Huai Sha* cannot possibly have been written shortly before Qu Yuan threw himself into the water, otherwise how could it have been transmitted? But taking *Huai Sha* as a work from before Qu Yuan’s suicide, when he was in a state of madness, does not seem unreasonable.
 
 An independent personality is not sustainable; the end of isolation is only destruction. “Completely in isolation. Isolated and despairing, I never had the illusion of survival. I ought to rest like that!”—how vividly real this psychological description is! “In early January, Shen Congwen wrote at the end of his old work *Green Nightmare* such a passage: ‘I ought to rest; my nerves have developed to the highest point I can adapt to. If I do not collapse, I will go mad.’” The capacity of the human heart is always limited; once the limit is broken, one truly “will go mad if not collapse.” Didn’t Qu Yuan first have “madness” and then commit suicide—exactly like this? Shen Congwen first had madness, and not long after, “on the morning of March 28, Shen Congwen attempted suicide at home” (author’s note: later rescued)—wasn’t it also like this?41 In fact, Qu Yuan died within the irreconcilability of personality isolation; death was only the final and most thorough “rest” and balance.
 
@@ -543,13 +545,13 @@ So-called personality, in Greek, means “mask.” Jung believed that the “per
 
 24. *Records of the Grand Historian*, p. 2184, same below.
 
-25. [USA] Eric Berne, cited in *The Psychology Book—50 Great Classics*, [USA] Tom Butler-Bowdon, translated by Chen Jianing and Ma Ning, China Youth Press, January 2011, 1st edition, p. 20.
+25. *Games People Play*, [USA] Eric Berne, cited in *The Psychology Book—50 Great Classics*, [USA] Tom Butler-Bowdon, translated by Chen Jianing and Ma Ning, China Youth Press, January 2011, 1st edition, p. 20.
 
 26. Cited in *Qu Yuan*, Fang Yingmin, Yunnan Education Press, June 2011, 1st edition, p. 38.
 
 27. *Inferiority and Beyond*, p. 40.
 
-28. [USA] Nathaniel Branden, cited in *The Psychology Book—50 Great Classics*, p. 44.
+28. *The Psychology of Self-Esteem*, [USA] Nathaniel Branden, cited in *The Psychology Book—50 Great Classics*, p. 44.
 
 29. For example, Wen Yiduo believed the last two lines were inserted due to omitted slips; Guo Moruo believed the last six lines all were. Cited from *Complete Translation of the Songs of Chu* (revised edition), p. 122.
 

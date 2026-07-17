@@ -4,7 +4,7 @@ approx_date: "2017-11"
 lang: en
 is_translation: true
 pair_id: 祖考皇矣
-title: The Ancestors Are Truly Regal
+title: The Ancestors Are Great and Glorious
 tags: ["Classical Chinese"]
 ---
 **Origin of the writing:**
@@ -19,7 +19,7 @@ What follows, “Great and Glorious Ancestors,” is a piece produced by modelin
 
 Great and glorious ancestors, following the rule of the Sovereign on High[1].
 
-Seeking the people’s distress[2], saying new, saying change[3].
+Seeking the people’s distress[2], renew and reform[3].
 
 Seeking where the people are not good[4], thereby drawing near to the virtuous[5]. (Zhi division)
 
@@ -51,13 +51,13 @@ The gentleman’s virtue is fragrant; long life and venerable age do not cease[1
 
 As for mulberry and catalpa, surely be reverent and respectful[17].
 
-Seeming to continue mother and ancestors, bestowing upon the people blessings.
+Following and continuing the foremothers and forefathers, bestowing upon the people blessings.
 
 For sons and sons’ sons, do not abolish but carry it on[18]. (Zhi division)
 
   
 
-Like gourds, continuous[19], like the Han River, broad[20].
+Like gourds, continuous[19], like the Han River, wide[20].
 
 Like the valley wind’s recurring[21], not days, not months[22].
 
@@ -91,7 +91,7 @@ Like bright stars’ splendor[23], none who see it do not rejoice[24]. (Yue divi
 
 [9] *You* is interchangeable with “佑,” meaning to protect. From “*Daya* • Decade of *Shengmin* • *Jiale*: ‘Protect and aid, command it; from Heaven reaffirm it.’”
 
-[10] *Zhushi*, to build a commemorative hall for the ancestors so as to receive their blessing and beneficence. See “*Xiaoya* • Decade of *Hongyan* • *Sigan*: ‘Seeming to continue mother and ancestors, building halls of a hundred walls.’” *Cuiwei* stands in for mountains. See “*Xiaoya* • Decade of *Gufeng* • *Gufeng*: ‘Softly, softly the valley wind; the mountains are lofty and high.’”
+[10] *Zhushi*, to build a commemorative hall for the ancestors so as to receive their blessing and beneficence. See “*Xiaoya* • Decade of *Hongyan* • *Sigan*: ‘Following and continuing the foremothers and forefathers, building halls of a hundred walls.’” *Cuiwei* stands in for mountains. See “*Xiaoya* • Decade of *Gufeng* • *Gufeng*: ‘Softly, softly the valley wind; the mountains are lofty and high.’”
 
 [11] *Ji* is like the ridges/edges of an arrow. *Hui*, pheasant. *Ge* is interchangeable with “翮,” meaning a bird flapping its wings to fly. The wording comes from “*Xiaoya* • Decade of *Hongyan* • *Sigan*: ‘Like standing on tiptoe, thus winged; like arrows, thus sharp; like birds, thus winging; like pheasants, thus flying—where the gentleman ascends.’”
 

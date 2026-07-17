@@ -1,721 +1,313 @@
+{% assign page_lang = page.lang | default: "en" %}
 <!doctype html>
-<html lang="en">
-
+<html lang="{{ page_lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} — {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/noscript.css" />
-  </noscript>
 
-  {%- assign title = page.title | escape -%}
-  {%- assign desc = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 -%}
-  {%- assign url = page.url | absolute_url -%}
-  {%- assign image = page.image | default: site.social_image | default: "/assets/images/site/og-default.jpg" |
-  absolute_url -%}
-
+  {% assign meta_title = page.title | escape %}
+  {% assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 %}
+  {% assign canonical_url = page.url | absolute_url %}
+  {% assign social_image = page.image | default: site.social_image | absolute_url %}
+  <meta name="description" content="{{ meta_description }}">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ desc }}">
-  <meta property="og:url" content="{{ url }}">
-  <meta property="og:image" content="{{ image }}">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ social_image }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ desc }}">
-  <meta name="twitter:image" content="{{ image }}">
   <meta name="robots" content="noai, noimageai, noindex, nofollow">
-  <link rel="canonical" href="{{ url }}">
-
-  <style>
-    :root {
-      --accent: #41b883;
-      --text: #333;
-      --light-gray: #888;
-    }
-
-    body {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--text);
-    }
-
-    /* Post pages don't use desktop sidebar; keep mobile panel behavior. */
-    #wrapper {
-      padding-right: 0 !important;
-    }
-
-    #header {
-      display: none;
-    }
-
-    @media screen and (max-width: 1024px) {
-      #header {
-        display: block;
-      }
-
-      #wrapper {
-        padding-top: 0 !important;
-      }
-
-      .post-wrapper {
-        margin-top: 0 !important;
-      }
-    }
-
-    .post-wrapper {
-      max-width: 850px;
-      margin: 6rem auto 4rem;
-      padding: 0 1rem;
-    }
-
-    .post-wrapper h1 {
-      margin-top: 0;
-      color: var(--accent);
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-      border-bottom: 3px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-
-    .post-meta {
-      color: var(--light-gray);
-      font-size: 1rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .post-disclaimer {
-      margin: 0 0 1.5rem;
-      padding: .65rem .85rem;
-      border-left: 4px solid #e6e6e6;
-      background: #fafafa;
-      color: #666;
-      font-size: .98rem;
-    }
-
-    .post-wrapper p {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .post-wrapper img {
-      display: block;
-      margin: 2rem auto;
-      border-radius: 6px;
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .post-footer {
-      margin-top: .9rem;
-      font-size: 1rem;
-    }
-
-    .post-footer a {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .post-legal {
-      margin-top: .9rem;
-      margin-bottom: 0;
-      padding: .75rem .95rem;
-      border-left: 4px solid #d9d9d9;
-      background: #fafafa;
-      color: #444;
-      font-size: .98rem;
-      line-height: 1.6;
-    }
-
-    .post-wrapper p.post-ghost-note {
-      margin: 0;
-      padding: 0;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: .01em;
-      user-select: text;
-      -webkit-user-select: text;
-    }
-
-    .post-wrapper p.post-ghost-note.is-selected {
-      color: #1f5e43;
-      -webkit-text-fill-color: #1f5e43;
-      background: rgba(65, 184, 131, 0.22);
-      animation: ghostFadeOut 3.2s ease-out forwards;
-    }
-
-    @keyframes ghostFadeOut {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .post-wrapper p.post-ghost-note::selection {
-      background: transparent;
-      color: transparent;
-    }
-
-    .post-wrapper p.post-ghost-note::-moz-selection {
-      background: transparent;
-      color: transparent;
-    }
-
-    .post-wrapper p.post-footer {
-      margin-top: .15rem;
-      margin-bottom: 0;
-    }
-
-    .post-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 2.5rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid #e6e6e6;
-    }
-
-    .post-nav-link {
-      display: inline-block;
-      text-decoration: none;
-      color: #41b883;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    .post-nav-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-      .post-nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .post-nav .next {
-        align-self: flex-end;
-      }
-    }
-
-    .share-bar {
-      margin-top: 1.75rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e6e6e6;
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
-      align-items: center;
-    }
-
-    .share-bar span {
-      color: #666;
-      margin-right: .25rem;
-    }
-
-    .share-bar .share {
-      display: inline-block;
-      padding: .35rem .6rem;
-      border-radius: 5px;
-      background: #f4f4f4;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .share-bar .share:hover {
-      text-decoration: underline;
-    }
-
-    .share-bar .x {
-      color: #111;
-    }
-
-    .share-bar .li {
-      color: #0a66c2;
-    }
-
-    .share-bar .fb {
-      color: #1877f2;
-    }
-
-    .share-bar .rd {
-      color: #ff4500;
-    }
-
-    .share-bar .em {
-      color: #41b883;
-    }
-
-    .post-tags a {
-      margin-right: .35rem;
-      text-decoration: none;
-      color: #41b883;
-      font-weight: 600
-    }
-
-    .post-meta .post-tag-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .post-meta .post-tag-link:hover {
-      text-decoration: underline;
-    }
-
-    .back-to-top {
-      position: fixed;
-      right: 1.1rem;
-      bottom: 1.1rem;
-      width: 44px;
-      height: 44px;
-      border: none;
-      border-radius: 999px;
-      background: #41b883;
-      color: #fff;
-      font-size: 1.25rem;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transform: translateY(8px);
-      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background 0.2s ease;
-      z-index: 1000;
-    }
-
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    .back-to-top:hover {
-      background: #359a72;
-    }
-
-    @media (max-width: 640px) {
-      .back-to-top {
-        width: 40px;
-        height: 40px;
-        right: 0.85rem;
-        bottom: 0.85rem;
-      }
-    }
-  </style>
-</head>
-
-<body class="is-preload">
-  <span id="logo" style="display:none;"><a href="{{ '/' | relative_url }}">Zhengxiang Wang</a></span>
-
-  <section id="header">
-    <nav id="nav">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/' | relative_url }}#Bio">Bio</a></li>
-        <li><a href="{{ '/' | relative_url }}#News">News</a></li>
-        <li><a href="{{ '/' | relative_url }}#Research">Research</a></li>
-        <li><a href="{{ '/' | relative_url }}#latest-blogs">Blogs</a></li>
-      </ul>
-    </nav>
-  </section>
-
-  <div id="wrapper">
-    <section class="wrapper style1 fade-up">
-      <div class="inner post-wrapper">
-        <h1>{{ page.title }}</h1>
-
-        {%- comment -%}
-        GitHub Pages-safe translation detection:
-        - Supports translated: true / "true"
-        - Supports is_translation: true / "true"
-        Avoid calling downcase on booleans.
-        {%- endcomment -%}
-        {%- assign __translated_raw = page.translated | default: page.is_translation | default: false -%}
-        {%- assign __translated_json = __translated_raw | jsonify -%}
-        {%- assign __is_translated = false -%}
-        {%- if __translated_raw == true or __translated_json == '"true"' or __translated_json == 'true' -%}
-        {%- assign __is_translated = true -%}
-        {%- endif -%}
-
-        {%- comment -%}
-        Language helper (treat zh-CN / zh etc as Chinese)
-        {%- endcomment -%}
-        {%- assign __lang = page.lang | default: "en" -%}
-        {%- assign __lang_s = __lang | append: "" -%}
-        {%- assign __is_zh = false -%}
-        {%- assign __is_en = false -%}
-        {%- if __lang_s contains "zh" -%}
-        {%- assign __is_zh = true -%}
-        {%- endif -%}
-        {%- if __lang_s contains "en" -%}
-        {%- assign __is_en = true -%}
-        {%- endif -%}
-
-        {% assign sib = site.posts | where: "pair_id", page.pair_id | where_exp: "p", "p.lang != page.lang" | first %}
-
-        {% if sib %}
-        <p id="langSwitchWrap" class="archive-tags-link">
-          {% if __is_zh %}
-          <a id="langSwitchLink" href="{{ sib.url | relative_url }}?nav=en">English →</a>
-          {% else %}
-          <a id="langSwitchLink" href="{{ sib.url | relative_url }}?nav=zh">中文 →</a>
-          {% endif %}
-        </p>
-        {% endif %}
-
-        {%- assign __human_date = nil -%}
-        {%- if page.display_date -%}
-        {%- assign __human_date = page.display_date -%}
-        {%- elsif page.approx_date -%}
-        {%- assign parts = page.approx_date | split: "-" -%}
-        {%- assign y = parts[0] -%}
-        {%- assign m_raw = parts[1] -%}
-        {%- assign m = m_raw | plus: 0 -%}
-        {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
-        {%- assign m_index = m | minus: 1 -%}
-        {%- assign __human_date = months[m_index] | append: " " | append: y -%}
-        {%- elsif page.year and page.month and page.day == nil -%}
-        {%- assign m = page.month | plus: 0 -%}
-        {%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
-        {%- assign m_index = m | minus: 1 -%}
-        {%- assign __human_date = months[m_index] | append: " " | append: page.year -%}
-        {%- endif -%}
-
-        <p class="post-meta">
-          {%- if __human_date -%}
-          {{ __human_date }}
-          {%- else -%}
-          {{ page.date | date: "%b %-d, %Y" }}
-          {%- endif -%}
-          {% if page.tags and page.tags.size > 0 %}
-          ·
-          {%- if __is_en -%}
-          {%- assign __tags_base = '/blogs/en/tags/' -%}
-          {%- else -%}
-          {%- assign __tags_base = '/blogs/tags/' -%}
-          {%- endif -%}
-          {% for t in page.tags %}
-          <a class="post-tag-link" href="{{ __tags_base | relative_url }}#{{ t | slugify }}">#{{ t }}</a>{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-          {% endif %}
-        </p>
-
-        {%- comment -%}
-        Disclaimer only on translated posts.
-        {%- endcomment -%}
-        {% if __is_translated %}
-        {% if __is_zh %}
-        <p class="post-disclaimer">
-          免责声明：本文译文由 GPT-5.2 翻译生成，原文为英文。
-        </p>
-        {% else %}
-        <p class="post-disclaimer">
-          Disclaimer: This post was originally written in Chinese and translated into English by GPT-5.2.
-        </p>
-        {% endif %}
-        {% endif %}
-
-        {{ content }}
-
-        {%- comment -%}
-        Navigation pools:
-        - default: follow content type (original -> originals, translated -> translated)
-        - en mode: all English posts (original + translated)
-        - zh mode: all Chinese posts (original + translated)
-        {%- endcomment -%}
-        {%- assign __pool_default = "" | split: "" -%}
-        {%- assign __pool_en = "" | split: "" -%}
-        {%- assign __pool_zh = "" | split: "" -%}
-
-        {%- for p in site.posts -%}
-        {%- assign _raw = p.translated | default: p.is_translation | default: false -%}
-        {%- assign _json = _raw | jsonify -%}
-        {%- assign _is_t = false -%}
-        {%- assign _lang = p.lang | default: "en" -%}
-        {%- assign _lang_s = _lang | append: "" -%}
-        {%- if _raw == true or _json == '"true"' or _json == 'true' -%}
-        {%- assign _is_t = true -%}
-        {%- endif -%}
-
-        {%- if __is_translated and _is_t -%}
-        {%- assign __pool_default = __pool_default | push: p -%}
-        {%- elsif __is_translated == false and _is_t == false -%}
-        {%- assign __pool_default = __pool_default | push: p -%}
-        {%- endif -%}
-
-        {%- if _lang_s contains "en" -%}
-        {%- assign __pool_en = __pool_en | push: p -%}
-        {%- endif -%}
-        {%- if _lang_s contains "zh" -%}
-        {%- assign __pool_zh = __pool_zh | push: p -%}
-        {%- endif -%}
-        {%- endfor -%}
-
-        {%- assign __pool_default_sorted = __pool_default | sort: "date" | reverse -%}
-        {%- assign __pool_en_sorted = __pool_en | sort: "date" | reverse -%}
-        {%- assign __pool_zh_sorted = __pool_zh | sort: "date" | reverse -%}
-
-        {%- assign __prev_default = nil -%}
-        {%- assign __next_default = nil -%}
-        {%- for p in __pool_default_sorted -%}
-        {%- if p.url == page.url -%}
-        {%- assign __idx = forloop.index0 -%}
-        {%- if __idx > 0 -%}
-        {%- assign __prev_i = __idx | minus: 1 -%}
-        {%- assign __prev_default = __pool_default_sorted[__prev_i] -%}
-        {%- endif -%}
-        {%- assign __next_i = __idx | plus: 1 -%}
-        {%- if __next_i < __pool_default_sorted.size -%} {%- assign __next_default = __pool_default_sorted[__next_i] -%} {%- endif -%}
-        {%- break -%}
-        {%- endif -%}
-        {%- endfor -%}
-
-        {%- assign __prev_en = nil -%}
-        {%- assign __next_en = nil -%}
-        {%- for p in __pool_en_sorted -%}
-        {%- if p.url == page.url -%}
-        {%- assign __idx = forloop.index0 -%}
-        {%- if __idx > 0 -%}
-        {%- assign __prev_i = __idx | minus: 1 -%}
-        {%- assign __prev_en = __pool_en_sorted[__prev_i] -%}
-        {%- endif -%}
-        {%- assign __next_i = __idx | plus: 1 -%}
-        {%- if __next_i < __pool_en_sorted.size -%} {%- assign __next_en = __pool_en_sorted[__next_i] -%} {%- endif -%}
-        {%- break -%}
-        {%- endif -%}
-        {%- endfor -%}
-
-        {%- assign __prev_zh = nil -%}
-        {%- assign __next_zh = nil -%}
-        {%- for p in __pool_zh_sorted -%}
-        {%- if p.url == page.url -%}
-        {%- assign __idx = forloop.index0 -%}
-        {%- if __idx > 0 -%}
-        {%- assign __prev_i = __idx | minus: 1 -%}
-        {%- assign __prev_zh = __pool_zh_sorted[__prev_i] -%}
-        {%- endif -%}
-        {%- assign __next_i = __idx | plus: 1 -%}
-        {%- if __next_i < __pool_zh_sorted.size -%} {%- assign __next_zh = __pool_zh_sorted[__next_i] -%} {%- endif -%}
-        {%- break -%}
-        {%- endif -%}
-        {%- endfor -%}
-
-        <nav class="post-nav" aria-label="Post">
-          <a id="postPrevLink" class="post-nav-link prev" rel="prev"
-            {% unless __prev_default %}style="display:none"{% endunless %}
-            data-default-url="{% if __prev_default %}{{ __prev_default.url | relative_url }}{% endif %}"
-            data-default-title="{% if __prev_default %}{{ __prev_default.title | escape }}{% endif %}"
-            data-en-url="{% if __prev_en %}{{ __prev_en.url | relative_url }}{% endif %}"
-            data-en-title="{% if __prev_en %}{{ __prev_en.title | escape }}{% endif %}"
-            data-zh-url="{% if __prev_zh %}{{ __prev_zh.url | relative_url }}{% endif %}"
-            data-zh-title="{% if __prev_zh %}{{ __prev_zh.title | escape }}{% endif %}"
-            href="{% if __prev_default %}{{ __prev_default.url | relative_url }}{% endif %}">
-            {% if __prev_default %}← Previous: {{ __prev_default.title }}{% endif %}
-          </a>
-
-          <a id="postNextLink" class="post-nav-link next" rel="next"
-            {% unless __next_default %}style="display:none"{% endunless %}
-            data-default-url="{% if __next_default %}{{ __next_default.url | relative_url }}{% endif %}"
-            data-default-title="{% if __next_default %}{{ __next_default.title | escape }}{% endif %}"
-            data-en-url="{% if __next_en %}{{ __next_en.url | relative_url }}{% endif %}"
-            data-en-title="{% if __next_en %}{{ __next_en.title | escape }}{% endif %}"
-            data-zh-url="{% if __next_zh %}{{ __next_zh.url | relative_url }}{% endif %}"
-            data-zh-title="{% if __next_zh %}{{ __next_zh.title | escape }}{% endif %}"
-            href="{% if __next_default %}{{ __next_default.url | relative_url }}{% endif %}">
-            {% if __next_default %}Next: {{ __next_default.title }} →{% endif %}
-          </a>
-        </nav>
-
-          <div class="share-bar">
-            <span>Share:</span>
-            <a class="share x"
-              href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | uri_escape }}&text={{ page.title | uri_escape }}"
-              target="_blank" rel="noopener">X</a>
-            <a class="share li"
-              href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}"
-              target="_blank" rel="noopener">LinkedIn</a>
-            <a class="share fb"
-              href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
-              target="_blank" rel="noopener">Facebook</a>
-            <a class="share rd"
-              href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}"
-              target="_blank" rel="noopener">Reddit</a>
-            <a class="share em"
-              href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url | uri_escape }}">Email</a>
-          </div>
-
-          <p class="post-legal">
-            &copy; {{ page.date | date: "%Y" }} {{ site.title }}. No automated scraping, dataset inclusion, or machine learning training permitted without written permission.
-          </p>
-
-          <p class="post-ghost-note">Now you see me. Now you don’t. 萍水相逢，当相忘于江湖。</p>
-
-          {%- if __is_translated -%}
-          {%- assign __back_blogs_href = '/blogs/en/' -%}
-          {%- else -%}
-          {%- assign __back_blogs_href = '/#latest-blogs' -%}
-          {%- endif -%}
-          <p class="post-footer">
-            <a href="{{ __back_blogs_href | relative_url }}">← Back to Blogs</a>
-            &nbsp;|&nbsp;
-            <a href="{{ '/' | relative_url }}">← Back to Home</a>
-          </p>
-      </div>
-    </section>
-  </div>
-
-  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
-
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/browser.min.js"></script>
-  <script src="/assets/js/breakpoints.min.js"></script>
-  <script src="/assets/js/util.js"></script>
-  <script src="/assets/js/main.js"></script>
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" href="{{ '/images/me.png' | relative_url }}">
   <script>
-    (function () {
-      var btn = document.getElementById('backToTopBtn');
-      var ghostNote = document.querySelector('.post-ghost-note');
-      var prevLink = document.getElementById('postPrevLink');
-      var nextLink = document.getElementById('postNextLink');
-      var langSwitchWrap = document.getElementById('langSwitchWrap');
-      var ghostFlashTimer = null;
-      var ghostWasTouched = false;
-
-      function toggleButton() {
-        if (!btn) return;
-        if (window.scrollY > 280) {
-          btn.classList.add('show');
-        } else {
-          btn.classList.remove('show');
-        }
-      }
-
-      function selectionTouchesGhost(selection, el) {
-        if (!selection || !el || selection.isCollapsed || selection.rangeCount === 0) return false;
-
-        if ((selection.anchorNode && el.contains(selection.anchorNode)) ||
-          (selection.focusNode && el.contains(selection.focusNode))) {
-          return true;
-        }
-
-        for (var i = 0; i < selection.rangeCount; i++) {
-          var range = selection.getRangeAt(i);
-          var common = range.commonAncestorContainer;
-          if (common && (common === el || el.contains(common))) return true;
-        }
-        return false;
-      }
-
-      function updateGhostSelectionState() {
-        if (!ghostNote || !window.getSelection) return;
-        var sel = window.getSelection();
-        if (selectionTouchesGhost(sel, ghostNote)) {
-          if (!ghostWasTouched) {
-            ghostNote.classList.remove('is-selected');
-            void ghostNote.offsetWidth;
-            ghostNote.classList.add('is-selected');
-            if (ghostFlashTimer) clearTimeout(ghostFlashTimer);
-            ghostFlashTimer = setTimeout(function () {
-              ghostNote.classList.remove('is-selected');
-              var s = window.getSelection ? window.getSelection() : null;
-              if (selectionTouchesGhost(s, ghostNote)) {
-                try {
-                  s.removeAllRanges();
-                } catch (e) {
-                  // Ignore selection clearing failures.
-                }
-              }
-              ghostFlashTimer = null;
-            }, 3250);
-          }
-          ghostWasTouched = true;
-        } else {
-          ghostWasTouched = false;
-        }
-      }
-
-      function normalizeNavMode(mode) {
-        return (mode === 'en' || mode === 'zh') ? mode : 'default';
-      }
-
-      function withNavMode(url, mode) {
-        if (!url) return '';
-        if (mode !== 'en' && mode !== 'zh') return url;
-        try {
-          var u = new URL(url, window.location.origin);
-          u.searchParams.set('nav', mode);
-          return u.pathname + u.search + u.hash;
-        } catch (e) {
-          return url;
-        }
-      }
-
-      function applyNavLink(link, mode, prefix, suffix) {
-        if (!link) return;
-        var baseUrl = link.getAttribute('data-' + mode + '-url') || '';
-        var title = link.getAttribute('data-' + mode + '-title') || '';
-        if (!baseUrl || !title) {
-          link.style.display = 'none';
-          link.removeAttribute('href');
-          link.textContent = '';
-          return;
-        }
-        link.style.display = '';
-        link.textContent = prefix + title + (suffix || '');
-        link.setAttribute('href', withNavMode(baseUrl, mode));
-      }
-
-      function applyPostNavMode() {
-        var params = new URLSearchParams(window.location.search);
-        var mode = normalizeNavMode(params.get('nav'));
-        applyNavLink(prevLink, mode, '← Previous: ');
-        applyNavLink(nextLink, mode, 'Next: ', ' →');
-        if (langSwitchWrap && mode === 'en') {
-          langSwitchWrap.style.display = 'none';
-        }
-      }
-
-      if (btn) {
-        btn.addEventListener('click', function () {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-      window.addEventListener('scroll', toggleButton, { passive: true });
-      document.addEventListener('selectionchange', updateGhostSelectionState);
-      document.addEventListener('mouseup', updateGhostSelectionState, { passive: true });
-      document.addEventListener('touchend', function () {
-        setTimeout(updateGhostSelectionState, 0);
-      }, { passive: true });
-      toggleButton();
-      updateGhostSelectionState();
-      applyPostNavMode();
-    })();
+    if (new URLSearchParams(window.location.search).get('embed') === '1') {
+      document.documentElement.classList.add('compare-embed');
+    }
   </script>
-</body>
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v=20260716-4">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="site-name" href="{{ '/' | relative_url }}">
+      <span>Zhengxiang Wang</span>
+      <span lang="zh-Hans">王政祥</span>
+    </a>
+    <nav class="nav-links">
+      <a class="writing-nav-link" href="{{ '/blogs/' | relative_url }}">Writing</a>
+    </nav>
+  </header>
+
+  {% assign translated_raw = page.is_translation | default: page.translated | default: false %}
+  {% assign translated_json = translated_raw | jsonify %}
+  {% assign is_translated = false %}
+  {% if translated_raw == true or translated_json == '"true"' or translated_json == 'true' %}
+    {% assign is_translated = true %}
+  {% endif %}
+
+  {% assign language = page.lang | default: "en" | append: "" %}
+  {% assign is_chinese = false %}
+  {% if language contains "zh" %}
+    {% assign is_chinese = true %}
+  {% endif %}
+
+  {% assign sibling_candidates = site.posts | where: "pair_id", page.pair_id %}
+  {% if page.approx_date %}
+    {% assign sibling_candidates = sibling_candidates | where: "approx_date", page.approx_date %}
+  {% endif %}
+  {% assign sibling = sibling_candidates | where_exp: "post", "post.lang != page.lang" | first %}
+
+  {% if sibling %}
+    {% if is_translated %}
+      {% assign original_post = sibling %}
+      {% assign translation_post = page %}
+    {% else %}
+      {% assign original_post = page %}
+      {% assign translation_post = sibling %}
+    {% endif %}
+  {% endif %}
+
+  {% assign human_date = nil %}
+  {% if page.display_date %}
+    {% assign human_date = page.display_date %}
+  {% elsif page.approx_date %}
+    {% assign date_parts = page.approx_date | split: "-" %}
+    {% assign month_number = date_parts[1] | plus: 0 %}
+    {% assign month_index = month_number | minus: 1 %}
+    {% assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+    {% assign human_date = month_names[month_index] | append: " " | append: date_parts[0] %}
+  {% endif %}
+
+  <main id="main" class="post-shell">
+    <article id="singlePost" class="post-article">
+      <header class="post-header">
+        <h1>{{ page.title }}</h1>
+        <p class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{% if human_date %}{{ human_date }}{% else %}{{ page.date | date: "%b %-d, %Y" }}{% endif %}</time>
+          {% if page.tags and page.tags.size > 0 %}
+            <span aria-hidden="true">·</span>
+            <span class="post-tags">
+              {% for tag in page.tags %}<span>#{{ tag }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}
+            </span>
+          {% endif %}
+        </p>
+
+        {% if sibling %}
+          <div class="post-actions">
+            <p class="language-switch">
+              {% if is_chinese %}
+                <a href="{{ sibling.url | relative_url }}">Read in English</a>
+              {% else %}
+                <a href="{{ sibling.url | relative_url }}" lang="zh-Hans">阅读中文</a>
+              {% endif %}
+            </p>
+            <button id="compareToggle" class="compare-toggle" type="button" aria-controls="compareView" aria-expanded="false" hidden>
+              Dual View
+            </button>
+          </div>
+        {% endif %}
+
+        {% if is_translated %}
+          <p class="post-disclaimer">
+            {% if is_chinese %}
+              免责声明：本文译文由 GPT-5.2 翻译生成，原文为英文。
+            {% else %}
+              Translated by GPT-5.2 (refined by GPT-5.6 Sol via Codex)
+            {% endif %}
+          </p>
+        {% endif %}
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      {% assign nav_pool = "" | split: "" %}
+      {% for candidate in site.posts %}
+        {% assign candidate_raw = candidate.is_translation | default: candidate.translated | default: false %}
+        {% assign candidate_json = candidate_raw | jsonify %}
+        {% assign candidate_is_translated = false %}
+        {% if candidate_raw == true or candidate_json == '"true"' or candidate_json == 'true' %}
+          {% assign candidate_is_translated = true %}
+        {% endif %}
+        {% if candidate_is_translated == is_translated %}
+          {% assign nav_pool = nav_pool | push: candidate %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign newer_post = nil %}
+      {% assign older_post = nil %}
+      {% for candidate in nav_pool %}
+        {% if candidate.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+          {% if current_index > 0 %}
+            {% assign newer_index = current_index | minus: 1 %}
+            {% assign newer_post = nav_pool[newer_index] %}
+          {% endif %}
+          {% assign older_index = current_index | plus: 1 %}
+          {% if older_index < nav_pool.size %}
+            {% assign older_post = nav_pool[older_index] %}
+          {% endif %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if newer_post or older_post %}
+        <nav class="post-navigation" aria-label="Adjacent posts">
+          <div>
+            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}">← Newer<br><span>{{ newer_post.title }}</span></a>{% endif %}
+          </div>
+          <div class="post-navigation-older">
+            {% if older_post %}<a href="{{ older_post.url | relative_url }}">Older →<br><span>{{ older_post.title }}</span></a>{% endif %}
+          </div>
+        </nav>
+      {% endif %}
+
+      {% assign cutoff = site.writing_archive_year | default: 2020 %}
+      {% assign post_year = page.date | date: "%Y" | plus: 0 %}
+      {% if post_year < cutoff %}
+        {% assign back_url = '/blogs/archive/' %}
+        {% assign back_label = 'Back to Archive' %}
+      {% else %}
+        {% assign back_url = '/blogs/' %}
+        {% assign back_label = 'Back to writing' %}
+      {% endif %}
+
+      <footer class="post-footer">
+        <p class="post-legal">&copy; {{ page.date | date: "%Y" }} {{ site.title }}. No automated scraping, dataset inclusion, or machine-learning training without written permission.</p>
+        <p><a href="{{ back_url | relative_url }}">← {{ back_label }}</a></p>
+      </footer>
+    </article>
+
+    {% if sibling %}
+      <section id="compareView" class="compare-view" aria-label="Side-by-side post comparison" hidden>
+        <div class="compare-toolbar">
+          <a class="compare-toolbar-back" href="{{ back_url | relative_url }}">← {{ back_label }}</a>
+          <button id="compareClose" class="compare-close" type="button">Single view</button>
+        </div>
+        <div class="compare-grid">
+          <section class="compare-column" aria-labelledby="compare-original-title">
+            <header class="compare-column-header">
+              <p>Original</p>
+              <h2 id="compare-original-title">{{ original_post.title }}</h2>
+            </header>
+            <iframe
+              id="compareOriginalFrame"
+              data-src="{{ original_post.url | relative_url }}"
+              title="Original post: {{ original_post.title | escape }}"
+              loading="lazy"></iframe>
+          </section>
+          <section class="compare-column" aria-labelledby="compare-translation-title">
+            <header class="compare-column-header">
+              <p>Translation</p>
+              <h2 id="compare-translation-title">{{ translation_post.title }}</h2>
+            </header>
+            <iframe
+              id="compareTranslationFrame"
+              data-src="{{ translation_post.url | relative_url }}"
+              title="Translated post: {{ translation_post.title | escape }}"
+              loading="lazy"></iframe>
+          </section>
+        </div>
+        <nav class="compare-navigation" aria-label="Dual View navigation">
+          <div>
+            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}?compare=1">← Newer</a>{% endif %}
+          </div>
+          <a class="compare-back" href="{{ back_url | relative_url }}">← {{ back_label }}</a>
+          <div class="compare-older">
+            {% if older_post %}<a href="{{ older_post.url | relative_url }}?compare=1">Older →</a>{% endif %}
+          </div>
+        </nav>
+      </section>
+    {% endif %}
+  </main>
+
+  {% if sibling %}
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('embed') === '1') return;
+
+        var shell = document.getElementById('main');
+        var singlePost = document.getElementById('singlePost');
+        var compareView = document.getElementById('compareView');
+        var compareToggle = document.getElementById('compareToggle');
+        var compareClose = document.getElementById('compareClose');
+        var originalFrame = document.getElementById('compareOriginalFrame');
+        var translationFrame = document.getElementById('compareTranslationFrame');
+        var desktop = window.matchMedia('(min-width: 901px)');
+
+        if (!shell || !singlePost || !compareView || !compareToggle || !compareClose) return;
+        compareToggle.hidden = false;
+
+        function embeddedUrl(path) {
+          var url = new URL(path, window.location.origin);
+          url.searchParams.set('embed', '1');
+          return url.pathname + url.search + url.hash;
+        }
+
+        function loadFrames() {
+          [originalFrame, translationFrame].forEach(function (frame) {
+            if (frame && !frame.getAttribute('src')) {
+              frame.setAttribute('src', embeddedUrl(frame.getAttribute('data-src')));
+            }
+          });
+        }
+
+        function setUrl(compare, replace) {
+          var url = new URL(window.location.href);
+          if (compare) {
+            url.searchParams.set('compare', '1');
+          } else {
+            url.searchParams.delete('compare');
+          }
+          window.history[replace ? 'replaceState' : 'pushState']({}, '', url.pathname + url.search + url.hash);
+        }
+
+        function setComparison(compare, focusControl) {
+          var enabled = compare && desktop.matches;
+          shell.classList.toggle('is-comparing', enabled);
+          singlePost.hidden = enabled;
+          compareView.hidden = !enabled;
+          compareToggle.setAttribute('aria-expanded', enabled ? 'true' : 'false');
+
+          if (enabled) {
+            loadFrames();
+            if (focusControl) compareClose.focus();
+          } else if (focusControl) {
+            compareToggle.focus();
+          }
+        }
+
+        compareToggle.addEventListener('click', function () {
+          setComparison(true, true);
+          setUrl(true, false);
+        });
+
+        compareClose.addEventListener('click', function () {
+          setComparison(false, true);
+          setUrl(false, false);
+        });
+
+        window.addEventListener('popstate', function () {
+          var current = new URLSearchParams(window.location.search);
+          setComparison(current.get('compare') === '1', false);
+        });
+
+        desktop.addEventListener('change', function (event) {
+          if (!event.matches && shell.classList.contains('is-comparing')) {
+            setComparison(false, false);
+            setUrl(false, true);
+          }
+        });
+
+        if (params.get('compare') === '1' && desktop.matches) {
+          setComparison(true, false);
+        }
+      })();
+    </script>
+  {% endif %}
+</body>
 </html>

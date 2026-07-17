@@ -1,5 +1,6 @@
 ---
 layout: null
+title: "Writing in English"
 permalink: /blogs/en/
 ---
 <!doctype html>
@@ -7,96 +8,38 @@ permalink: /blogs/en/
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blogs (English) — {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-
-  <style>
-  :root {
-    --accent: #41b883;
-  }
-
-  .archive-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .archive-page h3 {
-    margin-bottom: 1rem;
-  }
-
-  .post-row {
-    margin: .65rem 0;
-  }
-
-  .post-row a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .post-row a:hover {
-    text-decoration: underline;
-  }
-
-  .muted {
-    color: #888;
-  }
-
-  .archive-tags-link a {
-    color: var(--accent);
-  }
-
-  @media (max-width: 480px) {
-    .archive-page {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-  }
-  </style>
+  <meta name="description" content="English writing and translations by Zhengxiang Wang.">
+  <title>Writing in English — {{ site.title }}</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/images/me.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v=20260716-4">
 </head>
-<body class="is-preload">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="site-name" href="{{ '/' | relative_url }}">
+      <span>Zhengxiang Wang</span>
+      <span lang="zh-Hans">王政祥</span>
+    </a>
+    <nav class="nav-links"><a class="writing-nav-link" href="{{ '/blogs/' | relative_url }}">Writing</a></nav>
+  </header>
 
-  <div id="wrapper">
-    <section class="wrapper style1 fade-up">
-      <div class="container archive-page">
-        <h3>Blogs (English)</h3>
+  <main id="main" class="writing-shell">
+    <header class="writing-intro">
+      <p class="page-kicker"><a href="{{ '/blogs/archive/' | relative_url }}">Archive</a></p>
+      <h1>Writing in English</h1>
+      <p>Original English work and English translations.</p>
+    </header>
 
-        <p class="archive-tags-link">
-          <a href="{{ "/blogs/en/tags/" | relative_url }}">Browse by tag →</a>
-          &nbsp;|&nbsp;
-          <a href="{{ '/' | relative_url }}#latest-blogs">Originals →</a>
-        </p>
-
-        {% assign en_posts = site.posts | where: "lang", "en" %}
-        {% assign grouped = en_posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-
-        {% for yr in grouped %}
-          <div class="year" id="{{ yr.name }}">
-            <h3>{{ yr.name }}</h3>
-
-            {% for post in yr.items %}
-              <div class="post-row">
-                <span class="muted">{{ post.date | date: "%b %-d" }}</span>
-                &nbsp;—&nbsp;
-                <a href="{{ post.url | relative_url }}?nav=en">{{ post.title }}</a>
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
-
-        <p class="archive-tags-link" style="margin-top:2rem;">
-          <a href="/">← Back to Home</a>
-        </p>
-      </div>
+    {% assign english_posts = site.posts | where: "lang", "en" %}
+    <section class="writing-list" aria-label="English writing">
+      {% for post in english_posts %}
+        <article class="writing-row">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        </article>
+      {% endfor %}
     </section>
-    </div>
-
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/browser.min.js"></script>
-  <script src="/assets/js/breakpoints.min.js"></script>
-  <script src="/assets/js/util.js"></script>
-  <script src="/assets/js/main.js"></script>
+  </main>
 </body>
 </html>

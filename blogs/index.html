@@ -1,101 +1,66 @@
 ---
 layout: null
+title: "Writing"
+permalink: /blogs/
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blogs — {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-
-  <style>
-  :root {
-    --accent: #41b883;
-  }
-
-  .archive-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .archive-page h3 {
-    margin-bottom: 1rem;
-  }
-
-  .post-row {
-    margin: .65rem 0;
-  }
-
-  .post-row a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .post-row a:hover {
-    text-decoration: underline;
-  }
-
-  .muted {
-    color: #888;
-  }
-
-  .archive-tags-link a {
-    color: var(--accent);
-  }
-
-  @media (max-width: 480px) {
-    .archive-page {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-  }
-  </style>
+  <meta name="description" content="Writing by Zhengxiang Wang.">
+  <title>Writing — {{ site.title }}</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/images/me.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v=20260716-4">
 </head>
-<body class="is-preload">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div id="wrapper">
-    <section class="wrapper style1 fade-up">
-      <div class="container archive-page">
-        <h3>Blogs</h3>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="site-name" href="{{ '/' | relative_url }}">
+      <span>Zhengxiang Wang</span>
+      <span lang="zh-Hans">王政祥</span>
+    </a>
+    <nav class="nav-links" aria-label="Current section">
+      <a class="writing-nav-link" href="{{ '/blogs/' | relative_url }}" aria-current="page">Writing</a>
+    </nav>
+  </header>
 
-        <p class="archive-tags-link">
-          <a href="{{ "/blogs/tags/" | relative_url }}">Browse by tag →</a>
-          &nbsp;|&nbsp;
-          <a href="{{ "/blogs/en/" | relative_url }}">English →</a>
-        </p>
+  <main id="main" class="writing-shell">
+    <header class="writing-intro">
+      <h1>Writing</h1>
+    </header>
 
-        {% assign originals = site.posts | where_exp: "p", "p.is_translation != true" %}
-        {% assign grouped = originals | group_by_exp: "p", "p.date | date: '%Y'" %}
+    {% assign cutoff = site.writing_archive_year | default: 2020 %}
+    {% assign originals = site.posts | where_exp: "post", "post.is_translation != true" %}
+    {% assign has_current = false %}
+    {% assign archive_count = 0 %}
 
-        {% for yr in grouped %}
-          <div class="year" id="{{ yr.name }}">
-            <h3>{{ yr.name }}</h3>
+    <section class="writing-list" aria-label="Recent writing">
+      {% for post in originals %}
+        {% assign post_year = post.date | date: "%Y" | plus: 0 %}
+        {% if post_year >= cutoff %}
+          {% assign has_current = true %}
+          <article class="writing-row">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          </article>
+        {% else %}
+          {% assign archive_count = archive_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
 
-            {% for post in yr.items %}
-              <div class="post-row">
-                <span class="muted">{{ post.date | date: "%b %-d" }}</span>
-                &nbsp;—&nbsp;
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
-
-        <p class="archive-tags-link" style="margin-top:2rem;">
-          <a href="/">← Back to Home</a>
-        </p>
-      </div>
+      {% unless has_current %}
+        <p class="writing-empty">Coming soon</p>
+      {% endunless %}
     </section>
-  </div>
 
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/browser.min.js"></script>
-  <script src="/assets/js/breakpoints.min.js"></script>
-  <script src="/assets/js/util.js"></script>
-  <script src="/assets/js/main.js"></script>
+    <p class="archive-entry">
+      <a href="{{ '/blogs/archive/' | relative_url }}">
+        Archive · 2015–2019 · {{ archive_count }} works <span aria-hidden="true">→</span>
+      </a>
+    </p>
+  </main>
 </body>
 </html>

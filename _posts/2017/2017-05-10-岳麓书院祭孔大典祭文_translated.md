@@ -15,7 +15,7 @@ In this mid-autumn of the Bingshen year, it so happens to be the 2,567th anniver
 Clouds lie across the Xiang River; the autumn ripples are calm and faint.  
 Gathered into the great mountain range, stored within famed mountains.
 
-Heaven, ruler, teacher, kin—still as in the old ways.  
+Heaven, ruler, teacher, parents—still as in the old ways.<br>
 At the Grand Sacrifice to Confucius, the common people look up in reverence.
 
 
@@ -23,7 +23,7 @@ At the Grand Sacrifice to Confucius, the common people look up in reverence.
 Thinking of the man he was—he rested in utmost goodness.  
 Born when the times were in decline, rites collapsed and music fell into disorder.
 
-He loathed purple usurping vermilion; he was ever without unrighteous war.  
+He loathed purple usurping vermilion; there were never any righteous wars.<br>
 He traveled persuading the feudal states, repeatedly meeting with hardship.
 
 All the world surged on, and the benevolent had no peace.  
@@ -33,7 +33,7 @@ The former worthies stood lofty—sun and moon are hard to reach!
 
 
 
-All under Heaven are one body, and all things are companions—his teaching followed thus.  
+The people are our siblings, and all things our companions—his teaching followed thus.<br>
 Three thousand disciples bathed in spring at the Apricot Altar.
 
 Lofty and bright, the Doctrine of the Mean; he exhausted its two ends.  
