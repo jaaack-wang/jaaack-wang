@@ -30,12 +30,13 @@ permalink: /blogs/archive/
   <main id="main" class="writing-shell archive-shell">
     <header class="writing-intro">
       <h1>Archive</h1>
-      <p>Earlier work, 2015–2019. Each entry opens in its original language and links to its translation when available.</p>
+      <p>Earlier work from high school and college.</p>
     </header>
 
     {% assign cutoff = site.writing_archive_year | default: 2020 %}
     {% assign originals = site.posts | where_exp: "post", "post.is_translation != true" %}
-    {% assign grouped = originals | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% assign archive_posts = originals | sort: "date" %}
+    {% assign grouped = archive_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
     <div class="archive-years">
       {% for year in grouped %}
@@ -45,9 +46,15 @@ permalink: /blogs/archive/
             <h2 id="year-{{ year.name }}">{{ year.name }}</h2>
             <div class="writing-list">
               {% for post in year.items %}
+                {% assign translated_post = site.posts | where: "pair_id", post.pair_id | where: "is_translation", true | first %}
                 <article class="writing-row">
                   <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
-                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  <div class="archive-title-pair">
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    {% if translated_post %}
+                      <p><a href="{{ translated_post.url | relative_url }}">{{ translated_post.title }}</a></p>
+                    {% endif %}
+                  </div>
                 </article>
               {% endfor %}
             </div>

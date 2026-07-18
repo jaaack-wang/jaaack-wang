@@ -441,6 +441,28 @@ h3 {
 	font-weight: 560;
 }
 
+.archive-title-pair {
+	display: grid;
+	gap: 0.18rem;
+}
+
+.archive-title-pair p {
+	margin: 0;
+	color: #6f6963;
+	font-size: 0.82em;
+	line-height: 1.35;
+}
+
+.archive-title-pair p a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.archive-title-pair p a:hover {
+	color: var(--link);
+	text-decoration: underline;
+}
+
 .tag-index {
 	display: flex;
 	flex-wrap: wrap;
