@@ -681,7 +681,7 @@ h3 {
 	font-size: 1rem;
 }
 
-.post-navigation-older {
+.post-navigation-newer {
 	text-align: right;
 }
 
@@ -795,7 +795,7 @@ h3 {
 	text-align: center;
 }
 
-.compare-older {
+.compare-newer {
 	text-align: right;
 }
 
@@ -982,7 +982,7 @@ html.compare-embed .post-article {
 		gap: 1.25rem;
 	}
 
-	.post-navigation-older {
+	.post-navigation-newer {
 		text-align: left;
 	}
 

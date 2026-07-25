@@ -157,10 +157,10 @@
       {% if newer_post or older_post %}
         <nav class="post-navigation" aria-label="Adjacent posts">
           <div>
-            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}">← Newer<br><span>{{ newer_post.title }}</span></a>{% endif %}
+            {% if older_post %}<a href="{{ older_post.url | relative_url }}">← Older<br><span>{{ older_post.title }}</span></a>{% endif %}
           </div>
-          <div class="post-navigation-older">
-            {% if older_post %}<a href="{{ older_post.url | relative_url }}">Older →<br><span>{{ older_post.title }}</span></a>{% endif %}
+          <div class="post-navigation-newer">
+            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}">Newer →<br><span>{{ newer_post.title }}</span></a>{% endif %}
           </div>
         </nav>
       {% endif %}
@@ -213,11 +213,11 @@
         </div>
         <nav class="compare-navigation" aria-label="Dual View navigation">
           <div>
-            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}?compare=1">← Newer</a>{% endif %}
+            {% if older_post %}<a href="{{ older_post.url | relative_url }}?compare=1">← Older</a>{% endif %}
           </div>
           <a class="compare-back" href="{{ back_url | relative_url }}">← {{ back_label }}</a>
-          <div class="compare-older">
-            {% if older_post %}<a href="{{ older_post.url | relative_url }}?compare=1">Older →</a>{% endif %}
+          <div class="compare-newer">
+            {% if newer_post %}<a href="{{ newer_post.url | relative_url }}?compare=1">Newer →</a>{% endif %}
           </div>
         </nav>
       </section>

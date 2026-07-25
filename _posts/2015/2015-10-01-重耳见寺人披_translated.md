@@ -7,7 +7,7 @@ pair_id: 重耳见寺人披
 title: "Chong'er Meets the Eunuch Pi"
 tags: ["Classical Chinese", "Creative Writing"]
 ---
-# Chong’er Meets the Eunuch Pi①
+# Chong’er Meets the Eunuch Pi<a id="cite1" href="#ref1">[1]</a>
 
 
 
@@ -33,7 +33,7 @@ tags: ["Classical Chinese", "Creative Writing"]
 
 Guard: (on alert, raising weapon, in a low voice) Who goes there? If you do not cherish your own life and enter the forbidden area without authorization, then head and body will lie apart—this will not be our fault.
 
-Eunuch Pi: (unruffled, voice soft and yin②) I am Eunuch Pi, an old minister of the false court③. The false court has already fallen; the Marquis of Jin has returned by Heaven’s mandate, and the revival of Jin is foreseeable—therefore I come to submit. Now there are rebellious ministers and traitorous sons who secretly plot treason, to be carried out within days. If we do not stop small evils before they grow, Jin may be imperiled! That is why I have come. I request an audience with the Marquis of Jin.
+Eunuch Pi: (unruffled, voice soft and yin<a id="cite2" href="#ref2">[2]</a>) I am Eunuch Pi, an old minister of the false court<a id="cite3" href="#ref3">[3]</a>. The false court has already fallen; the Marquis of Jin has returned by Heaven’s mandate, and the revival of Jin is foreseeable—therefore I come to submit. Now there are rebellious ministers and traitorous sons who secretly plot treason, to be carried out within days. If we do not stop small evils before they grow, Jin may be imperiled! That is why I have come. I request an audience with the Marquis of Jin.
 
 Guard: (suspicious) First make the treason plot clear; only then will we report it.
 
@@ -64,7 +64,7 @@ Marquis of Jin: (stops at once, startled and enraged) Eunuch Pi!
 
 Guard: (with a look of contempt) The castrated one declares he wishes to submit, and wants to report to Your Lordship some rebel’s treason plot from the false court—mysterious and secretive, relying on self-importance. (earnest) In this minister’s view, Eunuch Pi is but a petty wretch. The reason he exposes treason and uproots the disloyal may be to claim merit and win favor, to protect himself and rise in rank; or he may wish to confuse and mislead, harboring other designs. Eunuch Pi’s heart is unfathomable! This minister asks that he be removed early. It is for Your Lordship to decide.
 
-Marquis of Jin: (as if no one is there, speaking to himself) Eunuch Pi! Eunuch Pi! You sought to rid me of my life twice—have you forgotten? Have you forgotten? (the guard, hearing this, is astonished) The severed sleeve is still here; humiliation and hatred have not vanished—yet now you dare to come see me; is your heart unfathomable! Is your heart unfathomable! (coming to himself) Guards! Impose palace punishment④ on him—cut off his life!
+Marquis of Jin: (as if no one is there, speaking to himself) Eunuch Pi! Eunuch Pi! You sought to rid me of my life twice—have you forgotten? Have you forgotten? (the guard, hearing this, is astonished) The severed sleeve is still here; humiliation and hatred have not vanished—yet now you dare to come see me; is your heart unfathomable! Is your heart unfathomable! (coming to himself) Guards! Impose palace punishment<a id="cite4" href="#ref4">[4]</a> on him—cut off his life!
 
 Guard: (smiling without showing it) Yes.
 
@@ -77,7 +77,7 @@ Kin had little grief, foes took joy.
 What love would a eunuch bear for me?  
 Twice by orders he came to take my life.  
 Now the court has changed, the dynasty replaced—  
-My kin are gone, I alone feel glad.  
+My kin<a id="cite5" href="#ref5">[5]</a> are gone, I alone feel glad.<br>
 The eunuch does not remember the severed sleeve remains;\
 With heart unfathomable, why come suffer so?  
 
@@ -137,8 +137,8 @@ Eunuch Pi: (slightly pleased) Your words exceed the truth—am I truly so? You f
 
 You follow Heaven’s mandate, gain the people’s heart;  
 Our state, within days, will be revived.  
-How could my words divert western waters eastward⑥?\
-Only a red heart illuminates the annals⑦.  
+How could my words divert western waters eastward<a id="cite6" href="#ref6">[6]</a>?\
+Only a red heart illuminates the annals<a id="cite7" href="#ref7">[7]</a>.<br>
 
 You follow Heaven’s mandate, gain the people’s heart;  
 Our state, within days, will be revived.  
@@ -169,18 +169,18 @@ Eunuch Pi: (concerned) The lord decides ten thousand affairs daily, works late a
 
 ## Notes
 
-① This script takes the segment “Eunuch Pi requests an audience” from *Zuo Zhuan: The Exile of Prince Chong’er of Jin* and fictionalizes it, with a few quotations altered by changed characters. The original source text is:
+<a id="ref1">[1] This script takes the segment “Eunuch Pi requests an audience” from *Zuo Zhuan: The Exile of Prince Chong’er of Jin* and fictionalizes it, with a few quotations altered by changed characters. The original source text is:</a> [↩](#cite1)
 
 > Lü and Xi, fearing coercion, were going to burn the ducal palace and murder the Marquis of Jin. Eunuch Pi requested an audience. The duke had someone rebuke him, and also dismissed him. He said: “In the affair at Pu City, my lord gave you one night, and you arrived at once. Later I followed the Lord of Di to hunt by the banks of the Wei; you came for Duke Hui seeking to kill me—he gave you three nights, and you arrived on the middle night. Though you had your lord’s orders, how swift you were! The severed sleeve still remains—go on your way!” He replied: “This minister thought that upon your return, you had gained understanding; if you still have not, you will soon meet calamity again. A lord’s order has no second—such is the ancient rule. In eliminating a ruler’s enemies, one looks only to one’s strength. The people of Pu, the people of Di—what have I to do with them? Now you are enthroned; do you have no Pu, no Di? Duke Huan of Qi set aside the incident of Guan Zhong’s arrow striking his belt hook and made Guan Zhong his minister; if you act differently from him, why demean yourself by ordering me away? There are many who would have to leave—could I, a castrated servant, be the only one?” The duke saw him and told him of the difficulty...... On yichou, the last day of the month, the ducal palace burned.
 
-② Eunuch Pi is, after all, a *sìrén*, a palace attendant—that is, a eunuch. Therefore his voice is soft and yin. In this play, all sounds that issue from Eunuch Pi’s mouth are soft and yin. The same below, hence no further notes.
+<a id="ref2">[2] Eunuch Pi is, after all, a *sìrén*, a palace attendant—that is, a eunuch. Therefore his voice is soft and yin. In this play, all sounds that issue from Eunuch Pi’s mouth are soft and yin. The same below, hence no further notes.</a> [↩](#cite2)
 
-③ As for the term “false court,” it is used for the time being; what follows as “the court has changed, the dynasty replaced” is the same. Guessing at the ancients’ intent, perhaps there truly was a sense of dynastic change—one cannot know. As for Chong’er, “changed court, replaced dynasty” is said to mock his self-conceit.
+<a id="ref3">[3] As for the term “false court,” it is used for the time being; what follows as “the court has changed, the dynasty replaced” is the same. Guessing at the ancients’ intent, perhaps there truly was a sense of dynastic change—one cannot know. As for Chong’er, “changed court, replaced dynasty” is said to mock his self-conceit.</a> [↩](#cite3)
 
-④ Here Chong’er’s wish to impose palace punishment on Eunuch Pi is likely due to the subconscious. When hatred reaches its extreme, even eating flesh and sleeping on skin is not enough to satisfy—how much more mere castration? Twice Chong’er nearly lost his head to Eunuch Pi; his contempt for the eunuch is beyond what pen and ink can fully express, lodged in the subconscious. At this time, what his mouth muttered and his mind thought was all Eunuch Pi; with the subconscious at work, it is no wonder he wished to “repeat construction”!
+<a id="ref4">[4] Here Chong’er’s wish to impose palace punishment on Eunuch Pi is likely due to the subconscious. When hatred reaches its extreme, even eating flesh and sleeping on skin is not enough to satisfy—how much more mere castration? Twice Chong’er nearly lost his head to Eunuch Pi; his contempt for the eunuch is beyond what pen and ink can fully express, lodged in the subconscious. At this time, what his mouth muttered and his mind thought was all Eunuch Pi; with the subconscious at work, it is no wonder he wished to “repeat construction”!</a> [↩](#cite4)
 
-⑤ “Kin” is taken in its ancient sense. Here it refers specifically to the “kin” who did not worry about Chong’er’s exile. And such “kin,” in Chong’er’s view—could they be only nineteen!
+<a id="ref5">[5] “Kin” is taken in its ancient sense. Here it refers specifically to the “kin” who did not worry about Chong’er’s exile. And such “kin,” in Chong’er’s view—could they be only nineteen!</a> [↩](#cite5)
 
-⑥ “East and west waters” means to breach the western waters and send them eastward, a metaphor for changing the original pattern of things. This cannot be done without a grand hand.
+<a id="ref6">[6] “East and west waters” means to breach the western waters and send them eastward, a metaphor for changing the original pattern of things. This cannot be done without a grand hand.</a> [↩](#cite6)
 
-⑦ Here the famous saying of Wen Tianxiang is borrowed in secret—not to let a predecessor monopolize its beauty, but in jest.
+<a id="ref7">[7] Here the famous saying of Wen Tianxiang is borrowed in secret—not to let a predecessor monopolize its beauty, but in jest.</a> [↩](#cite7)
