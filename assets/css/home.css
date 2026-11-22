@@ -318,8 +318,9 @@ h3 {
 }
 
 .venue {
-	font-size: 1em;
-	letter-spacing: 0.04em;
+	font-size: 0.95em;
+	letter-spacing: 0.01em;
+	text-transform: none;
 	line-height: 1.35;
 	padding-top: 0.02rem;
 }
@@ -992,5 +993,18 @@ html.compare-embed .post-article {
 	.writing-row {
 		grid-template-columns: 1fr;
 		gap: 0.2rem;
+	}
+}
+
+@media (min-width: 761px) {
+	.industry-list {
+		max-width: none;
+		grid-template-columns: max-content minmax(0, 1fr) max-content;
+		column-gap: 1.5rem;
+	}
+
+	.industry-list li {
+		grid-column: 1 / -1;
+		grid-template-columns: subgrid;
 	}
 }
